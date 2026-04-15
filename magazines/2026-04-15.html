@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MORNING EDITION — Wednesday, April 15, 2026</title>
+<meta name="description" content="A daily magazine for the politics-tech curious — AI, elections, campaigns, and the machinery of power. Issue 104, 15 April 2026." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Morning Edition — 15 April 2026" />
+<meta property="og:description" content="Ten stories shaping political technology today. Orbán falls, deepfakes become tactics, Brussels pulls Grok's leash, and more." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-04-15.html" />
+<meta property="og:site_name" content="Morning Edition" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Morning Edition — 15 April 2026" />
+<meta name="twitter:description" content="Ten stories shaping political technology today." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4efe3;
+    --parchment:#eee4cc;
+    --ink:#111015;
+    --midnight:#0a0f1f;
+    --crimson:#c7221f;
+    --rose:#e84855;
+    --gold:#c9a227;
+    --teal:#0d5c63;
+    --terminal:#00ff88;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;}
+  body{font-size:20px;line-height:1.45;}
+  .spread{
+    min-height:100vh;
+    padding:6vh 7vw;
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .rule{height:2px;background:currentColor;width:100%;}
+  .rule-thin{height:1px;background:currentColor;width:100%;opacity:.6;}
+
+  /* ============ MASTHEAD ============ */
+  .masthead{background:var(--cream);color:var(--ink);border-bottom:4px double var(--ink);}
+  .masthead .topbar{display:flex;justify-content:space-between;align-items:center;font-family:'Inter';font-weight:600;letter-spacing:.12em;font-size:18px;text-transform:uppercase;padding-bottom:2vh;}
+  .masthead h1{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 100,"WONK" 1;
+    font-size:clamp(90px,17vw,280px);
+    line-height:.82;
+    letter-spacing:-.03em;
+    margin:3vh 0 1vh 0;
+    font-style:italic;
+  }
+  .masthead .tagline{
+    font-family:'Fraunces',serif;
+    font-size:clamp(26px,3vw,44px);
+    font-weight:400;
+    font-style:italic;
+    color:var(--crimson);
+    margin-top:2vh;
+    max-width:22ch;
+    line-height:1.1;
+  }
+  .masthead .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:5vh;font-size:20px;font-weight:500;}
+  .masthead .meta span{padding:6px 18px;background:var(--ink);color:var(--cream);border-radius:999px;letter-spacing:.08em;text-transform:uppercase;font-size:17px;}
+  .masthead .lede{
+    font-family:'Fraunces',serif;
+    font-size:clamp(28px,2.6vw,38px);
+    line-height:1.25;
+    max-width:34ch;
+    margin-top:4vh;
+    color:#2a2a30;
+  }
+
+  /* ============ CONTENTS ============ */
+  .contents{background:var(--ink);color:var(--cream);}
+  .contents .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:20px;color:var(--gold);}
+  .contents h2{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(70px,10vw,160px);line-height:.95;margin:3vh 0;letter-spacing:-.02em;}
+  .contents ol{list-style:none;counter-reset:c;display:grid;grid-template-columns:1fr 1fr;gap:2vh 5vw;margin-top:4vh;}
+  .contents ol li{counter-increment:c;display:flex;gap:1.5vw;align-items:baseline;border-top:1px solid rgba(244,239,227,.3);padding-top:1.2vh;font-size:22px;line-height:1.25;}
+  .contents ol li::before{content:counter(c,decimal-leading-zero);font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:42px;color:var(--gold);min-width:1.5em;}
+  .contents ol li .t{font-family:'Fraunces',serif;font-size:26px;line-height:1.15;font-weight:500;}
+  .contents ol li .s{display:block;font-family:'Inter';font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#9a9a9a;font-weight:600;margin-top:.4em;}
+
+  /* ============ 01 HERO — HUNGARY ============ */
+  .s01{
+    background:radial-gradient(ellipse at 20% 30%, #f5c3c1 0%, #d44949 40%, #7f1414 100%);
+    color:var(--cream);
+  }
+  .s01 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(200px,30vw,520px);
+    line-height:.8;
+    position:absolute;
+    top:2vh;right:6vw;
+    opacity:.28;
+    font-variation-settings:"WONK" 1;
+    font-style:italic;
+  }
+  .s01 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:#ffe4a0;}
+  .s01 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(90px,11vw,210px);
+    line-height:.88;
+    letter-spacing:-.025em;
+    margin:3vh 0;
+    max-width:16ch;
+  }
+  .s01 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(28px,2.7vw,40px);line-height:1.2;max-width:28ch;}
+  .s01 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:20px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--cream);padding-top:2vh;}
+
+  /* ============ 02 DARK / MIDNIGHT — DEEPFAKE ============ */
+  .s02{background:var(--midnight);color:#e4e7f2;}
+  .s02::before{content:"";position:absolute;inset:0;background:
+     radial-gradient(circle at 80% 20%, rgba(255,0,90,.22), transparent 50%),
+     radial-gradient(circle at 20% 80%, rgba(90,180,255,.2), transparent 50%);pointer-events:none;}
+  .s02 .num{
+    font-family:'Inter';font-weight:900;font-size:clamp(180px,28vw,460px);
+    position:absolute;top:-3vh;left:4vw;color:transparent;
+    -webkit-text-stroke:3px #ff005e;letter-spacing:-.05em;line-height:.8;
+  }
+  .s02 .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:20px;letter-spacing:.2em;color:#000;background:#ff005e;padding:10px 18px;text-transform:uppercase;z-index:1;position:relative;}
+  .s02 h2{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(78px,10vw,180px);line-height:.92;letter-spacing:-.02em;margin:4vh 0;max-width:18ch;z-index:1;position:relative;}
+  .s02 .deck{font-family:'Inter';font-weight:300;font-size:clamp(24px,2.4vw,34px);line-height:1.35;max-width:40ch;opacity:.9;z-index:1;position:relative;}
+  .s02 .pull{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:clamp(26px,2.5vw,38px);color:#ff8fb0;margin-top:4vh;border-left:3px solid #ff005e;padding-left:2vw;max-width:40ch;z-index:1;position:relative;}
+  .s02 .byline{margin-top:auto;font-family:'JetBrains Mono',monospace;font-size:18px;letter-spacing:.2em;color:#7a7f95;text-transform:uppercase;z-index:1;position:relative;}
+
+  /* ============ 03 ROSE ALERT STAMP — EU AI ACT ============ */
+  .s03{background:#f1ead6;color:#1a1a1a;}
+  .s03::after{
+    content:"REGULATED";
+    position:absolute;top:10vh;right:6vw;
+    font-family:'Fraunces',serif;font-weight:900;font-style:italic;
+    font-size:clamp(60px,9vw,140px);
+    color:var(--crimson);
+    border:8px solid var(--crimson);
+    padding:10px 30px;
+    transform:rotate(-10deg);
+    letter-spacing:.04em;
+    opacity:.92;
+    border-radius:8px;
+    text-shadow:0 0 4px rgba(199,34,31,.2);
+  }
+  .s03 .num{font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(110px,14vw,220px);color:var(--crimson);line-height:.85;letter-spacing:-.04em;}
+  .s03 .kicker{font-family:'Inter';font-weight:800;letter-spacing:.25em;font-size:20px;text-transform:uppercase;color:#1a1a1a;}
+  .s03 h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(62px,7.5vw,130px);line-height:.98;margin:2vh 0;max-width:18ch;letter-spacing:-.015em;}
+  .s03 .deck{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(26px,2.5vw,38px);line-height:1.25;max-width:40ch;color:#333;}
+  .s03 .body{font-size:22px;line-height:1.5;max-width:55ch;margin-top:3vh;font-weight:400;}
+  .s03 .byline{margin-top:auto;font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:18px;border-top:2px solid var(--crimson);padding-top:2vh;display:flex;justify-content:space-between;color:var(--crimson);}
+
+  /* ============ 04 TERMINAL — AGENTIC AI CANVASSING ============ */
+  .s04{background:#000;color:var(--terminal);font-family:'JetBrains Mono',monospace;}
+  .s04 .barline{color:#007f45;font-size:18px;letter-spacing:.14em;}
+  .s04 .num{font-family:'JetBrains Mono',monospace;font-weight:800;color:#00ffaa;font-size:clamp(120px,18vw,280px);line-height:.85;letter-spacing:-.02em;}
+  .s04 .prompt{color:#00ffaa;font-weight:600;font-size:22px;}
+  .s04 h2{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    color:#f4efe3;
+    font-size:clamp(68px,8.5vw,160px);
+    line-height:.95;
+    margin:3vh 0;
+    max-width:19ch;
+    letter-spacing:-.02em;
+  }
+  .s04 .deck{color:var(--terminal);font-size:clamp(22px,2vw,28px);line-height:1.5;max-width:60ch;}
+  .s04 .scan{display:grid;grid-template-columns:1fr 1fr;gap:2vw 3vw;margin-top:3vh;font-size:20px;line-height:1.5;}
+  .s04 .scan div{border-left:3px solid #007f45;padding-left:1vw;}
+  .s04 .scan b{color:#ffd400;display:block;font-weight:800;letter-spacing:.1em;margin-bottom:4px;}
+  .s04 .byline{margin-top:auto;color:#00ffaa;border-top:2px dashed #007f45;padding-top:2vh;display:flex;justify-content:space-between;font-size:18px;}
+
+  /* ============ 05 ACADEMIC DROP-CAP — ANTHROPIC $20M ============ */
+  .s05{background:#ecead8;color:#111;}
+  .s05 .badge{display:inline-block;font-family:'Fraunces',serif;font-style:italic;font-size:22px;color:#111;border-top:2px solid #111;border-bottom:2px solid #111;padding:4px 0;letter-spacing:.1em;}
+  .s05 h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(70px,8.5vw,160px);line-height:.96;max-width:18ch;margin:3vh 0;letter-spacing:-.02em;}
+  .s05 .num{position:absolute;bottom:4vh;right:6vw;font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(160px,22vw,360px);color:var(--gold);line-height:.8;opacity:.85;}
+  .s05 .body{
+    column-count:2;column-gap:4vw;column-rule:1px solid #c7b98a;
+    font-family:'Fraunces',serif;font-weight:400;font-size:22px;line-height:1.55;
+    max-width:90%;margin-top:2vh;
+  }
+  .s05 .body::first-letter{
+    font-family:'Fraunces',serif;font-weight:900;font-style:italic;
+    font-size:clamp(140px,16vw,260px);line-height:.82;
+    float:left;margin:10px 18px -12px 0;color:var(--crimson);
+  }
+  .s05 .byline{margin-top:auto;font-weight:700;letter-spacing:.2em;font-size:18px;text-transform:uppercase;border-top:1px solid #111;padding-top:2vh;}
+
+  /* ============ 06 BIG-STAT — $10.8B AD SPEND ============ */
+  .s06{background:linear-gradient(160deg,#101418 0%, #1f2930 60%, #264256 100%);color:var(--cream);}
+  .s06 .kicker{font-family:'Inter';font-weight:800;font-size:22px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);}
+  .s06 .stat{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:900;
+    font-size:clamp(220px,38vw,700px);
+    line-height:.82;
+    margin:3vh 0;letter-spacing:-.04em;
+    background:linear-gradient(180deg,#fff3c0,#c9a227 70%,#7a5c00);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .s06 h2{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(38px,4.5vw,74px);line-height:1.05;max-width:22ch;margin-bottom:2vh;}
+  .s06 .deck{font-size:clamp(24px,2.3vw,34px);line-height:1.45;max-width:45ch;opacity:.92;font-weight:300;}
+  .s06 .byline{margin-top:auto;font-weight:700;letter-spacing:.2em;font-size:18px;text-transform:uppercase;border-top:1px solid rgba(244,239,227,.3);padding-top:2vh;display:flex;justify-content:space-between;}
+
+  /* ============ 07 EDITORIAL PHOTO-CAPTION — WI CHATBOT ============ */
+  .s07{background:#e5dbc5;color:#14110c;}
+  .s07 .frame{background:linear-gradient(135deg,#2b3b5a 0%, #4a6286 40%, #87a3c2 75%, #d6dfee 100%);border-radius:6px;padding:6vh 5vw;min-height:44vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
+  .s07 .frame::before{content:"";position:absolute;top:-20%;left:-10%;width:60%;height:80%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 60%);}
+  .s07 .frame .quote{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+    color:#fff;font-size:clamp(44px,5.5vw,92px);line-height:1.02;letter-spacing:-.015em;
+    max-width:22ch;z-index:1;position:relative;
+  }
+  .s07 .num{position:absolute;top:4vh;right:6vw;font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(120px,15vw,220px);color:#fff;opacity:.9;line-height:.8;}
+  .s07 .caption{margin-top:3vh;display:grid;grid-template-columns:2fr 3fr;gap:4vw;align-items:start;}
+  .s07 h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(46px,5vw,92px);line-height:.98;letter-spacing:-.015em;}
+  .s07 .body{font-size:22px;line-height:1.5;}
+  .s07 .body b{display:block;font-family:'Inter';font-weight:800;font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:var(--crimson);margin-bottom:1vh;}
+  .s07 .byline{margin-top:auto;font-weight:700;letter-spacing:.18em;font-size:18px;text-transform:uppercase;border-top:2px solid #14110c;padding-top:2vh;display:flex;justify-content:space-between;}
+
+  /* ============ 08 SPLIT DIPTYCH — GOP vs DEMS AI ============ */
+  .s08{padding:0;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;}
+  .s08 .side{padding:6vh 5vw;display:flex;flex-direction:column;position:relative;min-height:100vh;}
+  .s08 .red{background:#b91d1d;color:#fff;}
+  .s08 .blue{background:#1a3b7a;color:#fff;}
+  .s08 .side .num{font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(120px,16vw,240px);line-height:.85;letter-spacing:-.04em;}
+  .s08 .side .stat{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(180px,22vw,360px);line-height:.85;letter-spacing:-.05em;margin-top:auto;}
+  .s08 .side .label{font-family:'Inter';font-weight:800;font-size:22px;letter-spacing:.3em;text-transform:uppercase;margin-top:1vh;}
+  .s08 .side h2{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(42px,4.5vw,78px);line-height:1.02;margin-top:3vh;max-width:16ch;}
+  .s08 .side .body{font-size:22px;line-height:1.5;margin-top:2vh;max-width:34ch;opacity:.95;}
+  .s08 .side .byline{margin-top:3vh;font-weight:700;letter-spacing:.2em;font-size:18px;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.5);padding-top:2vh;}
+  .s08 .headline{position:absolute;top:5vh;left:50%;transform:translateX(-50%);font-family:'Inter';font-weight:800;font-size:20px;letter-spacing:.3em;color:#fff;text-transform:uppercase;z-index:2;background:#000;padding:6px 18px;}
+
+  /* ============ 09 INFLUENCER / SOCIAL — TIKTOK ============ */
+  .s09{background:linear-gradient(135deg,#ff2d75 0%, #d946ef 50%, #8b5cf6 100%);color:#fff;}
+  .s09 .kicker{font-family:'Inter';font-weight:800;font-size:20px;letter-spacing:.2em;background:#000;color:#fff;display:inline-block;padding:8px 16px;text-transform:uppercase;}
+  .s09 .num{font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(140px,20vw,320px);position:absolute;top:3vh;right:6vw;line-height:.8;color:#fff;mix-blend-mode:overlay;opacity:.85;}
+  .s09 h2{font-family:'Fraunces',serif;font-weight:800;font-size:clamp(68px,8.5vw,160px);line-height:.92;margin:3vh 0;max-width:16ch;letter-spacing:-.02em;}
+  .s09 .deck{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(28px,2.8vw,42px);line-height:1.18;max-width:28ch;}
+  .s09 .tags{margin-top:4vh;display:flex;flex-wrap:wrap;gap:16px;}
+  .s09 .tags span{font-family:'Inter';font-weight:700;font-size:20px;padding:10px 22px;border:2px solid #fff;border-radius:999px;backdrop-filter:blur(4px);background:rgba(255,255,255,.12);}
+  .s09 .stats{margin-top:3vh;display:flex;flex-wrap:wrap;gap:4vw;}
+  .s09 .stats div b{display:block;font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(60px,7vw,120px);line-height:.9;}
+  .s09 .stats div span{font-family:'Inter';font-weight:600;font-size:18px;letter-spacing:.2em;text-transform:uppercase;}
+  .s09 .byline{margin-top:auto;font-weight:700;letter-spacing:.2em;font-size:18px;text-transform:uppercase;border-top:2px solid #fff;padding-top:2vh;display:flex;justify-content:space-between;}
+
+  /* ============ 10 LONG-FORM ESSAY — BRAZIL ============ */
+  .s10{background:#efe6d0;color:#141414;}
+  .s10 .num{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(180px,26vw,420px);line-height:.8;color:var(--teal);letter-spacing:-.04em;}
+  .s10 .kicker{font-family:'Inter';font-weight:800;font-size:20px;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);margin-top:2vh;}
+  .s10 h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(58px,7vw,128px);line-height:.98;margin:2vh 0;max-width:18ch;letter-spacing:-.015em;}
+  .s10 .deck{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(26px,2.5vw,38px);line-height:1.25;max-width:40ch;color:#333;}
+  .s10 .body{column-count:3;column-gap:3vw;column-rule:1px solid #c9be9a;margin-top:3vh;font-size:21px;line-height:1.55;}
+  .s10 .body p{margin-bottom:1em;}
+  .s10 .byline{margin-top:auto;font-weight:700;letter-spacing:.2em;font-size:18px;text-transform:uppercase;border-top:2px solid var(--teal);padding-top:2vh;display:flex;justify-content:space-between;color:var(--teal);}
+
+  /* ============ COLOPHON ============ */
+  .colophon{background:var(--ink);color:var(--cream);text-align:center;padding:15vh 8vw;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+  .colophon .mono{font-family:'JetBrains Mono',monospace;font-weight:600;letter-spacing:.3em;font-size:18px;color:var(--gold);text-transform:uppercase;}
+  .colophon h3{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(60px,9vw,160px);line-height:.95;margin:4vh 0;max-width:24ch;}
+  .colophon p{font-size:22px;line-height:1.5;max-width:50ch;opacity:.85;}
+  .colophon .sig{font-family:'Fraunces',serif;font-weight:900;font-style:italic;font-size:clamp(80px,12vw,200px);color:var(--gold);margin-top:3vh;line-height:.8;}
+
+  @media (max-width: 800px){
+    .contents ol{grid-template-columns:1fr;}
+    .s05 .body{column-count:1;}
+    .s10 .body{column-count:1;}
+    .s08{grid-template-columns:1fr;}
+    .s08 .side{min-height:70vh;}
+    .s07 .caption{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== MASTHEAD ===================== -->
+<section class="spread masthead">
+  <div class="topbar">
+    <span>Volume I · Issue No. 104</span>
+    <span>Wednesday · 15 April 2026</span>
+    <span>For Ben · Private Edition</span>
+  </div>
+  <div>
+    <h1>Morning<br>Edition.</h1>
+    <div class="tagline">A daily magazine for the politics-tech curious — AI, elections, campaigns, and the machinery of power.</div>
+  </div>
+  <div class="lede">
+    An independent curation of ten stories shaping political technology, drawn each dawn from the front pages of the world's serious press.
+  </div>
+  <div class="meta">
+    <span>AI in Politics</span>
+    <span>GovTech</span>
+    <span>Global Elections</span>
+    <span>Campaigns</span>
+    <span>Social Platforms</span>
+  </div>
+</section>
+
+<!-- ===================== TABLE OF CONTENTS ===================== -->
+<section class="spread contents">
+  <div class="kicker">In this issue</div>
+  <h2>Ten stories,<br>one morning.</h2>
+  <ol>
+    <li>
+      <div>
+        <div class="t">Orbán falls. Magyar's Tisza rewrites Europe.</div>
+        <div class="s">Global Elections — Hungary</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">The deepfake becomes official campaign strategy.</div>
+        <div class="s">Political Technology — U.S. Midterms</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Brussels tightens the leash on Grok.</div>
+        <div class="s">GovTech — EU AI Act</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Door-knocking, automated.</div>
+        <div class="s">Political Technology — Agentic AI</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">The $20 million bid to pick friendly lawmakers.</div>
+        <div class="s">AI in Politics — Lobbying</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">A record-breaking money pile.</div>
+        <div class="s">Political Campaigning — Ad Spend</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Wisconsin's million-voter chatbot.</div>
+        <div class="s">GovTech — Voter Contact</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">The partisan AI gap.</div>
+        <div class="s">Campaigns — GOP vs. Democrats</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">The creator becomes the candidate.</div>
+        <div class="s">Social Media Trends — TikTok</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Brazil braces for a laboratory of lies.</div>
+        <div class="s">Global Elections — Brazil 2026</div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ===================== 01 HERO — HUNGARY ===================== -->
+<section class="spread s01">
+  <div class="num">01</div>
+  <div>
+    <div class="kicker">Global Elections · Budapest, filed Sunday</div>
+    <h2>Orbán falls. A<br>continent exhales.</h2>
+    <div class="deck">
+      Péter Magyar's Tisza swept 52 percent of the party-list vote and a two-thirds supermajority, ending sixteen years of illiberal rule at a post-Communist-record 79.6 percent turnout.
+    </div>
+  </div>
+  <div class="byline">
+    <span>The lead</span>
+    <span>After Al Jazeera · CNN · Time</span>
+  </div>
+</section>
+
+<!-- ===================== 02 DARK MIDNIGHT — DEEPFAKE ===================== -->
+<section class="spread s02">
+  <div class="num">02</div>
+  <div>
+    <span class="tag">◉ Synthetic · Verified · Aired</span>
+    <h2>The deepfake is<br>no longer a scandal.<br>It is a tactic.</h2>
+    <div class="deck">
+      The NRSC's minute-long fabrication of Texas Democrat James Talarico — real tweets spliced with invented confessions — passed forensic review as nearly undetectable. Five confirmed incidents now span Texas, Georgia and Massachusetts. No federal rule applies.
+    </div>
+    <div class="pull">"It mixed real quotes with total fabrications. Even a forensic expert couldn't tell."</div>
+  </div>
+  <div class="byline">→ CNN · Detroit News · Reuters review · NBC · Boston.com</div>
+</section>
+
+<!-- ===================== 03 ROSE ALERT STAMP — EU AI ACT ===================== -->
+<section class="spread s03">
+  <div>
+    <div class="kicker">GovTech · Brussels dispatch</div>
+    <div class="num">03</div>
+  </div>
+  <div>
+    <h2>Brussels pulls<br>the leash on Grok.</h2>
+    <div class="deck">
+      On the cusp of the AI Act's full August enforcement, the Commission has ordered X to preserve every byte of its chatbot's output.
+    </div>
+    <div class="body">
+      A January order required X to retain all internal data tied to Grok after the platform's "Spicy Mode" was accused of generating non-consensual imagery and disinformation. Article 50 — mandating disclosure of AI interactions, watermarking of synthetic media, and labeling of political deepfakes — becomes fully enforceable on 2 August 2026. Only eight of twenty-seven member states report readiness. Fines can reach six percent of global turnover.
+    </div>
+  </div>
+  <div class="byline">
+    <span>Enforcement begins</span>
+    <span>Tech Policy Press · HSF Kramer · European Business</span>
+  </div>
+</section>
+
+<!-- ===================== 04 TERMINAL — AGENTIC CANVASSING ===================== -->
+<section class="spread s04">
+  <div class="barline">────────────────────── MORNING_EDITION // 04 // TERMINAL.LIVE ──────────────────────</div>
+  <div>
+    <div class="num">&gt;&nbsp;04</div>
+    <div class="prompt">$ deploy --agent=colloquy --task=gotv --voters=unlimited_</div>
+    <h2>Nobody knocked.<br>The door answered<br>anyway.</h2>
+    <div class="deck">
+      Chemeria's Colloquy Agentic AI promises to retire door-knocking as a campaign ritual. The pitch: inbound voter Q&amp;A, volunteer sign-ups, event scheduling, polling, and GOTV reminders, run by agents that don't sleep and don't quit. Paid staff goes down. Coverage goes up. Accountability is an open question.
+    </div>
+    <div class="scan">
+      <div><b>STACK</b>Conversational agents, LLM-backed · integrated CRM · real-time sentiment scoring</div>
+      <div><b>DEPLOYMENT</b>GOTV, volunteer ops, rapid-response messaging across SMS and voice</div>
+      <div><b>RISK</b>Scaled persuasion. Consent. Trust. "A very slippery slope." — researchers</div>
+      <div><b>PRECEDENT</b>Ashley (2023) · Wisconsin Convos (2026) · and now an agentic default</div>
+    </div>
+  </div>
+  <div class="byline"><span>// The AI Journal · MarketersMedia</span><span>[END OF FEED]</span></div>
+</section>
+
+<!-- ===================== 05 ACADEMIC DROP-CAP — ANTHROPIC $20M ===================== -->
+<section class="spread s05">
+  <div>
+    <div class="badge">Essay · AI in Politics · 05</div>
+    <h2>Twenty million<br>dollars to choose the<br>next AI regulator.</h2>
+  </div>
+  <div class="body">
+    Anthropic pledged twenty million dollars to Public First Action, a super-PAC supporting candidates friendly to AI guardrails, in what may be the clearest sign yet that model labs have become first-rank political actors. The money arrives in a cycle where rival AI-industry PACs are already outspending issue groups across the Texas and North Carolina primaries. Whatever one thinks of the lab's stated mission, the precedent is plain: the producers of the technology now fund the lawmakers who will govern it, and the ads those candidates run will be shaped by tools their own benefactors build. The frame is no longer public-interest philanthropy. It is industrial policy, fought on cable and on TikTok, with the same logic as energy, banking, or defense before it. The rest of the cycle will test whether "guardrail" is a policy or a brand.
+  </div>
+  <div class="num">05</div>
+  <div class="byline">Essay · compiled from NBC News · Quartz · CalMatters</div>
+</section>
+
+<!-- ===================== 06 BIG-STAT — AD SPEND ===================== -->
+<section class="spread s06">
+  <div class="kicker">By the numbers · 06 · Political Campaigning</div>
+  <div class="stat">$10.8B</div>
+  <div>
+    <h2>The most expensive midterm in American history — and it hasn't even peaked.</h2>
+    <div class="deck">
+      Political advertising on track to top ten-point-eight billion dollars — more than twenty percent above 2022. YouTube overtakes broadcast; TikTok swallows the margins; AI-generated creative drives cost per spot toward zero. The map of attention is being redrawn in real time.
+    </div>
+  </div>
+  <div class="byline"><span>OpenSecrets · EyesOver · Axios</span><span>Read time · 3 min</span></div>
+</section>
+
+<!-- ===================== 07 EDITORIAL PHOTO-CAPTION — WI CHATBOT ===================== -->
+<section class="spread s07">
+  <div class="frame">
+    <div class="num">07</div>
+    <div class="quote">"Grassroots organizing — at a scale grassroots has never had."</div>
+  </div>
+  <div class="caption">
+    <h2>Wisconsin's million-voter chatbot.</h2>
+    <div class="body">
+      <b>GovTech · Voter Contact</b>
+      An AI virtual assistant texted 1.1 million Wisconsin voters during the state's Supreme Court race; more than 10,000 talked back. The tool targeted "undecideds" at statewide scale — a modest experiment in 2025, a template for 2026. Critics call it a "slippery slope." Operators call it a field staff that never goes home.
+    </div>
+  </div>
+  <div class="byline"><span>WPR · Wisconsin Law Journal</span><span>Dispatch · Madison</span></div>
+</section>
+
+<!-- ===================== 08 SPLIT DIPTYCH — GOP vs DEMS AI ===================== -->
+<section class="spread s08">
+  <div class="headline">08 · The Partisan AI Gap</div>
+  <div class="side red">
+    <div class="num">R</div>
+    <h2>Republicans are<br>shipping with<br>AI-by-default.</h2>
+    <div class="body">
+      Sixty-four percent of GOP consultants now use AI daily — from synthetic voter panels (Aaru) that poll imagined constituents, to ad creative, to donor-targeting. The NRSC has an in-house AI shop. Spending scales linearly with shipped experiments.
+    </div>
+    <div class="stat">64%</div>
+    <div class="label">Use AI daily</div>
+    <div class="byline">Via Axios · 14 April</div>
+  </div>
+  <div class="side blue">
+    <div class="num">D</div>
+    <h2>Democrats are<br>hedging — and<br>falling behind.</h2>
+    <div class="body">
+      Forty-nine percent of Dem operatives touch AI daily. Privacy fears, union pressure, and job-displacement anxiety keep ads "artisanal." One senior strategist: "We're still debating the ethics while they're cutting the ad."
+    </div>
+    <div class="stat">49%</div>
+    <div class="label">Use AI daily</div>
+    <div class="byline">Via Axios · NBC News</div>
+  </div>
+</section>
+
+<!-- ===================== 09 INFLUENCER / TIKTOK ===================== -->
+<section class="spread s09">
+  <div class="num">09</div>
+  <div>
+    <span class="kicker">Social Media Trends · Under the Influencers</span>
+    <h2>The water cooler is vertical, algorithmic, and for rent.</h2>
+    <div class="deck">
+      Campaigns now credential TikTok creators with the same lanyard as press. Harry Sisson pushes 100 million views for the Democratic Party — a volume rivaling legacy outlets. The FEC has not yet touched paid-creator disclosure, and so a parallel ad market has opened, unregulated.
+    </div>
+    <div class="tags">
+      <span>#CreatorAccess</span>
+      <span>#FECLoophole</span>
+      <span>#GenZPol</span>
+      <span>#AttentionEconomy</span>
+      <span>#PaidOrOrganic?</span>
+    </div>
+    <div class="stats">
+      <div><b>28%</b><span>TikTok news creators lean left</span></div>
+      <div><b>25%</b><span>TikTok news creators lean right</span></div>
+      <div><b>100M</b><span>Views driven by one Gen-Z creator</span></div>
+    </div>
+  </div>
+  <div class="byline"><span>Pew · Harvard Political Review · City &amp; State</span><span>Feature · Platform report</span></div>
+</section>
+
+<!-- ===================== 10 LONG-FORM ESSAY — BRAZIL ===================== -->
+<section class="spread s10">
+  <div class="num">10</div>
+  <div class="kicker">Global Elections · São Paulo · Analysis</div>
+  <h2>Brazil braces for<br>a laboratory of lies.</h2>
+  <div class="deck">
+    Lula, Flavio Bolsonaro, WhatsApp, and a decade of muscle-memory disinformation — six months out, the October vote is already a case study.
+  </div>
+  <div class="body">
+    <p>President Lula is reportedly recalibrating his 2026 message toward an anti-elite register, a tonal shift aimed squarely at voters who carried the Bolsonaro project. Against him: Flavio Bolsonaro, an heir playing his father's hand without his father's distraction, and a movement whose ground game was always digital.</p>
+    <p>The playbook is familiar. In past cycles, pastors and politicians laundered claims on Facebook that Lula planned to close churches. False allegations that he was an anti-Christian crusader reached 142 million Twitter accounts. WhatsApp delivered a daily, forwardable drip — industrial in scale, intimate in delivery — into the phones of tens of millions of Brazilians.</p>
+    <p>Lula's response — an Office for the Defense of Democracy — has institutionalized counter-disinformation inside the executive. The judiciary has widened its jurisdiction over political speech online. Both are unpopular with a platform sector that prefers friction over rule.</p>
+    <p>What makes 2026 different is the tooling. Generative models produce campaign-grade video at negligible cost. The same WhatsApp that carried the rumors now carries AI-generated "news anchors" reading fabricated scripts. The Commission's Brussels standard will not apply. The FEC's non-intervention offers no guide. Brazil will decide its next president in the first election where synthetic media is the default medium of political speech.</p>
+  </div>
+  <div class="byline"><span>Bloomberg · PBS News · Reuters Institute</span><span>Essay · 6 min</span></div>
+</section>
+
+<!-- ===================== COLOPHON ===================== -->
+<section class="spread colophon">
+  <div class="mono">— End of Issue · Morning Edition —</div>
+  <h3>Ten windows onto one new politics.</h3>
+  <p>
+    Curated automatically, daily at 08:00, from the front pages of The Washington Post, The New York Times, Campaigns &amp; Elections, The Economist, The Atlantic, Axios, Reuters, CNN, Al Jazeera, Bloomberg, Pew, and peer outlets. Filed for Ben.
+  </p>
+  <div class="sig">—ME.</div>
+  <div class="mono">Volume I · Issue 104 · 15 April 2026</div>
+</section>
+
+</body>
+</html>
