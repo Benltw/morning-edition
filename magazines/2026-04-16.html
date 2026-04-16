@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MORNING EDITION — Thursday, April 16, 2026</title>
+<meta name="description" content="A daily magazine for the politics-tech curious — AI, elections, campaigns, and the machinery of power. Issue 105, 16 April 2026." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Morning Edition — 16 April 2026" />
+<meta property="og:description" content="AI super PACs amass $140 million for midterms, Hungary charts life after Orban, and social media fractures along party lines." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-04-16.html" />
+<meta property="og:site_name" content="Morning Edition" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Morning Edition — 16 April 2026" />
+<meta name="twitter:description" content="Ten stories shaping political technology today." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4efe3;
+    --parchment:#eee4cc;
+    --ink:#111015;
+    --midnight:#0a0f1f;
+    --crimson:#c7221f;
+    --rose:#e84855;
+    --gold:#c9a227;
+    --teal:#0d5c63;
+    --terminal:#00ff88;
+    --slate:#2c2f3a;
+    --lavender:#e8e0f0;
+    --blush:#f5e6e0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;}
+  body{font-size:20px;line-height:1.45;}
+  .spread{
+    min-height:100vh;
+    padding:6vh 7vw;
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .rule{height:2px;background:currentColor;width:100%;}
+  .rule-thin{height:1px;background:currentColor;width:100%;opacity:.6;}
+
+  /* ============ MASTHEAD ============ */
+  .masthead{background:var(--cream);color:var(--ink);border-bottom:4px double var(--ink);}
+  .masthead .topbar{display:flex;justify-content:space-between;align-items:center;font-family:'Inter';font-weight:600;letter-spacing:.12em;font-size:18px;text-transform:uppercase;padding-bottom:2vh;}
+  .masthead h1{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 100,"WONK" 1;
+    font-size:clamp(90px,17vw,280px);
+    line-height:.82;
+    letter-spacing:-.03em;
+    margin:3vh 0 1vh 0;
+    font-style:italic;
+  }
+  .masthead .tagline{
+    font-family:'Fraunces',serif;
+    font-size:clamp(26px,3vw,44px);
+    font-weight:400;
+    font-style:italic;
+    color:var(--crimson);
+    margin-top:2vh;
+    max-width:22ch;
+    line-height:1.1;
+  }
+  .masthead .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:5vh;font-size:20px;font-weight:500;}
+  .masthead .meta span{padding:6px 18px;background:var(--ink);color:var(--cream);border-radius:999px;letter-spacing:.08em;text-transform:uppercase;font-size:17px;}
+  .masthead .lede{
+    font-family:'Fraunces',serif;
+    font-size:clamp(28px,2.6vw,38px);
+    line-height:1.25;
+    max-width:34ch;
+    margin-top:4vh;
+    color:#2a2a30;
+  }
+
+  /* ============ CONTENTS ============ */
+  .contents{background:var(--ink);color:var(--cream);}
+  .contents .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:20px;color:var(--gold);}
+  .contents h2{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(70px,10vw,160px);line-height:.95;margin:3vh 0;letter-spacing:-.02em;}
+  .contents ol{list-style:none;counter-reset:c;display:grid;grid-template-columns:1fr 1fr;gap:2vh 5vw;margin-top:4vh;}
+  .contents ol li{counter-increment:c;display:flex;gap:1.5vw;align-items:baseline;border-top:1px solid rgba(244,239,227,.3);padding-top:1.2vh;font-size:22px;line-height:1.25;}
+  .contents ol li::before{content:counter(c,decimal-leading-zero);font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:42px;color:var(--gold);min-width:1.5em;}
+  .contents ol li .t{font-family:'Fraunces',serif;font-size:26px;line-height:1.15;font-weight:500;}
+  .contents ol li .s{display:block;font-family:'Inter';font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#9a9a9a;font-weight:600;margin-top:.4em;}
+
+  /* ============ 01 HERO GRADIENT — AI Super PACs ============ */
+  .s01{
+    background:radial-gradient(ellipse at 15% 50%, #1a0a3e 0%, #2d1066 30%, #4a1a8a 60%, #6b21a8 100%);
+    color:var(--cream);
+  }
+  .s01 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(200px,30vw,520px);
+    line-height:.8;
+    position:absolute;
+    top:2vh;right:6vw;
+    opacity:.18;
+    font-variation-settings:"WONK" 1;
+    font-style:italic;
+    color:#d4a0ff;
+  }
+  .s01 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--gold);}
+  .s01 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(80px,11vw,200px);
+    line-height:.88;
+    letter-spacing:-.025em;
+    margin:3vh 0;
+    max-width:16ch;
+  }
+  .s01 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.25;max-width:34ch;}
+  .s01 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#e8ddf5;}
+  .s01 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid rgba(244,239,227,.5);padding-top:2vh;}
+
+  /* ============ 02 DARK / MIDNIGHT — Hungary ============ */
+  .s02{
+    background:var(--midnight);
+    color:var(--cream);
+    border-left:8px solid var(--gold);
+  }
+  .s02 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(180px,26vw,440px);
+    line-height:.8;
+    position:absolute;
+    bottom:4vh;right:5vw;
+    opacity:.12;
+    font-style:italic;
+    color:var(--gold);
+  }
+  .s02 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--teal);}
+  .s02 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(72px,10vw,180px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:3vh 0;
+    max-width:14ch;
+  }
+  .s02 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.25;max-width:30ch;color:#b0c8d0;}
+  .s02 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#c0c0cc;}
+  .s02 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--gold);padding-top:2vh;}
+
+  /* ============ 03 ROSE ALERT STAMP — GOP vs Dems on AI ============ */
+  .s03{
+    background:var(--cream);
+    color:var(--ink);
+    position:relative;
+  }
+  .s03::after{
+    content:'ALERT';
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%) rotate(-18deg);
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(120px,22vw,380px);
+    color:var(--rose);
+    opacity:.08;
+    letter-spacing:.08em;
+    pointer-events:none;
+  }
+  .s03 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(140px,20vw,360px);
+    line-height:.8;
+    position:absolute;
+    top:3vh;left:6vw;
+    opacity:.10;
+    font-style:italic;
+    color:var(--rose);
+  }
+  .s03 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--rose);}
+  .s03 .stamp{
+    display:inline-block;
+    border:4px solid var(--rose);
+    padding:12px 28px;
+    font-family:'Inter';
+    font-weight:800;
+    font-size:24px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--rose);
+    transform:rotate(-3deg);
+    margin:3vh 0 2vh 0;
+  }
+  .s03 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(64px,9vw,160px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:18ch;
+  }
+  .s03 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.25;max-width:32ch;color:#444;}
+  .s03 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;}
+  .s03 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--rose);padding-top:2vh;}
+
+  /* ============ 04 TERMINAL — AI Propaganda ============ */
+  .s04{
+    background:#0c0c0c;
+    color:var(--terminal);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .s04 .num{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:800;
+    font-size:clamp(160px,24vw,400px);
+    line-height:.8;
+    position:absolute;
+    top:3vh;right:5vw;
+    opacity:.15;
+    color:var(--terminal);
+  }
+  .s04 .kicker{font-family:'JetBrains Mono',monospace;font-weight:600;letter-spacing:.2em;font-size:18px;text-transform:uppercase;color:#666;}
+  .s04 .prompt{color:#666;font-size:22px;margin:2vh 0 1vh 0;}
+  .s04 .prompt span{color:var(--terminal);}
+  .s04 h2{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:800;
+    font-size:clamp(48px,7vw,120px);
+    line-height:.95;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:20ch;
+    color:#fff;
+  }
+  .s04 .deck{font-family:'JetBrains Mono',monospace;font-weight:400;font-size:clamp(20px,2vw,30px);line-height:1.3;max-width:40ch;color:var(--terminal);}
+  .s04 .body{font-family:'Inter',sans-serif;font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#a0a0a0;}
+  .s04 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:16px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:1px solid #333;padding-top:2vh;color:#666;}
+
+  /* ============ 05 BIG STAT — $10.8 Billion ============ */
+  .s05{
+    background:linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color:var(--cream);
+    text-align:center;
+    align-items:center;
+  }
+  .s05 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--gold);}
+  .s05 .bignum{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(100px,20vw,320px);
+    line-height:.85;
+    letter-spacing:-.03em;
+    color:var(--gold);
+    margin:3vh 0 1vh 0;
+    text-shadow:0 4px 40px rgba(201,162,39,.3);
+  }
+  .s05 .bignum-unit{
+    font-family:'Inter';
+    font-weight:300;
+    font-size:clamp(28px,4vw,56px);
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#8899bb;
+    margin-bottom:2vh;
+  }
+  .s05 h2{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:clamp(40px,5vw,90px);
+    line-height:1;
+    letter-spacing:-.02em;
+    max-width:20ch;
+    margin:0 auto;
+  }
+  .s05 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,32px);line-height:1.3;max-width:38ch;margin:2vh auto 0 auto;color:#99aabb;}
+  .s05 .body{font-family:'Inter';font-size:20px;line-height:1.55;max-width:54ch;margin:3vh auto 0 auto;text-align:left;columns:2;column-gap:3vw;color:#bbc8dd;}
+  .s05 .byline{margin-top:auto;width:100%;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--gold);padding-top:2vh;}
+
+  /* ============ 06 ACADEMIC DROP-CAP — Data Centers ============ */
+  .s06{
+    background:var(--parchment);
+    color:var(--ink);
+  }
+  .s06 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(160px,24vw,400px);
+    line-height:.8;
+    position:absolute;
+    bottom:3vh;right:4vw;
+    opacity:.08;
+    font-style:italic;
+    color:var(--teal);
+  }
+  .s06 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--teal);}
+  .s06 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(60px,8vw,140px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:3vh 0;
+    max-width:18ch;
+    color:var(--ink);
+  }
+  .s06 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:30ch;color:#555;}
+  .s06 .body{font-size:20px;line-height:1.6;max-width:60ch;margin-top:3vh;columns:2;column-gap:3vw;}
+  .s06 .body::first-letter{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:96px;
+    float:left;
+    line-height:.75;
+    margin:0 12px 0 0;
+    color:var(--teal);
+  }
+  .s06 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--teal);padding-top:2vh;}
+
+  /* ============ 07 SPLIT DIPTYCH — Social Media Fractures ============ */
+  .s07{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:100vh;
+    padding:0;
+  }
+  .s07 .left{
+    background:#1a1a2e;
+    color:var(--cream);
+    padding:6vh 5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .s07 .right{
+    background:var(--cream);
+    color:var(--ink);
+    padding:6vh 5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .s07 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(120px,14vw,240px);
+    line-height:.8;
+    opacity:.15;
+    font-style:italic;
+  }
+  .s07 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:18px;text-transform:uppercase;}
+  .s07 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(44px,6vw,100px);
+    line-height:.9;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+  }
+  .s07 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(20px,2vw,28px);line-height:1.25;}
+  .s07 .body-col{font-size:19px;line-height:1.55;margin-top:2vh;}
+  .s07 .byline{font-size:16px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid currentColor;padding-top:1.5vh;margin-top:auto;}
+
+  /* ============ 08 EDITORIAL PHOTO-CAPTION — Democracy & Social Media ============ */
+  .s08{
+    background:#f0e8e0;
+    color:var(--ink);
+  }
+  .s08 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(180px,26vw,440px);
+    line-height:.8;
+    position:absolute;
+    top:2vh;left:5vw;
+    opacity:.06;
+    font-style:italic;
+    color:var(--crimson);
+  }
+  .s08 .photo-frame{
+    background:var(--ink);
+    color:var(--cream);
+    padding:4vh 4vw;
+    margin:3vh 0;
+    position:relative;
+  }
+  .s08 .photo-frame .caption-num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:72px;
+    color:var(--gold);
+    position:absolute;
+    top:-18px;left:20px;
+  }
+  .s08 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--crimson);}
+  .s08 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(56px,8vw,140px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:18ch;
+  }
+  .s08 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:30ch;color:#555;}
+  .s08 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:2vh;columns:2;column-gap:3vw;}
+  .s08 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--crimson);padding-top:2vh;}
+
+  /* ============ 09 GRADIENT SOCIAL — CISA Rebuilds ============ */
+  .s09{
+    background:linear-gradient(160deg, #0d5c63 0%, #0a4a50 40%, #134e5e 70%, #2a8a7e 100%);
+    color:var(--cream);
+  }
+  .s09 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(160px,24vw,400px);
+    line-height:.8;
+    position:absolute;
+    top:4vh;right:5vw;
+    opacity:.15;
+    font-style:italic;
+    color:#7ee8d0;
+  }
+  .s09 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:#a0f0d8;}
+  .s09 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(64px,9vw,170px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:3vh 0;
+    max-width:16ch;
+  }
+  .s09 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:32ch;color:#c0e8dd;}
+  .s09 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#d0e8e0;}
+  .s09 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid #7ee8d0;padding-top:2vh;}
+
+  /* ============ 10 NEWSPRINT ESSAY — AI in British Politics ============ */
+  .s10{
+    background:#faf6ee;
+    color:var(--ink);
+    border-top:6px solid var(--ink);
+  }
+  .s10 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(140px,20vw,360px);
+    line-height:.8;
+    position:absolute;
+    bottom:3vh;left:4vw;
+    opacity:.06;
+    font-style:italic;
+  }
+  .s10 .dateline{
+    font-family:'Inter';
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:1vh;
+    margin-bottom:2vh;
+    display:flex;
+    justify-content:space-between;
+  }
+  .s10 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--crimson);}
+  .s10 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(56px,7vw,120px);
+    line-height:.9;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:20ch;
+  }
+  .s10 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:34ch;color:#555;margin-bottom:3vh;}
+  .s10 .essay{
+    columns:3;
+    column-gap:3vw;
+    column-rule:1px solid #ccc;
+    font-size:19px;
+    line-height:1.6;
+  }
+  .s10 .essay::first-letter{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:80px;
+    float:left;
+    line-height:.75;
+    margin:0 10px 0 0;
+    color:var(--crimson);
+  }
+  .s10 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--ink);padding-top:2vh;}
+
+  /* ============ COLOPHON ============ */
+  .colophon{background:var(--ink);color:var(--cream);text-align:center;align-items:center;justify-content:center;min-height:60vh;}
+  .colophon h2{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(48px,8vw,130px);line-height:.95;letter-spacing:-.02em;margin-bottom:3vh;}
+  .colophon .note{font-size:20px;max-width:42ch;margin:0 auto;line-height:1.5;color:#999;}
+  .colophon .sig{font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:28px;margin-top:4vh;color:var(--gold);}
+  .colophon .issue{font-size:16px;letter-spacing:.2em;text-transform:uppercase;margin-top:2vh;color:#555;}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:900px){
+    .contents ol{grid-template-columns:1fr;}
+    .s07{grid-template-columns:1fr;grid-template-rows:auto auto;}
+    .s01 .body,.s02 .body,.s03 .body,.s04 .body,.s05 .body,.s06 .body,.s08 .body,.s09 .body{columns:1;}
+    .s10 .essay{columns:1;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================== MASTHEAD ============================== -->
+<section class="spread masthead">
+  <div>
+    <div class="topbar">
+      <span>Issue 105</span>
+      <span>Thursday, 16 April 2026</span>
+    </div>
+    <div class="rule"></div>
+    <h1>Morning Edition</h1>
+    <p class="tagline">The machinery of power, decoded daily</p>
+    <div class="meta">
+      <span>AI &amp; Politics</span>
+      <span>GovTech</span>
+      <span>Global Elections</span>
+      <span>Campaigns</span>
+      <span>Social Media</span>
+    </div>
+  </div>
+  <p class="lede">AI money floods the midterms, Hungary begins life after Orban, and America's social platforms fracture along party lines.</p>
+</section>
+
+<!-- ============================== TABLE OF CONTENTS ============================== -->
+<section class="spread contents">
+  <div>
+    <p class="kicker">Today's Briefing</p>
+    <h2>Contents</h2>
+    <div class="rule-thin" style="background:var(--gold);"></div>
+    <ol>
+      <li><div><span class="t">AI Super PACs Amass $140 Million War Chest for the Midterms</span><span class="s">AI in Politics</span></div></li>
+      <li><div><span class="t">Hungary After Orban: Magyar's Landslide Reshapes Europe</span><span class="s">Global Elections</span></div></li>
+      <li><div><span class="t">GOP Goes All-In on AI Campaigning; Democrats Ban the Bots</span><span class="s">Political Technology</span></div></li>
+      <li><div><span class="t">AI Agents Can Now Run Propaganda Campaigns Without Human Direction</span><span class="s">AI in Politics</span></div></li>
+      <li><div><span class="t">The $10.8 Billion Midterm: Most Expensive Non-Presidential Cycle Ever</span><span class="s">Political Campaigning</span></div></li>
+      <li><div><span class="t">Data Centers Are the New "Cost of Eggs" in Midterm Politics</span><span class="s">GovTech</span></div></li>
+      <li><div><span class="t">Social Media Splinters Along Partisan Lines</span><span class="s">Social Media Trends</span></div></li>
+      <li><div><span class="t">Heavy Social Media Use Erodes Belief in Democracy, Poll Finds</span><span class="s">Social Media Trends</span></div></li>
+      <li><div><span class="t">CISA Reverses Course: 300 New Hires After DOGE Gutted Its Ranks</span><span class="s">GovTech</span></div></li>
+      <li><div><span class="t">The Silent Coup: AI's Quiet Takeover of British Politics</span><span class="s">AI in Politics</span></div></li>
+    </ol>
+  </div>
+  <div class="rule-thin" style="background:var(--gold);margin-top:5vh;"></div>
+</section>
+
+<!-- ============================== 01 — AI Super PACs ============================== -->
+<section class="spread s01">
+  <div class="num">01</div>
+  <div>
+    <p class="kicker">AI in Politics</p>
+    <h2>$140 Million and Counting</h2>
+    <p class="deck">A single AI-aligned super PAC has raised $140 million for the 2026 cycle, making Silicon Valley the midterms' most aggressive new power broker.</p>
+  </div>
+  <div class="body">
+    Leading the Future, the political action committee launched in 2025 with backing from top AI companies and investors, announced this week that it raised $15 million in the first quarter of 2026 alone, bringing its total haul for the cycle to $140 million. The group's backers read like a roster of Silicon Valley's most influential figures: venture capital firm Andreessen Horowitz, OpenAI co-founder Greg Brockman, Palantir co-founder Joe Lonsdale, SV Angel founder Ron Conway, and AI search company Perplexity. Their shared agenda is clear. Leading the Future opposes state-by-state AI regulation and supports candidates who favor a single national regulatory framework, arguing that a patchwork of local rules stifles innovation. But the money has drawn pushback. A rival PAC, Public First Action, has staked out the opposite position, calling for state-level authority over AI rules, legal protections for whistleblowers who expose dangerous activity by AI companies, and mandatory disclosure when firms developing advanced AI systems undertake new capabilities. In Texas, AI-aligned super PACs have already poured millions into congressional races, turning previously sleepy districts into testing grounds for the industry's political ambitions.
+  </div>
+  <div class="byline">
+    <span>Sources: CNBC, ABC News, Houston Public Media</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 02 — Hungary ============================== -->
+<section class="spread s02">
+  <div class="num">02</div>
+  <div>
+    <p class="kicker">Global Elections</p>
+    <h2>After Orban</h2>
+    <p class="deck">Peter Magyar's Tisza party ends Viktor Orban's 16-year grip on Hungary, sending shockwaves from Brussels to the Kremlin.</p>
+  </div>
+  <div class="body">
+    In a result that few would have predicted two years ago, Peter Magyar's Tisza party secured a commanding 138 seats in the Hungarian parliament on Sunday, toppling Viktor Orban in the most dramatic transfer of power in Central Europe in a generation. Orban, who had served as prime minister since 2010 and had remade Hungary's institutions in his image, conceded defeat on election night. Magyar, a former Orban loyalist who burst onto the opposition scene in 2024, ran a campaign built on anti-corruption pledges, renewed European integration, and a promise to restore judicial independence. The result is already reverberating across the continent. For the European Union, Magyar's victory signals the potential return of Hungary as a cooperative member state after years of vetoes and obstruction under Orban. For NATO and western allies watching the war in Ukraine, the election removes one of Russia's most prominent sympathizers from power in an EU capital. Orban had repeatedly accused the EU of warmongering over the Russia-Ukraine conflict. Analysts in Budapest caution that the transition will not be seamless. Orban's Fidesz party still commands loyalists throughout the judiciary, state media, and civil service. Magyar now faces the monumental task of governing a polarized nation while dismantling the institutional capture that defined Orban's tenure.
+  </div>
+  <div class="byline">
+    <span>Sources: CNN, Al Jazeera, Foreign Policy</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 03 — GOP vs Dems on AI ============================== -->
+<section class="spread s03">
+  <div class="num">03</div>
+  <div>
+    <p class="kicker">Political Technology</p>
+    <div class="stamp">Partisan Divide</div>
+    <h2>The AI Campaign Gap</h2>
+    <p class="deck">Republicans are using AI to generate ads, mine donor data, and micro-target voters. Democrats have banned it from their own headquarters.</p>
+  </div>
+  <div class="body">
+    The technological divide between the two major U.S. parties has never been starker. The National Republican Senatorial Committee is deploying artificial intelligence to create campaign advertisements, analyze voter data, and identify new small-dollar donors. The technology has allowed the NRSC to produce more content at lower cost and to test messaging variations at a speed that human teams alone cannot match. On the other side of the aisle, the Democratic National Committee has barred its staffers from using ChatGPT, Claude, and other commercial AI tools, citing privacy risks and concerns about job displacement within the party apparatus. Democratic operatives describe a culture of wariness, where the potential of AI is acknowledged in private but resisted in practice. Campaign professionals who spoke at a recent George Washington University forum stressed that the gap is becoming strategically significant. With $10.8 billion in projected ad spending, the party that can produce and optimize content faster holds a structural advantage. Others warn that speed without ethical guardrails risks eroding voter trust. The question heading into November is whether the Democrats' caution will prove principled or simply costly.
+  </div>
+  <div class="byline">
+    <span>Sources: Axios, GW Hatchet</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 04 — AI Propaganda ============================== -->
+<section class="spread s04">
+  <div class="num">04</div>
+  <div>
+    <p class="kicker">// AI in Politics</p>
+    <p class="prompt">$ research --field="info-ops" --status=<span>CRITICAL</span></p>
+    <h2>Autonomous Propaganda Machines</h2>
+    <p class="deck">&gt; USC researchers show that networks of AI agents can coordinate disinformation campaigns with zero human oversight.</p>
+  </div>
+  <div class="body">
+    A study accepted at The Web Conference 2026, authored by researchers at USC's Information Sciences Institute, has demonstrated that even simple AI agents can autonomously coordinate, amplify each other, and push shared narratives online without any human control. The researchers created a simulated social media environment modeled on X, populated with 50 AI agents: 10 designated as influence operators and 40 as ordinary users. With only a goal and a team designation, the operator agents independently wrote their own posts, learned what worked, copied their teammates' successful approaches, and echoed each other's content. When the experiment was scaled to 500 agents, the results held. The agents developed emergent coordinated behaviors, organically forming amplification networks that would be difficult for platform moderation systems to detect. The implications for the 2026 midterms and beyond are sobering. A hostile government, political operative, or bad actor could set a broad objective and delegate the execution entirely to AI, making influence operations faster, cheaper, and far harder to trace. The researchers recommend that platforms shift their detection strategies from analyzing individual post content to studying behavioral patterns across accounts, looking for synchronized timing, content mirroring, and rapid mutual reinforcement among otherwise unconnected profiles.
+  </div>
+  <div class="byline">
+    <span>Sources: USC Viterbi, TechXplore, Digital Trends</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 05 — $10.8 Billion ============================== -->
+<section class="spread s05">
+  <p class="kicker">Political Campaigning</p>
+  <div class="bignum">$10.8B</div>
+  <div class="bignum-unit">Projected Midterm Ad Spending</div>
+  <h2>The Most Expensive Non-Presidential Election in History</h2>
+  <p class="deck">Political advertising will exceed every prior midterm cycle by more than 20 percent, with connected TV emerging as the fastest-growing channel.</p>
+  <div class="body">
+    AdImpact's 2026 political projections report confirms what campaign operatives have long suspected: this cycle will shatter every spending record for a non-presidential year. The $10.8 billion projection represents a more-than-20-percent increase over the $8.9 billion spent in 2022. Senate spending alone is projected to reach $2.8 billion, beating the all-time Senate record set in 2024. House spending will cross the $2 billion threshold for the first time. Broadcast television still commands 49 percent of total spend, but connected TV is surging at nearly $2.5 billion, reflecting the shift in how Americans consume media. Geographically, California leads with a projected $1.1 billion in ad spending, driven by competitive House races and a closely watched gubernatorial contest. Michigan follows at nearly $1 billion. The Assembly consultancy projects that with control of both chambers of Congress up for grabs, ad rates will hit premiums not seen since the 2020 presidential cycle. For local broadcasters and digital platforms alike, the midterms represent a once-in-two-years revenue bonanza that will test inventory limits across every screen.
+  </div>
+  <div class="byline">
+    <span>Sources: OpenSecrets, Campaigns &amp; Elections, AdImpact</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 06 — Data Centers ============================== -->
+<section class="spread s06">
+  <div class="num">06</div>
+  <div>
+    <p class="kicker">GovTech</p>
+    <h2>The New "Cost of Eggs"</h2>
+    <p class="deck">Rising electricity bills, driven by AI data center demand, are fast becoming a kitchen-table campaign issue in swing-state America.</p>
+  </div>
+  <div class="body">
+    Electricity costs in communities near large data center developments have risen by as much as 267 percent compared with 2020 levels. Nationally, residential electricity prices climbed 6 percent in 2025 alone. These numbers are turning an infrastructure question into a voter revolt. A 2026 Politico national survey found that nearly half of Americans expect data center energy costs to be a campaign issue this cycle. Candidates across the political spectrum are responding. From the left, Senator Bernie Sanders has called for a moratorium on new data center construction until affordability protections are in place. From the right, former Florida Governor Ron DeSantis has joined the skeptics, arguing that Big Tech should not be allowed to externalize infrastructure costs onto residential ratepayers. The bipartisan anger has prompted policy responses at every level of government. States are proposing construction moratoriums, new taxes on hyperscale facilities, and large-load utility tariffs. Big Tech lobbying, meanwhile, has reached unprecedented intensity. The Trump administration signed a Ratepayer Protection Pledge in March, a non-binding commitment to make technology companies bear the full cost of new power generation, substations, transmission lines, and grid upgrades. Whether the pledge translates into enforceable regulation will be one of the defining GovTech questions of the cycle.
+  </div>
+  <div class="byline">
+    <span>Sources: Brookings, Bloomberg, Lawfare, CNBC</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 07 — Social Media Fracture ============================== -->
+<section class="spread s07">
+  <div class="left">
+    <div class="num" style="color:#4488ff;">07</div>
+    <p class="kicker" style="color:#6699ff;">The Right's Platform</p>
+    <h2>X Turns Red</h2>
+    <div class="body-col">
+      On X, formerly Twitter, Republicans now hold a modest majority among active political posters, representing a swing of approximately 73 percentage points since 2020, when Democrats dominated political discourse on the platform with a roughly 56-point advantage. While the overall X user base remains marginally Democratic-leaning, Democratic users have largely retreated from active participation, resulting in a platform where liberal voices are increasingly silent and conservative content dominates the algorithmic feed. The shift has been accelerated by policy changes under Elon Musk's ownership, including the reinstatement of previously banned accounts and changes to content moderation that Republican users have welcomed and Democratic users have protested.
+    </div>
+    <div class="byline" style="border-color:#4488ff;">Source: LSE Impact</div>
+  </div>
+  <div class="right">
+    <div class="num">07</div>
+    <p class="kicker" style="color:var(--teal);">The Left's Exodus</p>
+    <h2>The Bluesky Bet</h2>
+    <div class="body-col">
+      As Republican users consolidated their presence on X, Democrats and progressive voices have fragmented across a constellation of smaller platforms. Bluesky and Mastodon have absorbed the most visible defectors, creating ideologically homogeneous spaces that function more as echo chambers than town squares. The average number of social media platforms used by American adults has fallen, driven in part by a growing share of Americans who have abandoned social media altogether. This selective exit is not uniform: it spans very different demographics, suggesting that platform fatigue is a bipartisan phenomenon even as partisan sorting accelerates among those who remain. Politicians on both sides are adapting, with more leaders launching podcasts and YouTube shows to bypass traditional media gatekeepers entirely, seeking direct, unfiltered channels to reach supporters.
+    </div>
+    <div class="byline" style="border-color:var(--teal);">Source: LSE Impact, Reuters Institute</div>
+  </div>
+</section>
+
+<!-- ============================== 08 — Democracy & Social Media ============================== -->
+<section class="spread s08">
+  <div class="num">08</div>
+  <div>
+    <p class="kicker">Social Media Trends</p>
+    <h2>Scrolling Away from Democracy</h2>
+    <p class="deck">A new national poll finds that the more time Americans spend on social media, the less likely they are to express faith in democratic governance.</p>
+  </div>
+  <div class="photo-frame">
+    <div class="caption-num">08</div>
+    <p style="font-family:'Fraunces',serif;font-size:clamp(26px,3vw,40px);line-height:1.2;font-style:italic;font-weight:400;">
+      "Heavy social media consumers showed measurably lower confidence in elections, institutions, and the value of civic participation itself."
+    </p>
+    <p style="margin-top:1.5vh;font-size:18px;color:#888;letter-spacing:.1em;text-transform:uppercase;">The Washington Post, 2 April 2026</p>
+  </div>
+  <div class="body">
+    The Washington Post reported in early April on a national survey that found a striking correlation between heavy social media use and diminished belief in democratic governance. Respondents who spent more than four hours a day on social platforms were significantly less likely to say that democracy is the best form of government, that elections produce legitimate outcomes, or that civic participation makes a meaningful difference. The findings cut across partisan lines, though the mechanisms differed. Among conservative heavy users, skepticism centered on institutional corruption and election integrity. Among liberal heavy users, the dominant sentiment was futility, a belief that democratic systems are too broken to reform. Researchers cautioned against drawing simple causal arrows, noting that people who are already disillusioned may gravitate toward heavier social media consumption. But the directional finding aligns with a growing body of evidence that algorithmic feeds, designed to maximize engagement through conflict and outrage, are corroding the civic fabric that democracies require to function. The question for the 2026 cycle is whether any political actor has an incentive to address the problem, or whether the platforms' corrosive dynamics simply benefit whoever is best positioned to exploit them.
+  </div>
+  <div class="byline">
+    <span>Source: The Washington Post</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 09 — CISA Rebuilds ============================== -->
+<section class="spread s09">
+  <div class="num">09</div>
+  <div>
+    <p class="kicker">GovTech</p>
+    <h2>CISA Rebuilds from the Ashes</h2>
+    <p class="deck">After DOGE slashed a third of its workforce and $707 million from its budget, America's cybersecurity agency is hiring again.</p>
+  </div>
+  <div class="body">
+    The Cybersecurity and Infrastructure Security Agency is planning to recruit more than 300 people in the coming months, a dramatic reversal for an agency that has lost roughly one-third of its workforce since the start of the second Trump administration. The cuts were driven by Elon Musk's Department of Government Efficiency, which fired more than a hundred CISA employees, including specialized red-team staffers responsible for probing government networks for vulnerabilities. At least 32 cybersecurity-related contracts were cancelled. The White House justified the reductions as part of a broader effort to refocus CISA on its core mission of federal network defense and critical infrastructure resilience while eliminating what it called waste. But cybersecurity experts have warned that the cuts left significant gaps. Supporting critical infrastructure companies and state and local governments after losing thousands of employees and key collaboration tools has become CISA's most pressing challenge. In a leadership shakeup, Madhu Gottumukkala was moved to the DHS role of director of strategic implementation, and acting executive assistant director Nick Andersen now serves as acting CISA director. The hiring push signals an acknowledgment within the administration that the cuts went too deep, though the agency's $707 million budget reduction remains in place. The CIRCIA cybersecurity incident reporting rule, originally due in March, has been delayed until May 2026.
+  </div>
+  <div class="byline">
+    <span>Sources: Federal News Network, TechCrunch, Cybersecurity Dive</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 10 — AI in British Politics ============================== -->
+<section class="spread s10">
+  <div class="num">10</div>
+  <div class="dateline">
+    <span>London</span>
+    <span>New Statesman</span>
+  </div>
+  <div>
+    <p class="kicker">AI in Politics</p>
+    <h2>The Silent Coup</h2>
+    <p class="deck">The New Statesman's April investigation warns that AI is quietly reshaping British governance without public debate, legislative guardrails, or democratic consent.</p>
+  </div>
+  <div class="essay">
+    Across Whitehall and Westminster, artificial intelligence systems are being deployed to make decisions that were once the exclusive domain of elected officials and career civil servants. The New Statesman's April investigation, titled "The Silent Coup," documents how AI tools are now used in welfare eligibility assessments, immigration case prioritization, policing resource allocation, and even parliamentary scheduling. In each case, the technology was adopted through procurement decisions that bypassed meaningful legislative scrutiny. The investigation raises a constitutional question that has no easy answer: who is accountable when an algorithm denies a benefit, delays an asylum claim, or deprioritizes a policing request? Under the current framework, the answer is often no one. Ministers can claim they were not aware of the technical details, and the vendors who built the systems are shielded by commercial confidentiality clauses. The piece draws comparisons to the Post Office Horizon scandal, in which flawed software led to the wrongful prosecution of hundreds of postmasters, arguing that the conditions for a similar systemic failure are being replicated across multiple departments simultaneously. Civil society groups and opposition MPs have called for an AI accountability act that would require algorithmic impact assessments before deployment in public services, mandatory audit trails, and a statutory right for citizens to know when a decision affecting them was made or influenced by an automated system. The government has so far resisted, arguing that excessive regulation would slow the modernization of public services.
+  </div>
+  <div class="byline">
+    <span>Source: New Statesman</span>
+    <span>16 Apr 2026</span>
+  </div>
+</section>
+
+<!-- ============================== COLOPHON ============================== -->
+<section class="spread colophon">
+  <div>
+    <h2>End of Edition</h2>
+    <p class="note">Morning Edition is compiled daily from primary reporting by the world's leading outlets, filtered for the politics-tech intersection. No filler, no fluff, no algorithm.</p>
+    <p class="sig">Morning Edition</p>
+    <p class="issue">Issue 105 &middot; Thursday, 16 April 2026</p>
+  </div>
+</section>
+
+</body>
+</html>
