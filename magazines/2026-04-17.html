@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FIRST COFFEE NEWS — Friday, April 17, 2026</title>
+<meta name="description" content="A daily magazine for the AI, cloud, defense and geopolitics curious — and for anyone watching Germany. Issue No. 003, 17 April 2026." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="First Coffee News — 17 April 2026" />
+<meta property="og:description" content="Anthropic overtakes OpenAI, Germany halves its growth forecast, and Europe quietly drafts a NATO Plan B." />
+<meta property="og:url" content="https://first-coffee-news.netlify.app/magazines/2026-04-17.html" />
+<meta property="og:site_name" content="First Coffee News" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="First Coffee News — 17 April 2026" />
+<meta name="twitter:description" content="Ten stories at the crossroads of AI, cloud, defense, and Europe." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4efe3;
+    --parchment:#eee4cc;
+    --ink:#111015;
+    --midnight:#0a0f1f;
+    --crimson:#c7221f;
+    --rose:#e84855;
+    --gold:#c9a227;
+    --teal:#0d5c63;
+    --terminal:#00ff88;
+    --slate:#2c2f3a;
+    --lavender:#e8e0f0;
+    --blush:#f5e6e0;
+    --steel:#3a4a5c;
+    --forest:#1f3a2e;
+    --bronze:#a0522d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;}
+  body{font-size:20px;line-height:1.45;}
+  .spread{
+    min-height:100vh;
+    padding:6vh 7vw;
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .rule{height:2px;background:currentColor;width:100%;}
+  .rule-thin{height:1px;background:currentColor;width:100%;opacity:.6;}
+  .flag{
+    display:inline-block;
+    font-family:'Inter',sans-serif;
+    font-weight:800;
+    font-size:13px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border:2px solid currentColor;
+    margin-left:12px;
+    vertical-align:middle;
+    border-radius:4px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead{background:var(--cream);color:var(--ink);border-bottom:4px double var(--ink);}
+  .masthead .topbar{display:flex;justify-content:space-between;align-items:center;font-family:'Inter';font-weight:600;letter-spacing:.12em;font-size:18px;text-transform:uppercase;padding-bottom:2vh;}
+  .masthead h1{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 100,"WONK" 1;
+    font-size:clamp(90px,17vw,280px);
+    line-height:.82;
+    letter-spacing:-.03em;
+    margin:3vh 0 1vh 0;
+    font-style:italic;
+  }
+  .masthead .tagline{
+    font-family:'Fraunces',serif;
+    font-size:clamp(26px,3vw,44px);
+    font-weight:400;
+    font-style:italic;
+    color:var(--crimson);
+    margin-top:2vh;
+    max-width:22ch;
+    line-height:1.1;
+  }
+  .masthead .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:5vh;font-size:20px;font-weight:500;}
+  .masthead .meta span{padding:6px 18px;background:var(--ink);color:var(--cream);border-radius:999px;letter-spacing:.08em;text-transform:uppercase;font-size:17px;}
+  .masthead .lede{
+    font-family:'Fraunces',serif;
+    font-size:clamp(28px,2.6vw,38px);
+    line-height:1.25;
+    max-width:34ch;
+    margin-top:4vh;
+    color:#2a2a30;
+  }
+  .masthead .daily-pick{
+    margin-top:5vh;
+    border:3px solid var(--gold);
+    padding:3vh 3vw;
+    position:relative;
+    background:linear-gradient(135deg, rgba(201,162,39,.06) 0%, rgba(201,162,39,.02) 100%);
+  }
+  .masthead .daily-pick .pick-label{
+    position:absolute;
+    top:-14px;left:24px;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    padding:4px 16px;
+  }
+  .masthead .daily-pick .pick-title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(32px,4vw,56px);
+    line-height:.95;
+    letter-spacing:-.02em;
+    margin-top:1vh;
+  }
+  .masthead .daily-pick .pick-reason{
+    font-family:'Inter',sans-serif;
+    font-size:18px;
+    line-height:1.45;
+    color:#555;
+    margin-top:1.5vh;
+    max-width:52ch;
+  }
+  .masthead .daily-pick .pick-tag{
+    display:inline-block;
+    margin-top:1.5vh;
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--crimson);
+  }
+
+  /* ============ CONTENTS ============ */
+  .contents{background:var(--ink);color:var(--cream);}
+  .contents .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:20px;color:var(--gold);}
+  .contents h2{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(70px,10vw,160px);line-height:.95;margin:3vh 0;letter-spacing:-.02em;}
+  .contents ol{list-style:none;counter-reset:c;display:grid;grid-template-columns:1fr 1fr;gap:2vh 5vw;margin-top:4vh;}
+  .contents ol li{counter-increment:c;display:flex;gap:1.5vw;align-items:baseline;border-top:1px solid rgba(244,239,227,.3);padding-top:1.2vh;font-size:22px;line-height:1.25;}
+  .contents ol li::before{content:counter(c,decimal-leading-zero);font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:42px;color:var(--gold);min-width:1.5em;}
+  .contents ol li .t{font-family:'Fraunces',serif;font-size:26px;line-height:1.15;font-weight:500;}
+  .contents ol li .s{display:block;font-family:'Inter';font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#9a9a9a;font-weight:600;margin-top:.4em;}
+  .contents ol li .t .applies{display:inline-block;margin-left:10px;font-family:'Inter';font-style:normal;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1.5px solid var(--gold);padding:3px 9px;border-radius:3px;vertical-align:middle;}
+
+  /* ============ 01 HERO — Anthropic overtakes OpenAI ============ */
+  .s01{
+    background:radial-gradient(ellipse at 80% 30%, #3a1f0a 0%, #4a2811 30%, #6b3a1a 60%, #8a4d25 100%);
+    color:var(--cream);
+  }
+  .s01 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(200px,30vw,520px);
+    line-height:.8;
+    position:absolute;
+    top:2vh;right:6vw;
+    opacity:.18;
+    font-variation-settings:"WONK" 1;
+    font-style:italic;
+    color:#ffd9a8;
+  }
+  .s01 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--gold);}
+  .s01 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(80px,11vw,200px);
+    line-height:.88;
+    letter-spacing:-.025em;
+    margin:3vh 0;
+    max-width:17ch;
+  }
+  .s01 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.25;max-width:34ch;}
+  .s01 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#f3e3d0;}
+  .s01 .applies-flag{display:inline-block;background:var(--gold);color:var(--ink);font-family:'Inter';font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;margin-top:2vh;}
+  .s01 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid rgba(244,239,227,.5);padding-top:2vh;}
+
+  /* ============ 02 DARK / MIDNIGHT — TSMC ============ */
+  .s02{
+    background:var(--midnight);
+    color:var(--cream);
+    border-left:8px solid var(--gold);
+  }
+  .s02 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(180px,26vw,440px);
+    line-height:.8;
+    position:absolute;
+    bottom:4vh;right:5vw;
+    opacity:.12;
+    font-style:italic;
+    color:var(--gold);
+  }
+  .s02 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--teal);}
+  .s02 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(72px,10vw,180px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:3vh 0;
+    max-width:14ch;
+  }
+  .s02 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.25;max-width:30ch;color:#b0c8d0;}
+  .s02 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#c0c0cc;}
+  .s02 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--gold);padding-top:2vh;}
+
+  /* ============ 03 ROSE ALERT STAMP — NATO Plan B ============ */
+  .s03{
+    background:var(--blush);
+    color:var(--ink);
+    position:relative;
+  }
+  .s03::after{
+    content:'ALERT';
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%) rotate(-18deg);
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(120px,22vw,380px);
+    color:var(--rose);
+    opacity:.08;
+    letter-spacing:.08em;
+    pointer-events:none;
+  }
+  .s03 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(140px,20vw,360px);
+    line-height:.8;
+    position:absolute;
+    top:3vh;left:6vw;
+    opacity:.10;
+    font-style:italic;
+    color:var(--rose);
+  }
+  .s03 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--rose);}
+  .s03 .stamp{
+    display:inline-block;
+    border:4px solid var(--rose);
+    padding:12px 28px;
+    font-family:'Inter';
+    font-weight:800;
+    font-size:24px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--rose);
+    transform:rotate(-3deg);
+    margin:3vh 0 2vh 0;
+  }
+  .s03 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(64px,9vw,160px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:18ch;
+  }
+  .s03 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,2.4vw,36px);line-height:1.25;max-width:32ch;color:#444;}
+  .s03 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;}
+  .s03 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--rose);padding-top:2vh;}
+
+  /* ============ 04 TERMINAL — Agent infrastructure ============ */
+  .s04{
+    background:#0c0c0c;
+    color:var(--terminal);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .s04 .num{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:800;
+    font-size:clamp(160px,24vw,400px);
+    line-height:.8;
+    position:absolute;
+    top:3vh;right:5vw;
+    opacity:.15;
+    color:var(--terminal);
+  }
+  .s04 .kicker{font-family:'JetBrains Mono',monospace;font-weight:600;letter-spacing:.2em;font-size:18px;text-transform:uppercase;color:#666;}
+  .s04 .prompt{color:#666;font-size:22px;margin:2vh 0 1vh 0;}
+  .s04 .prompt span{color:var(--terminal);}
+  .s04 h2{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:800;
+    font-size:clamp(48px,7vw,120px);
+    line-height:.95;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:22ch;
+    color:#fff;
+  }
+  .s04 .deck{font-family:'JetBrains Mono',monospace;font-weight:400;font-size:clamp(20px,2vw,30px);line-height:1.3;max-width:44ch;color:var(--terminal);}
+  .s04 .body{font-family:'Inter',sans-serif;font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#a0a0a0;}
+  .s04 .applies-flag{display:inline-block;background:var(--terminal);color:#0c0c0c;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:15px;letter-spacing:.15em;text-transform:uppercase;padding:8px 14px;margin-top:2vh;}
+  .s04 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:16px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:1px solid #333;padding-top:2vh;color:#666;}
+
+  /* ============ 05 BIG STAT — 0.5% ============ */
+  .s05{
+    background:linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color:var(--cream);
+    text-align:center;
+    align-items:center;
+  }
+  .s05 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--gold);}
+  .s05 .bignum{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(100px,20vw,320px);
+    line-height:.85;
+    letter-spacing:-.03em;
+    color:var(--gold);
+    margin:3vh 0 1vh 0;
+    text-shadow:0 4px 40px rgba(201,162,39,.3);
+  }
+  .s05 .bignum-unit{
+    font-family:'Inter';
+    font-weight:300;
+    font-size:clamp(28px,4vw,56px);
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#8899bb;
+    margin-bottom:2vh;
+  }
+  .s05 h2{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:clamp(40px,5vw,90px);
+    line-height:1;
+    letter-spacing:-.02em;
+    max-width:22ch;
+    margin:0 auto;
+  }
+  .s05 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,32px);line-height:1.3;max-width:38ch;margin:2vh auto 0 auto;color:#99aabb;}
+  .s05 .body{font-family:'Inter';font-size:20px;line-height:1.55;max-width:54ch;margin:3vh auto 0 auto;text-align:left;columns:2;column-gap:3vw;color:#bbc8dd;}
+  .s05 .applies-flag{display:inline-block;background:var(--gold);color:var(--ink);font-family:'Inter';font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;margin:2vh auto 0 auto;}
+  .s05 .byline{margin-top:auto;width:100%;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--gold);padding-top:2vh;}
+
+  /* ============ 06 ACADEMIC DROP-CAP — Data centers ============ */
+  .s06{
+    background:var(--parchment);
+    color:var(--ink);
+  }
+  .s06 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(160px,24vw,400px);
+    line-height:.8;
+    position:absolute;
+    bottom:3vh;right:4vw;
+    opacity:.08;
+    font-style:italic;
+    color:var(--teal);
+  }
+  .s06 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--teal);}
+  .s06 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(60px,8vw,140px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:3vh 0;
+    max-width:18ch;
+    color:var(--ink);
+  }
+  .s06 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:30ch;color:#555;}
+  .s06 .body{font-size:20px;line-height:1.6;max-width:60ch;margin-top:3vh;columns:2;column-gap:3vw;}
+  .s06 .body::first-letter{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:96px;
+    float:left;
+    line-height:.75;
+    margin:0 12px 0 0;
+    color:var(--teal);
+  }
+  .s06 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--teal);padding-top:2vh;}
+
+  /* ============ 07 SPLIT DIPTYCH — Xi / Trump ============ */
+  .s07{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:100vh;
+    padding:0;
+  }
+  .s07 .left{
+    background:#7a1f1f;
+    color:var(--cream);
+    padding:6vh 5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .s07 .right{
+    background:#eae2d0;
+    color:var(--ink);
+    padding:6vh 5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .s07 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(120px,14vw,240px);
+    line-height:.8;
+    opacity:.18;
+    font-style:italic;
+  }
+  .s07 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:18px;text-transform:uppercase;}
+  .s07 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(44px,6vw,100px);
+    line-height:.9;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+  }
+  .s07 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(20px,2vw,28px);line-height:1.25;}
+  .s07 .body-col{font-size:19px;line-height:1.55;margin-top:2vh;}
+  .s07 .byline{font-size:16px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid currentColor;padding-top:1.5vh;margin-top:auto;}
+
+  /* ============ 08 EDITORIAL PHOTO-CAPTION — Rheinmetall ============ */
+  .s08{
+    background:#f0e8e0;
+    color:var(--ink);
+  }
+  .s08 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(180px,26vw,440px);
+    line-height:.8;
+    position:absolute;
+    top:2vh;left:5vw;
+    opacity:.06;
+    font-style:italic;
+    color:var(--crimson);
+  }
+  .s08 .photo-frame{
+    background:var(--ink);
+    color:var(--cream);
+    padding:4vh 4vw;
+    margin:3vh 0;
+    position:relative;
+  }
+  .s08 .photo-frame .caption-num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:72px;
+    color:var(--gold);
+    position:absolute;
+    top:-18px;left:20px;
+  }
+  .s08 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--crimson);}
+  .s08 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(56px,8vw,140px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:18ch;
+  }
+  .s08 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:30ch;color:#555;}
+  .s08 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:2vh;columns:2;column-gap:3vw;}
+  .s08 .applies-flag{display:inline-block;background:var(--crimson);color:var(--cream);font-family:'Inter';font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;margin-top:2vh;}
+  .s08 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--crimson);padding-top:2vh;}
+
+  /* ============ 09 GRADIENT — Bond Market ============ */
+  .s09{
+    background:linear-gradient(160deg, #1f3a2e 0%, #26513f 40%, #356e54 70%, #4a8a6d 100%);
+    color:var(--cream);
+  }
+  .s09 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(160px,24vw,400px);
+    line-height:.8;
+    position:absolute;
+    top:4vh;right:5vw;
+    opacity:.15;
+    font-style:italic;
+    color:#d8e8d0;
+  }
+  .s09 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:#b5d8c0;}
+  .s09 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(64px,9vw,170px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    margin:3vh 0;
+    max-width:16ch;
+  }
+  .s09 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:32ch;color:#d0e0d5;}
+  .s09 .body{font-size:20px;line-height:1.55;max-width:56ch;margin-top:3vh;columns:2;column-gap:3vw;color:#e0ece0;}
+  .s09 .byline{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid #b5d8c0;padding-top:2vh;}
+
+  /* ============ 10 NEWSPRINT ESSAY — Europe, China, Merz ============ */
+  .s10{
+    background:#faf6ee;
+    color:var(--ink);
+    border-top:6px solid var(--ink);
+  }
+  .s10 .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(140px,20vw,360px);
+    line-height:.8;
+    position:absolute;
+    bottom:3vh;left:4vw;
+    opacity:.06;
+    font-style:italic;
+  }
+  .s10 .dateline{
+    font-family:'Inter';
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:1vh;
+    margin-bottom:2vh;
+    display:flex;
+    justify-content:space-between;
+  }
+  .s10 .kicker{font-family:'Inter';font-weight:700;letter-spacing:.3em;font-size:20px;text-transform:uppercase;color:var(--crimson);}
+  .s10 h2{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(56px,7vw,120px);
+    line-height:.9;
+    letter-spacing:-.02em;
+    margin:2vh 0;
+    max-width:20ch;
+  }
+  .s10 .deck{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.2vw,34px);line-height:1.25;max-width:34ch;color:#555;margin-bottom:3vh;}
+  .s10 .essay{
+    columns:3;
+    column-gap:3vw;
+    column-rule:1px solid #ccc;
+    font-size:19px;
+    line-height:1.6;
+  }
+  .s10 .essay::first-letter{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:80px;
+    float:left;
+    line-height:.75;
+    margin:0 10px 0 0;
+    color:var(--crimson);
+  }
+  .s10 .applies-flag{display:inline-block;background:var(--ink);color:var(--cream);font-family:'Inter';font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;margin-top:3vh;}
+  .s10 .byline{margin-top:3vh;display:flex;justify-content:space-between;align-items:flex-end;font-size:18px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-top:2px solid var(--ink);padding-top:2vh;}
+
+  /* ============ COLOPHON ============ */
+  .colophon{background:var(--ink);color:var(--cream);text-align:center;align-items:center;justify-content:center;min-height:60vh;}
+  .colophon h2{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(48px,8vw,130px);line-height:.95;letter-spacing:-.02em;margin-bottom:3vh;}
+  .colophon .note{font-size:20px;max-width:46ch;margin:0 auto;line-height:1.5;color:#999;}
+  .colophon .sig{font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:28px;margin-top:4vh;color:var(--gold);}
+  .colophon .issue{font-size:16px;letter-spacing:.2em;text-transform:uppercase;margin-top:2vh;color:#555;}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:900px){
+    .contents ol{grid-template-columns:1fr;}
+    .s07{grid-template-columns:1fr;grid-template-rows:auto auto;}
+    .s01 .body,.s02 .body,.s03 .body,.s04 .body,.s05 .body,.s06 .body,.s08 .body,.s09 .body{columns:1;}
+    .s10 .essay{columns:1;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================== MASTHEAD ============================== -->
+<section class="spread masthead">
+  <div>
+    <div class="topbar">
+      <span>Issue No. 003</span>
+      <span>Friday, 17 April 2026</span>
+    </div>
+    <div class="rule"></div>
+    <h1>First Coffee<br>News.</h1>
+    <p class="tagline">Ten stories a day at the intersection of AI, cloud, capital and conflict — skipping the noise out of Westminster and Washington</p>
+    <div class="meta">
+      <span>AI &amp; Tools</span>
+      <span>Cloud</span>
+      <span>Defense</span>
+      <span>Economics</span>
+      <span>Geopolitics</span>
+      <span>Germany</span>
+    </div>
+  </div>
+  <p class="lede">Anthropic overtakes OpenAI in revenue, Germany halves its growth forecast, and Europe quietly drafts a NATO Plan&nbsp;B.</p>
+  <div class="daily-pick">
+    <div class="pick-label">Ben's Daily Pick</div>
+    <div class="pick-title">Anthropic Crosses $30 Billion</div>
+    <p class="pick-reason">The AI company whose tools you use every day now leads OpenAI in run-rate revenue for the first time — and is shipping organization-wide controls for Claude Cowork aimed directly at enterprise deployments. If you care where the agentic-AI market is headed, today is the day the ordering changed.</p>
+    <span class="pick-tag">Applies to you → AI / Tools</span>
+  </div>
+</section>
+
+<!-- ============================== CONTENTS ============================== -->
+<section class="spread contents">
+  <div>
+    <div class="kicker">In this edition</div>
+    <h2>Ten stories,<br>one coffee.</h2>
+  </div>
+  <ol>
+    <li><span class="t">Anthropic passes OpenAI in revenue <span class="applies">Applies</span><span class="s">AI / Tools</span></span></li>
+    <li><span class="t">TSMC: first-quarter profit up 58%<span class="s">Cloud / Semiconductors</span></span></li>
+    <li><span class="t">Europe and Canada draft NATO Plan B<span class="s">Defense / Geopolitics</span></span></li>
+    <li><span class="t">Agent infrastructure goes mainstream <span class="applies">Applies</span><span class="s">AI / Tools</span></span></li>
+    <li><span class="t">Berlin halves its 2026 growth forecast <span class="applies">Applies</span><span class="s">Economics / Germany</span></span></li>
+    <li><span class="t">Europe's AI data-center land grab<span class="s">Cloud / Germany</span></span></li>
+    <li><span class="t">Xi &amp; Trump: chips for rare earths<span class="s">Geopolitics</span></span></li>
+    <li><span class="t">Rheinmetall's €14.5B year <span class="applies">Applies</span><span class="s">Defense / Germany</span></span></li>
+    <li><span class="t">Oil shock erases Fed-cut bets<span class="s">Economics</span></span></li>
+    <li><span class="t">The Merz moment — and a fracturing Europe<span class="s">Germany / Geopolitics</span></span></li>
+  </ol>
+</section>
+
+<!-- ============================== 01 HERO — Anthropic passes OpenAI ============================== -->
+<section class="spread s01">
+  <div class="num">01</div>
+  <div>
+    <div class="kicker">Artificial Intelligence · Leaders</div>
+    <h2>Anthropic<br>overtakes OpenAI<br><em>in revenue.</em></h2>
+    <p class="deck">Claude's parent company crossed a $30&nbsp;billion annualised run rate in April, edging past OpenAI's $25&nbsp;billion and marking the first time a challenger has led the frontier-model pack on dollars earned.</p>
+    <span class="applies-flag">★ Applies to you — AI / Tools</span>
+  </div>
+  <div class="body">
+    Anthropic tripled its run rate in four months, from $9&nbsp;billion at the end of 2025 to $30&nbsp;billion by mid-April. Close to a third of American businesses now pay for its products, up more than six percentage points month-on-month. Much of the growth is enterprise: this week the company revealed organisation-wide controls for Claude Cowork, its autonomous agent that can drive real work across an employee's computer. OpenAI answered by slashing the price of its Codex "Pro" tier and shipping a revised Agents SDK with multi-sandbox support — a tacit admission that the fight is no longer about capability alone but about distribution, governance and the unit economics of agentic work. For the first time since 2023, the question is not whether a rival can catch OpenAI. It is whether OpenAI can catch Anthropic.
+  </div>
+  <div class="byline">
+    <span>Reporting · Technology desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 02 DARK — TSMC ============================== -->
+<section class="spread s02">
+  <div class="num">02</div>
+  <div>
+    <div class="kicker">Semiconductors · Cloud</div>
+    <h2>TSMC prints money.<br><em>AI chips do the rest.</em></h2>
+    <p class="deck">A 58% jump in Q1 net profit, a fourth consecutive record quarter, and full-year 2026 guidance raised above 30% growth — the foundry that makes the world's AI is still bottlenecked by demand it cannot meet.</p>
+  </div>
+  <div class="body">
+    TSMC reported NT$572.48&nbsp;billion in net income for the quarter ending March, beating analyst estimates on the back of what executives called "sustained, structural" demand for advanced nodes. Nvidia has already locked up the majority of CoWoS advanced-packaging capacity; two new packaging plants are being raced to production in Taiwan, with two more planned in Arizona before year-end, and a new fab announced for Tainan. Taiwan now supplies more than 90% of leading-edge logic chips, which means every AI breakthrough — and every cloud capex headline — still threads through a single 36,000-square-kilometre island. ASML's results, due next week, will tell us whether the lithography side is keeping pace or quietly pulling the brake lever on the whole stack.
+  </div>
+  <div class="byline">
+    <span>Reporting · Business desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 03 ROSE ALERT STAMP — NATO Plan B ============================== -->
+<section class="spread s03">
+  <div class="num">03</div>
+  <div>
+    <div class="kicker">Defense · Geopolitics</div>
+    <div class="stamp">Briefing · Restricted Circulation</div>
+    <h2>Europe is quietly<br>drafting a NATO<br><em>Plan&nbsp;B.</em></h2>
+    <p class="deck">Senior officials in Berlin, Paris, Warsaw, London and Ottawa are discussing — with unusual candour — what a credible Atlantic alliance looks like if Washington walks. For the first time since 1949, the answer is not "it does not."</p>
+  </div>
+  <div class="body">
+    The conversation has moved from think-tank salons into ministries. Europe's largest NATO members and Canada are drawing up contingency structures that could function without the American nuclear umbrella and without US strategic enablers — satellite ISR, air-to-air refuelling, long-range munitions — that currently backstop almost every European operation. Sergey Lavrov's visit to Beijing this week, where he and his Chinese counterpart jointly celebrated the "failure" of Western hegemony, sharpened the planning. The awkward truth: without the United States, Europe has the factories but not the glue. Building the glue — shared command, integrated air defence, and European long-range strike — is the silent project of 2026, and it is already reshaping defence budgets from Warsaw to The Hague.
+  </div>
+  <div class="byline">
+    <span>Reporting · Foreign desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 04 TERMINAL — Agent Infrastructure ============================== -->
+<section class="spread s04">
+  <div class="num">04</div>
+  <div>
+    <div class="kicker">AI · Tools</div>
+    <div class="prompt"><span>$</span> cat /var/log/agent-stack/2026-04.md</div>
+    <h2>Agent infrastructure<br>is no longer<br>experimental.</h2>
+    <p class="deck">MCP installs cross 97&nbsp;million. OpenAI's Agents SDK goes multi-sandbox. The plumbing for agentic AI has quietly become the fastest-standardising layer in software.</p>
+    <div class="applies-flag">&gt;&gt; APPLIES TO YOU — YOU ARE BUILDING ON THIS STACK</div>
+  </div>
+  <div class="body">
+    The Model Context Protocol, contributed by Anthropic to the Agentic AI Foundation in December, crossed 97&nbsp;million installs in March — an inflection point that puts it somewhere between a de-facto standard and a slow-moving USB-C moment for model tooling. OpenAI this week made its Agents SDK compatible with multiple sandbox providers, so teams can now drive long-horizon agents against the infrastructure they already run. Meanwhile Stanford's 2026 AI Index, released on Monday, showed frontier benchmarks still climbing: the predicted "wall" is, for now, not arriving. The interesting question is no longer which model is best. It is which harness, permission model and audit trail your organisation will trust an agent to operate inside.
+  </div>
+  <div class="byline">
+    <span>[desk] · technology</span>
+    <span>2026-04-17 · ☕</span>
+  </div>
+</section>
+
+<!-- ============================== 05 BIG STAT — Germany 0.5% ============================== -->
+<section class="spread s05">
+  <div>
+    <div class="kicker">Economics · Germany</div>
+    <div class="bignum">0.5%</div>
+    <div class="bignum-unit">German GDP growth — 2026 forecast, halved</div>
+    <h2>Berlin's recovery story has stalled again.</h2>
+    <p class="deck">The government's 2026 outlook has been cut from 1.0% to 0.5%, 2027 from 1.3% to 0.9%, and inflation revised up to 2.7% — all of it triggered by the Iran energy shock crashing into a still-weak industrial base.</p>
+    <span class="applies-flag">★ Applies to you — Germany</span>
+  </div>
+  <div class="body">
+    Five leading institutes now see 2026 growth at just 0.6%. Industrial production slipped 0.3% in February, before the oil spike. The Bundesbank still officially expects a gradual recovery; the ifo index does not agree, falling to 86.4 in March. The political pressure is real: Chancellor Merz recorded the lowest approval rating of any elected leader in a 24-country survey this week, with 76% disapproval. The coalition's answer — €500 billion in infrastructure-and-climate borrowing plus a loosened debt brake to fund defence — is the biggest German fiscal bet since reunification. Whether it works depends almost entirely on whether industrial demand returns before the political patience does.
+  </div>
+  <div class="byline">
+    <span>Reporting · Finance desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 06 ACADEMIC DROP-CAP — Data centers ============================== -->
+<section class="spread s06">
+  <div class="num">06</div>
+  <div>
+    <div class="kicker">Cloud · Europe</div>
+    <h2>Europe's AI<br>data-center<br><em>land grab.</em></h2>
+    <p class="deck">Bain Capital takes 80% of AQ&nbsp;Compute to accelerate a multi-billion-euro European build-out. Meta signs a $35 billion, multi-year compute deal with CoreWeave. The scaffolding of the AI economy is being poured, fast, on both sides of the Atlantic.</p>
+  </div>
+  <div class="body">
+    AI/ML workloads have climbed from 1.74% of aggregate cloud spend in September 2025 to 4.84% in March — nearly tripling in six months, and rising at a rate no other cloud category can match. That money needs physical homes, and homes need power, permits and land. Bain's AQ Compute deal is explicitly aimed at "AI-ready, green-first" European campuses in Germany, the Nordics and Iberia. Meta's CoreWeave contract gives it guaranteed early access to cutting-edge GPUs at hyperscale, with contracted revenue above $35 billion. The economic geography of AI — who powers it, where, on whose grids and under whose regulators — is being decided now, quietly, in term sheets most people will never see.
+  </div>
+  <div class="byline">
+    <span>Reporting · Business desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 07 SPLIT DIPTYCH — Xi / Trump ============================== -->
+<section class="spread s07">
+  <div class="left">
+    <div class="num">07</div>
+    <div>
+      <div class="kicker" style="color:#ffc8a0;">Beijing · From</div>
+      <h2>Rare earths,<br><em>slowly.</em></h2>
+      <p class="deck" style="color:#f3d5c5;">China signals willingness to restart a constrained flow of heavy rare earths and permanent magnets — in return for relief on advanced-node chip exports and a ceasefire on tariff escalation.</p>
+      <p class="body-col" style="color:#f3d5c5;">Lavrov's Beijing visit made clear the strategic read: China believes time is on its side. But domestic Chinese economic data suggests the tariffs are biting harder than Beijing's rhetoric admits. The offer on rare earths is tactical, not generous.</p>
+    </div>
+    <div class="byline">Reporting · Beijing bureau</div>
+  </div>
+  <div class="right">
+    <div class="num" style="color:var(--crimson);">07</div>
+    <div>
+      <div class="kicker" style="color:var(--crimson);">Washington · For</div>
+      <h2>Chips,<br><em>reluctantly.</em></h2>
+      <p class="deck">The White House is weighing partial relief on the latest tranche of chip-equipment export controls. It would be read in Europe as a signal that technology containment has limits — and in Tokyo and Seoul as license to hedge.</p>
+      <p class="body-col">Any deal struck at the anticipated Xi–Trump summit is likely to be narrow, short-dated and deliberately reversible. The real prize for Washington is process: reopening a working channel that quietly closed in late 2025.</p>
+    </div>
+    <div class="byline">Reporting · Washington bureau</div>
+  </div>
+</section>
+
+<!-- ============================== 08 EDITORIAL PHOTO-CAPTION — Rheinmetall ============================== -->
+<section class="spread s08">
+  <div class="num">08</div>
+  <div>
+    <div class="kicker">Defense · Germany</div>
+    <h2>Rheinmetall<br>has become<br><em>a national utility.</em></h2>
+    <p class="deck">The firm now projects €14.5 billion in 2026 sales, expects €32 billion in new German orders, and is "focusing entirely on defence." The Bundeswehr's €108.2 billion budget — the largest in the Republic's history — is the demand side of the same equation.</p>
+    <span class="applies-flag">★ Applies to you — Germany / Defense</span>
+  </div>
+  <div class="photo-frame">
+    <div class="caption-num">"</div>
+    <p style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(28px,3vw,44px);line-height:1.2;max-width:30ch;margin-top:1vh;">
+      The Federal Ministry of Defence has drafted a procurement plan worth <strong style="color:var(--gold);">€377 billion</strong> — from immediate buys to long-horizon aspirations.
+    </p>
+    <p style="margin-top:2vh;font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);opacity:.9;">On the list · 687 Puma IFVs · 500+ Skyranger 30 air-defence platforms · 12 Luna NG drones</p>
+  </div>
+  <div class="body">
+    The political economy of Kriegstüchtigkeit — literally, war-readiness — is reshaping German industrial policy. Ammunition output is being lifted 30% through FY2026. Rheinmetall's order backlog is at record highs; so are those of Leonardo, Airbus Defence and BAE. But the bottleneck is no longer appetite or money: it is skilled labour, energy, and a permitting system built for a country that last mass-produced tanks under a very different constitution. The defence boom will either rewire the German industrial base or expose how thinly it is staffed.
+  </div>
+  <div class="byline">
+    <span>Reporting · Europe desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 09 GRADIENT — Bond market ============================== -->
+<section class="spread s09">
+  <div class="num">09</div>
+  <div>
+    <div class="kicker">Economics · Fixed Income</div>
+    <h2>The Fed-cut trade<br>is <em>dead.</em></h2>
+    <p class="deck">Oil-driven inflation from the Iran war has forced traders to unwind the most crowded bet of 2026 — expected Federal Reserve easing — and sent short-maturity yields vaulting higher. The US 10-year is back to 4.34%.</p>
+  </div>
+  <div class="body">
+    Central-bank communications this week turned unmistakably hawkish. The Bank of England, the ECB, and the Fed all independently warned that near-term inflation risks have shifted up. Market pricing has now fully erased the expectation of further Fed easing in 2026, after markets entered the year pricing in at least two cuts. Treasury market liquidity has held up better than feared through the tariff litigation and Supreme Court ruling, but emerging-market resilience is the more striking story: Liberty Street's latest work shows EM currencies absorbing shocks with a fraction of the volatility of a decade ago. The bond-market equilibrium of the late 2010s is over; what replaces it is, for now, being priced day by day.
+  </div>
+  <div class="byline">
+    <span>Reporting · Markets desk</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== 10 NEWSPRINT ESSAY — Merz / Europe / China ============================== -->
+<section class="spread s10">
+  <div class="dateline">
+    <span>The Essay · 17 April 2026</span>
+    <span>The Editor</span>
+  </div>
+  <div class="num">10</div>
+  <div class="kicker">Germany · Europe · China</div>
+  <h2>The Merz moment,<br><em>and a fracturing Europe.</em></h2>
+  <p class="deck">Friedrich Merz has the most unpopular government on earth — and arguably the most consequential European agenda since Kohl. Both can be true.</p>
+  <div class="essay">
+    Five months into Merz's chancellorship, the numbers look bleak. Insa has him at 19% approval, 76% disapproval — the lowest of any elected leader in a 24-country survey published this week. The economy is flat; the Iran war has reignited the energy-cost debate; industrial production is slipping again; and the AfD continues to poll well above its February result. And yet, under the surface, the Merz–SPD coalition is doing real things: a €500 billion infrastructure and climate fund, a reform of the debt brake to finance defence, a planned 25% cut in bureaucracy costs worth an estimated €16 billion, and — most importantly — an informal but tightening leadership role in the post-American NATO conversation. The EU's fight with China over industrial overcapacity, from electric vehicles to mature-node semiconductors to wind-turbine components, will be largely fought from Berlin, because Berlin still has the factories and the balance sheet. Merz's unpopularity is not evidence of failure; it is the reliable cost of governing Germany through a structural adjustment. Helmut Schmidt had it. Gerhard Schröder had it. The question for 2026 is whether the coalition has the discipline to spend political capital it does not feel it has — on an industrial strategy, a European security architecture, and an AI-and-data policy that, almost by accident, Berlin is now positioned to lead.
+  </div>
+  <span class="applies-flag">★ Applies to you — Germany</span>
+  <div class="byline">
+    <span>Essay · The Editor</span>
+    <span>Friday · 17 April 2026</span>
+  </div>
+</section>
+
+<!-- ============================== COLOPHON ============================== -->
+<section class="spread colophon">
+  <h2>Enjoy your coffee.</h2>
+  <p class="note">First Coffee News is a daily curated magazine, produced autonomously for Ben. We skip UK and US politics. We lean into AI tools, cloud, defense, economics, geopolitics, and — because you asked — Germany. Sources drawn from the day's reporting when The Economist is unreachable; see colophon note.</p>
+  <p class="sig">— Fin. —</p>
+  <p class="issue">Issue No. 003 · Friday, 17 April 2026</p>
+</section>
+
+</body>
+</html>
