@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0d0e14" />
+<title>First Coffee Campaign News — April 18, 2026</title>
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Morning Edition — April 18, 2026" />
+<meta property="og:description" content="The AI super PAC war crosses $150M, CISA's election-security shop is being quietly hollowed out, and Hungary's 16-year Orbán era ends. Ten spreads on politics, technology and the machinery of persuasion. Issue No. 004." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-04-18.html" />
+<meta property="og:site_name" content="Morning Edition" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --serif: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --ink: #111015;
+    --paper: #f4efe3;
+    --rose: #e6002e;
+    --gold: #c79a3a;
+    --pad-x: clamp(22px, 6vw, 96px);
+    --pad-y: clamp(48px, 10vw, 120px);
+    --gutter: clamp(18px, 4vw, 44px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans);
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: #1a1a1c;
+  }
+  .issue { max-width: 1600px; margin: 0 auto; background: var(--paper); }
+  section.spread {
+    padding: var(--pad-y) var(--pad-x);
+    position: relative;
+    overflow: hidden;
+    min-height: 88vh;
+  }
+  .kicker {
+    font-family: var(--sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .24em;
+    font-size: 15px;
+  }
+  .rule { height: 2px; background: currentColor; opacity: .25; margin: 28px 0; }
+  .deck {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.25;
+    font-size: clamp(22px, 2.4vw, 32px);
+    max-width: 34ch;
+  }
+  .dateline {
+    font-family: var(--mono);
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .byline { font-family: var(--mono); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  .source-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1.5px solid currentColor;
+  }
+  .num {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    line-height: .8;
+    letter-spacing: -.04em;
+  }
+
+  /* =========================================================
+     COVER — masthead
+     ========================================================= */
+  .cover {
+    background: var(--paper);
+    color: var(--ink);
+    padding: clamp(40px, 7vw, 96px) var(--pad-x) clamp(44px, 8vw, 100px);
+    border-bottom: 6px double var(--ink);
+  }
+  .cover .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    padding-bottom: 22px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .cover h1 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(72px, 15vw, 240px);
+    line-height: .82;
+    letter-spacing: -.035em;
+    margin-bottom: 24px;
+  }
+  .cover h1 .rose { color: var(--rose); }
+  .cover .tag {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 34px);
+    line-height: 1.3;
+    max-width: 34ch;
+    color: #3a3a3f;
+    margin-bottom: 48px;
+  }
+  .cover .lede-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1.5px solid var(--ink);
+  }
+  @media (min-width: 820px) {
+    .cover .lede-grid { grid-template-columns: 1.3fr 1fr 1fr; gap: var(--gutter); }
+  }
+  .cover .lede h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(26px, 2.3vw, 34px);
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .cover .lede p { font-size: 18px; line-height: 1.55; color: #2a2a30; }
+  .cover .lede .source-tag { margin-top: 14px; color: var(--rose); border-color: var(--rose); }
+
+  /* =========================================================
+     TOC
+     ========================================================= */
+  .toc {
+    background: #eae3d0;
+    color: var(--ink);
+  }
+  .toc h2 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(52px, 8vw, 120px);
+    line-height: .9;
+    letter-spacing: -.025em;
+    margin-bottom: 44px;
+  }
+  .toc-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 820px) { .toc-grid { grid-template-columns: 1fr 1fr; gap: 32px 56px; } }
+  .toc-item {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 24px;
+    border-top: 1.5px solid var(--ink);
+    padding-top: 20px;
+  }
+  .toc-item .n {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 62px;
+    line-height: .85;
+    color: var(--rose);
+  }
+  .toc-item h4 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .toc-item p { font-size: 17px; color: #3d3d44; line-height: 1.5; }
+  .toc-item .tag {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+    color: #6a6a70; margin-top: 10px;
+  }
+
+  /* =========================================================
+     SPREAD 01 — Hero gradient — AI Super PAC money war
+     ========================================================= */
+  .s-hero {
+    background: radial-gradient(circle at 20% 0%, #f8cf1a 0%, #ea7c18 42%, #b21846 72%, #3c0d2e 100%);
+    color: #fff8ea;
+  }
+  .s-hero .kicker { color: #ffe9a8; }
+  .s-hero .num-big {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(120px, 24vw, 380px);
+    line-height: .78;
+    letter-spacing: -.04em;
+    color: #fff8ea;
+    margin: 22px 0 12px;
+  }
+  .s-hero h2 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: clamp(46px, 6.4vw, 92px);
+    line-height: .95;
+    letter-spacing: -.02em;
+    max-width: 22ch;
+    margin-bottom: 28px;
+  }
+  .s-hero .deck { color: #ffe9a8; max-width: 44ch; }
+  .s-hero .body-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1.5px solid rgba(255,232,168,.4);
+  }
+  @media (min-width: 820px) { .s-hero .body-grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; } }
+  .s-hero .body-grid p { font-size: 18px; line-height: 1.6; color: #fff4d8; }
+  .s-hero .body-grid strong { color: #ffe9a8; font-weight: 800; }
+
+  /* =========================================================
+     SPREAD 02 — Dark/midnight — CISA
+     ========================================================= */
+  .s-dark {
+    background: #0a0d1a;
+    color: #e8ecf5;
+  }
+  .s-dark .kicker { color: #7ea6ff; }
+  .s-dark .stamp {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    border: 1.5px solid #7ea6ff;
+    color: #7ea6ff;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+  }
+  .s-dark h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 6.6vw, 104px);
+    line-height: .98;
+    letter-spacing: -.02em;
+    max-width: 20ch;
+    margin-bottom: 36px;
+    color: #f6f7fb;
+  }
+  .s-dark h2 em { font-style: italic; color: #7ea6ff; font-weight: 400; }
+  .s-dark .layout {
+    display: grid; grid-template-columns: 1fr; gap: 40px;
+    margin-top: 30px; padding-top: 32px;
+    border-top: 1px solid rgba(126,166,255,.4);
+  }
+  @media (min-width: 860px) { .s-dark .layout { grid-template-columns: 2fr 1fr; gap: 60px; } }
+  .s-dark .layout p { font-size: 19px; line-height: 1.65; color: #c8cfe0; margin-bottom: 18px; }
+  .s-dark .layout .highlight { color: #f6f7fb; font-weight: 500; font-family: var(--serif); font-size: 22px; font-style: italic; }
+  .s-dark .stats { border-left: 2px solid #7ea6ff; padding-left: 24px; }
+  .s-dark .stats .stat { margin-bottom: 32px; }
+  .s-dark .stats .v {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 72px;
+    color: #f6f7fb;
+    line-height: .9;
+  }
+  .s-dark .stats .l {
+    font-family: var(--mono);
+    font-size: 14px;
+    letter-spacing: .1em;
+    color: #8a9bc2;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+
+  /* =========================================================
+     SPREAD 03 — Rose alert stamp — Deepfake ads
+     ========================================================= */
+  .s-alert {
+    background: #f6dadb;
+    color: #3a0a12;
+    position: relative;
+  }
+  .s-alert .alert-stamp {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    background: var(--rose);
+    color: #fff;
+    display: inline-block;
+    transform: rotate(-2deg);
+    margin-bottom: 32px;
+    box-shadow: 6px 6px 0 #3a0a12;
+  }
+  .s-alert h2 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(50px, 7.4vw, 118px);
+    line-height: .9;
+    letter-spacing: -.02em;
+    color: #3a0a12;
+    max-width: 18ch;
+    margin-bottom: 36px;
+  }
+  .s-alert h2 .rose { color: var(--rose); font-style: italic; }
+  .s-alert .deck { color: #5a1a22; max-width: 40ch; }
+  .s-alert .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 56px;
+  }
+  @media (min-width: 820px) { .s-alert .cards { grid-template-columns: 1fr 1fr 1fr; gap: 28px; } }
+  .s-alert .card {
+    background: #fff4ec;
+    padding: 32px 28px;
+    border: 2px solid #3a0a12;
+    position: relative;
+  }
+  .s-alert .card h4 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .s-alert .card p { font-size: 17px; line-height: 1.55; color: #3a0a12; }
+  .s-alert .card .tag {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--rose); margin-bottom: 14px; display: block;
+  }
+
+  /* =========================================================
+     SPREAD 04 — Terminal / mono — GOP AI tooling
+     ========================================================= */
+  .s-terminal {
+    background: #0b0f0a;
+    color: #b6f29a;
+    font-family: var(--mono);
+  }
+  .s-terminal .prompt { color: #6fe05a; font-size: 15px; margin-bottom: 8px; letter-spacing: .08em; }
+  .s-terminal h2 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(44px, 6vw, 80px);
+    line-height: 1.05;
+    margin: 18px 0 28px;
+    color: #e6ffd6;
+    letter-spacing: -.005em;
+  }
+  .s-terminal .deck {
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #b6f29a;
+    max-width: 58ch;
+    margin-bottom: 44px;
+  }
+  .s-terminal pre {
+    background: #051107;
+    border: 1px solid #2e6f1f;
+    color: #d4f7bf;
+    padding: 26px 24px;
+    font-size: 15px;
+    line-height: 1.65;
+    overflow-x: auto;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    white-space: pre-wrap;
+  }
+  .s-terminal pre .k { color: #6fe05a; }
+  .s-terminal pre .c { color: #7aa78b; }
+  .s-terminal .footer {
+    border-top: 1px dashed #2e6f1f;
+    padding-top: 20px;
+    color: #88b77a;
+    font-size: 14px;
+  }
+  .s-terminal .blink::after {
+    content: "▌";
+    color: #b6f29a;
+    animation: blink 1s steps(2) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* =========================================================
+     SPREAD 05 — Academic drop-cap — Pew on democracy
+     ========================================================= */
+  .s-academic {
+    background: #ede6d2;
+    color: #1b1811;
+  }
+  .s-academic .kicker { color: #7a5a1b; }
+  .s-academic h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(44px, 6vw, 88px);
+    line-height: 1.02;
+    letter-spacing: -.01em;
+    max-width: 22ch;
+    margin-bottom: 34px;
+  }
+  .s-academic .byline { color: #4a4a2d; margin-bottom: 30px; display: block; }
+  .s-academic .body {
+    column-count: 1;
+    column-gap: 48px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #2a2515;
+    max-width: 75ch;
+  }
+  @media (min-width: 960px) { .s-academic .body { column-count: 2; } }
+  .s-academic .body p { margin-bottom: 18px; break-inside: avoid; }
+  .s-academic .body p:first-child::first-letter {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 160px;
+    line-height: .82;
+    float: left;
+    margin: 10px 16px 0 0;
+    color: var(--rose);
+  }
+  .s-academic .footnotes {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1.5px solid rgba(0,0,0,.15);
+    font-size: 16px;
+    color: #56502f;
+    max-width: 75ch;
+  }
+
+  /* =========================================================
+     SPREAD 06 — Big stat — 50%
+     ========================================================= */
+  .s-bigstat {
+    background: linear-gradient(135deg, #1a1f3a 0%, #3a1545 50%, #55173e 100%);
+    color: #fbeedc;
+    text-align: center;
+    padding-top: clamp(60px, 10vw, 160px);
+    padding-bottom: clamp(60px, 10vw, 160px);
+  }
+  .s-bigstat .kicker { color: #f6c87a; }
+  .s-bigstat .pct {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(200px, 40vw, 600px);
+    line-height: .78;
+    color: #f6c87a;
+    letter-spacing: -.05em;
+    margin: 24px 0 0;
+    text-shadow: 0 6px 0 rgba(0,0,0,.25);
+  }
+  .s-bigstat h2 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(26px, 3.4vw, 48px);
+    line-height: 1.25;
+    max-width: 26ch;
+    margin: 20px auto 40px;
+    color: #fbeedc;
+  }
+  .s-bigstat .context {
+    font-size: 19px;
+    line-height: 1.65;
+    color: #e7d6ba;
+    max-width: 52ch;
+    margin: 0 auto 22px;
+    text-align: left;
+  }
+  .s-bigstat .src {
+    font-family: var(--mono);
+    font-size: 14px;
+    letter-spacing: .16em;
+    color: #f6c87a;
+    text-transform: uppercase;
+    margin-top: 28px;
+  }
+
+  /* =========================================================
+     SPREAD 07 — Editorial photo-caption — Orbán / Magyar
+     ========================================================= */
+  .s-photo {
+    background: #f2ede0;
+    color: #1a1a1a;
+    padding: 0;
+  }
+  .s-photo .inner { padding: var(--pad-y) var(--pad-x); }
+  .s-photo .hero-card {
+    background: linear-gradient(135deg, #0e4166 0%, #1e6aa3 55%, #2f8acc 100%);
+    padding: clamp(40px, 6vw, 88px);
+    color: #f9f7f0;
+    position: relative;
+    margin-bottom: 48px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .s-photo .hero-card::before {
+    content: "HU";
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 140px;
+    line-height: 1;
+    color: rgba(255,255,255,.15);
+  }
+  .s-photo .hero-card .tag {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    background: #f9f7f0;
+    color: #0e4166;
+    display: inline-block;
+    margin-bottom: 28px;
+    width: max-content;
+  }
+  .s-photo .hero-card h2 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(44px, 6.4vw, 96px);
+    line-height: .95;
+    letter-spacing: -.02em;
+    max-width: 18ch;
+    margin-bottom: 24px;
+  }
+  .s-photo .hero-card .caption {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(20px, 2vw, 26px);
+    max-width: 50ch;
+    line-height: 1.3;
+    color: #e1edfa;
+  }
+  .s-photo .caption-grid {
+    display: grid; grid-template-columns: 1fr; gap: 30px;
+  }
+  @media (min-width: 820px) { .s-photo .caption-grid { grid-template-columns: 1.25fr 1fr; gap: 50px; } }
+  .s-photo .caption-grid h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.12;
+    margin-bottom: 14px;
+  }
+  .s-photo .caption-grid p { font-size: 18px; line-height: 1.6; color: #2a2a2a; margin-bottom: 14px; }
+  .s-photo .caption-grid .pullquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(22px, 2.4vw, 32px);
+    line-height: 1.3;
+    color: #0e4166;
+    border-left: 4px solid #0e4166;
+    padding-left: 24px;
+  }
+
+  /* =========================================================
+     SPREAD 08 — Split diptych — Barcelona & New Jersey
+     ========================================================= */
+  .s-diptych {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 88vh;
+    padding: 0;
+  }
+  @media (min-width: 920px) { .s-diptych { grid-template-columns: 1fr 1fr; } }
+  .s-diptych .panel {
+    padding: clamp(60px, 8vw, 120px) clamp(32px, 5vw, 80px);
+  }
+  .s-diptych .left {
+    background: #c73b24;
+    color: #ffe6d9;
+  }
+  .s-diptych .right {
+    background: #0d2d3a;
+    color: #f0e8d2;
+  }
+  .s-diptych .kicker { letter-spacing: .22em; margin-bottom: 22px; font-size: 14px; }
+  .s-diptych .panel h2 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-style: italic;
+    font-size: clamp(40px, 5.5vw, 80px);
+    line-height: .98;
+    letter-spacing: -.015em;
+    margin-bottom: 26px;
+    max-width: 18ch;
+  }
+  .s-diptych .panel .loc {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1.5px solid currentColor;
+    margin-bottom: 26px;
+  }
+  .s-diptych .panel p { font-size: 18px; line-height: 1.6; margin-bottom: 16px; }
+  .s-diptych .panel .tag-bottom {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    margin-top: 34px;
+    opacity: .8;
+  }
+
+  /* =========================================================
+     SPREAD 09 — Influencer/social gradient — YouTube & creators
+     ========================================================= */
+  .s-influencer {
+    background: linear-gradient(160deg, #ff3da6 0%, #ff6f2c 45%, #ffd260 100%);
+    color: #1a0a1e;
+  }
+  .s-influencer .kicker { color: #5c0e3a; }
+  .s-influencer h2 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(54px, 8vw, 132px);
+    line-height: .88;
+    letter-spacing: -.025em;
+    max-width: 16ch;
+    margin-bottom: 34px;
+    color: #1a0a1e;
+  }
+  .s-influencer h2 em { font-style: italic; color: #5c0e3a; }
+  .s-influencer .deck { max-width: 42ch; color: #2e0a2e; }
+  .s-influencer .blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 56px;
+  }
+  @media (min-width: 820px) { .s-influencer .blocks { grid-template-columns: 1fr 1fr 1fr; gap: 36px; } }
+  .s-influencer .block {
+    background: rgba(255,255,255,.4);
+    backdrop-filter: blur(4px);
+    padding: 32px 28px;
+    border: 1.5px solid #1a0a1e;
+  }
+  .s-influencer .block .big {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 72px;
+    line-height: .88;
+    color: #5c0e3a;
+    margin-bottom: 14px;
+  }
+  .s-influencer .block h4 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .s-influencer .block p { font-size: 17px; line-height: 1.55; color: #1a0a1e; }
+
+  /* =========================================================
+     SPREAD 10 — Long-form newsprint essay — Democracy Index
+     ========================================================= */
+  .s-essay {
+    background: #f4efe3;
+    color: #1a1a1a;
+    font-family: var(--serif);
+  }
+  .s-essay .head {
+    border-top: 4px double #1a1a1a;
+    border-bottom: 1.5px solid #1a1a1a;
+    padding: 28px 0;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 720px) { .s-essay .head { grid-template-columns: 1fr auto; align-items: baseline; } }
+  .s-essay .head .masthead {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
+  .s-essay .head .dateline { font-family: var(--mono); font-size: 13px; }
+  .s-essay h2 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -.015em;
+    margin-bottom: 22px;
+    max-width: 26ch;
+  }
+  .s-essay .deck {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.3;
+    color: #3d3d3d;
+    max-width: 54ch;
+    margin-bottom: 40px;
+  }
+  .s-essay .body {
+    column-count: 1;
+    column-gap: 42px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    font-family: var(--serif);
+  }
+  @media (min-width: 880px) { .s-essay .body { column-count: 3; } }
+  .s-essay .body p { margin-bottom: 16px; break-inside: avoid; }
+  .s-essay .body h3 {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    margin: 24px 0 10px;
+    color: var(--rose);
+  }
+  .s-essay .body p:first-of-type::first-line { font-variant: small-caps; letter-spacing: .08em; }
+
+  /* =========================================================
+     COLOPHON
+     ========================================================= */
+  .colophon {
+    background: #0c0c10;
+    color: #d8cfba;
+    padding: clamp(70px, 10vw, 140px) var(--pad-x);
+    border-top: 4px double #3a3a42;
+  }
+  .colophon .mast {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(44px, 7vw, 96px);
+    line-height: .9;
+    letter-spacing: -.02em;
+    color: #f4efe3;
+    margin-bottom: 30px;
+  }
+  .colophon .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1.5px solid #3a3a42;
+  }
+  @media (min-width: 820px) { .colophon .grid { grid-template-columns: 1fr 1fr 1fr; gap: 44px; } }
+  .colophon h4 {
+    font-family: var(--mono);
+    font-size: 14px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #f3c65a;
+    margin-bottom: 12px;
+  }
+  .colophon p { font-size: 17px; line-height: 1.6; margin-bottom: 12px; color: #c2b99f; }
+  .colophon .footer-rule {
+    margin-top: 48px;
+    padding-top: 22px;
+    border-top: 1.5px solid #3a3a42;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #8f8668;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="issue">
+
+  <!-- ============= COVER ============= -->
+  <section class="cover spread" style="min-height:auto;">
+    <div class="top-bar">
+      <span>Morning Edition &middot; Volume I</span>
+      <span>Issue No. 004</span>
+      <span>Saturday, 18 April 2026</span>
+    </div>
+
+    <h1>First<br>Coffee<br><span class="rose">Campaign</span><br>News.</h1>
+
+    <div class="tag">Ten spreads on politics, technology and the machinery of persuasion — filed from the politics-tech beat for a Saturday read.</div>
+
+    <div class="lede-grid">
+      <div class="lede">
+        <h3>The AI super-PAC war crosses $150M — and nobody is asking if that's a lot.</h3>
+        <p>Andreessen Horowitz sent another $25M into the pro-AI Leading the Future super PAC this week, taking it past $51M on hand. A former senior Trump aide is standing up a parallel $100M push. Two weeks ago AI was a wonk issue. It is now, by spend, one of the defining issues of the 2026 midterms.</p>
+        <span class="source-tag">Bloomberg · CNBC</span>
+      </div>
+      <div class="lede">
+        <h3>Orbán falls.</h3>
+        <p>After 16 years in power, Viktor Orbán has conceded to Péter Magyar's Tisza party, which is projected to take two-thirds of parliament. The campaign ran on stagnant wages and bad hospitals — not Brussels, not Kyiv.</p>
+        <span class="source-tag">CNN · Reuters</span>
+      </div>
+      <div class="lede">
+        <h3>CISA is unfunded.</h3>
+        <p>DHS has been dark for two months. CISA has now cancelled its CyberCorps summer class for the second straight year and cannot pay for anything beyond salaries. The FY27 proposal would finish the job on the election-security wing.</p>
+        <span class="source-tag">Nextgov · Brennan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= TABLE OF CONTENTS ============= -->
+  <section class="toc spread" style="min-height:auto;">
+    <h2>In this issue.</h2>
+    <div class="toc-grid">
+      <div class="toc-item"><div class="n">01</div><div>
+        <h4>The AI money war</h4>
+        <p>Andreessen Horowitz tops up Leading the Future; a $100M Trump-aligned fund enters the field.</p>
+        <div class="tag">Political Technology</div>
+      </div></div>
+      <div class="toc-item"><div class="n">02</div><div>
+        <h4>The quiet dismantling of CISA</h4>
+        <p>Two months unfunded, interns cancelled, and a budget that would gut election security.</p>
+        <div class="tag">GovTech · Election Security</div>
+      </div></div>
+      <div class="toc-item"><div class="n">03</div><div>
+        <h4>Deepfake is now a line item</h4>
+        <p>NRSC ships a minute-long fake of Graham Platner; similar spot hit Texas's Talarico last month.</p>
+        <div class="tag">AI in Politics</div>
+      </div></div>
+      <div class="toc-item"><div class="n">04</div><div>
+        <h4>Synthetic voter panels</h4>
+        <p>Aaru and MiroFish simulate an electorate on demand. 64% of GOP consultants use AI daily.</p>
+        <div class="tag">Political Technology</div>
+      </div></div>
+      <div class="toc-item"><div class="n">05</div><div>
+        <h4>The reform majority</h4>
+        <p>77% of Americans say the political system needs major change or complete overhaul.</p>
+        <div class="tag">Pew · Public Opinion</div>
+      </div></div>
+      <div class="toc-item"><div class="n">06</div><div>
+        <h4>50%</h4>
+        <p>The share of voters who say a deepfake influenced their 2026 decision — even while distrusting the medium.</p>
+        <div class="tag">AI · Information Integrity</div>
+      </div></div>
+      <div class="toc-item"><div class="n">07</div><div>
+        <h4>Budapest, after Orbán</h4>
+        <p>Magyar's Tisza lands a two-thirds majority on a kitchen-table platform.</p>
+        <div class="tag">Global Elections</div>
+      </div></div>
+      <div class="toc-item"><div class="n">08</div><div>
+        <h4>Barcelona / Bergen County</h4>
+        <p>A progressive summit opens in Spain as an NJ special election narrows the House GOP majority.</p>
+        <div class="tag">Campaigning · Global Left</div>
+      </div></div>
+      <div class="toc-item"><div class="n">09</div><div>
+        <h4>YouTube eats TikTok</h4>
+        <p>Creator partnerships, reality-show-style candidate content, and the year the long-form video campaign won.</p>
+        <div class="tag">Social Media Trends</div>
+      </div></div>
+      <div class="toc-item"><div class="n">10</div><div>
+        <h4>A flawed democracy</h4>
+        <p>The EIU Index stabilises globally. The United States keeps falling — 34th place, deeper into "flawed".</p>
+        <div class="tag">Democracy · Long Read</div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ============= 01 HERO GRADIENT ============= -->
+  <section class="spread s-hero">
+    <div class="kicker">No. 01 · Political Technology</div>
+    <div class="num-big">01</div>
+    <h2>The AI money war reaches the midterm ad market.</h2>
+    <div class="deck">Leading the Future now sits on more than $51M. A parallel Trump-aligned vehicle promises $100M more. AI has become the best-funded sleeper issue of the 2026 cycle.</div>
+
+    <div class="body-grid">
+      <p><strong>Who is writing the cheques.</strong> Marc Andreessen and Ben Horowitz added $25M to Leading the Future this week. The pro-AI super PAC's total haul across entities is now north of $140M for the cycle, per filings reported by Bloomberg and Quartz.</p>
+      <p><strong>What it is buying.</strong> The committee is building air cover for House and Senate members who oppose state-level AI rules and support a pre-emptive federal framework — the same blueprint Trump released as a policy roadmap in March.</p>
+      <p><strong>The other side.</strong> Anthropic sent $20M to Public First Action in February, arguing — unusually for a frontier lab — that regulation is lagging the risk. The AI industry is not one voter.</p>
+    </div>
+  </section>
+
+  <!-- ============= 02 DARK / MIDNIGHT ============= -->
+  <section class="spread s-dark">
+    <div class="stamp">No. 02 · The machinery</div>
+    <h2>The <em>election-security</em> office is being quietly unfunded — one internship at a time.</h2>
+    <div class="layout">
+      <div>
+        <p class="highlight">CISA has now been operating without appropriations for two months. It cannot legally spend on anything beyond salaries. Non-payroll costs require an Antideficiency Act exception.</p>
+        <p>The agency has cancelled its CyberCorps Scholarship-for-Service summer class for the second consecutive year — up to one hundred undergraduate and postgraduate cyber interns who would have rotated through federal networks will not, this summer, rotate through anything. Town-hall sessions for the Cyber Incident Reporting for Critical Infrastructure Act have been postponed indefinitely. Staff travel is frozen.</p>
+        <p>The president's FY27 request, released last week, goes further: it explicitly reduces the budget for the election-security mission, stakeholder engagement, and infrastructure-protection partnerships. Votebeat and the Brennan Center report that state election officials describe the working relationship with CISA as "broken" — and that some now see federal engagement as a threat to their independence rather than a resource.</p>
+        <p>This is happening seven months before the first Tuesday in November.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="v">2 mo.</div><div class="l">DHS unfunded since 14 Feb</div></div>
+        <div class="stat"><div class="v">100</div><div class="l">Cancelled CyberCorps summer roles</div></div>
+        <div class="stat"><div class="v">FY27</div><div class="l">Budget year targeting election-security cuts</div></div>
+        <div class="stat"><div class="v">205</div><div class="l">Days to Election Day</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 03 ROSE ALERT STAMP ============= -->
+  <section class="spread s-alert">
+    <div class="alert-stamp">Alert · Synthetic Media</div>
+    <h2>The <span class="rose">deepfake ad</span> is no longer an outlier. It is a line item.</h2>
+    <div class="deck">At least fifteen campaign ads featuring AI-generated content have aired since November, according to NBC News and Bloomberg tallies. Two dropped this month alone.</div>
+
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Maine · US Senate</span>
+        <h4>A minute of a candidate who never spoke.</h4>
+        <p>The NRSC's spot against Democrat Graham Platner used an AI-generated version of him to deliver attacks the real candidate never gave. It ran full length — unusual for synthetic content, which normally surfaces in fragments.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Texas · US Senate</span>
+        <h4>Talarico, in words that were never his.</h4>
+        <p>Last month's NRSC deepfake of James Talarico has drawn a complaint to the FEC. CNN reported the spot as "the latest in a series" from the national GOP committee in the last year.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Regulation</span>
+        <h4>A patchwork, increasing by the month.</h4>
+        <p>Twenty-six states now regulate AI-generated political speech in some form — up from five in 2023. There is still no federal framework. The Trump AI roadmap would pre-empt the state laws entirely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 04 TERMINAL / MONO ============= -->
+  <section class="spread s-terminal">
+    <div class="prompt">~/campaigns/2026 $ ./poll --synthetic --respondents=1200 --region=PA-SD --run</div>
+    <h2>Republicans now poll <span class="blink">imagined voters</span></h2>
+    <div class="deck">The American Association of Political Consultants reports that 64% of Republican operatives use AI daily; 49% of Democrats do. The tooling is no longer a curiosity — it's a panel replacement.</div>
+
+    <pre>
+<span class="c"># Aaru.synthetic_panel — 2026-04-18 08:42 UTC</span>
+<span class="k">&gt;</span> spawn_agents(n=1200, seed_from="PA-SD-7", issues=["iran","economy","immigration"])
+<span class="k">&gt;</span> simulate_event(event="iran_ceasefire_announced")
+<span class="k">&gt;</span> aggregate(demo="white_college,50+")
+  ─ baseline_favor: 0.41
+  ─ post_event:      0.53   (<span class="c">+12pp</span>, ci [0.09, 0.14])
+  ─ movement_driver: "restraint / veterans' framing"
+<span class="k">&gt;</span> export(to="creative_brief.md")
+
+<span class="c"># MiroFish.scan — open-source social, last 12h</span>
+  ─ trend: "no more forever wars" — 2.3x baseline
+  ─ salient clip: 00:07–00:15, veteran monologue
+  ─ recommended_ad_hook: 8-word affirm. of restraint</pre>
+
+    <div class="footer">
+      — The American Prospect · Axios · NCSL. Both platforms sell themselves as cheaper, faster alternatives to live panels; neither has been independently benchmarked against actual turnout.
+    </div>
+  </section>
+
+  <!-- ============= 05 ACADEMIC DROP-CAP ============= -->
+  <section class="spread s-academic">
+    <div class="kicker">No. 05 · Pew Research · Public Opinion</div>
+    <h2>A reform majority now, on both sides of the aisle — and nobody's confident it can happen.</h2>
+    <span class="byline">By the numbers &middot; fieldwork March 2026</span>
+    <div class="body">
+      <p>Seventy-seven percent of Americans now say the political system needs major changes or complete reform, according to Pew's cross-national survey released this week. The share is the highest of any of the twelve wealthy democracies Pew surveyed — despite the United States still having the highest GDP per capita in the set.</p>
+      <p>Dissatisfaction with how democracy is working rose to 69% in a separate March survey, a seven-point jump from 2025. Democrats remain overwhelmingly dissatisfied — 86% to 13%. Republicans split almost evenly: 51% dissatisfied, 48% satisfied. The partisan split on the mechanics of democracy is now narrower than the split on almost any policy question.</p>
+      <p>What makes the Pew work distinctive this cycle is the taxonomy. Americans break roughly in thirds: 49% of respondents are what Pew calls "pessimistic reformers" — they think the system needs major change but don't believe the change is coming; 27% are "optimistic reformers" who think it can happen; 23% think the system is fine as is, or needs only minor tweaks.</p>
+      <p>Put differently: three-quarters of the country wants the system to look different, and most of that three-quarters has given up on it getting there. That is the electorate the midterms are being fought over.</p>
+    </div>
+    <div class="footnotes">Sources: Pew Research Center, "Americans stand out internationally for their pessimism about the nation's political system" (15 April 2026); "Multiple indicators show a decline in the health of America's democracy" (15 April 2026). Fieldwork conducted March 2026, n≈3,600 US adults.</div>
+  </section>
+
+  <!-- ============= 06 BIG STAT ============= -->
+  <section class="spread s-bigstat">
+    <div class="kicker">No. 06 · By the Numbers</div>
+    <div class="pct">50%</div>
+    <h2>Nearly half of voters say a deepfake influenced their decision this cycle — even as most claim to distrust the medium.</h2>
+    <p class="context">Cycle survey data reported across The Japan Times, Honolulu Star-Advertiser and The Express Tribune found that close to half of American voters believe AI-generated content has had some effect on their 2026 election choices. That number is self-reported, which is exactly the point: even voters who swear they don't trust synthetic media are telling pollsters it has reached them.</p>
+    <p class="context">It sits next to another number. In an AccuPay survey cited by the same reporting, synthetic political content now reaches an estimated two in three voters across digital channels during a competitive race. Reach is no longer the bottleneck. Attribution is.</p>
+    <div class="src">Sources · Japan Times · Tribune · R Street Institute</div>
+  </section>
+
+  <!-- ============= 07 EDITORIAL PHOTO-CAPTION — ORBÁN ============= -->
+  <section class="spread s-photo">
+    <div class="inner">
+      <div class="kicker" style="color:#0e4166;">No. 07 · Global Elections · Budapest dispatch</div>
+      <div class="hero-card">
+        <div>
+          <span class="tag">Budapest · 12 April</span>
+          <h2>After sixteen years: Orbán concedes.</h2>
+        </div>
+        <div class="caption">Péter Magyar's Tisza party is projected to take a two-thirds parliamentary majority. The victory speech did not mention Vladimir Putin, Ursula von der Leyen, or Donald Trump.</div>
+      </div>
+      <div class="caption-grid">
+        <div>
+          <h3>The campaign that changed Hungary ran on healthcare, not geopolitics.</h3>
+          <p>Magyar, a former Fidesz insider turned insurgent, built a coalition out of small-town dissatisfaction with stagnating wages, deteriorating hospitals, and corruption fatigue. CNN and Al Jazeera both note how little he said, during the campaign, about the EU or the war in Ukraine — the issues that have defined Orbán's image abroad for a decade.</p>
+          <p>For European capitals, the result removes the most consistent obstacle inside the European Council to coordinated policy on Ukraine, migration, and sanctions. For Washington, it is a setback: President Trump endorsed Orbán during the campaign.</p>
+          <p>For political-tech watchers, the more interesting finding is that Magyar's insurgent apparatus ran a largely unglamorous, door-to-door, data-led ground game with only modest digital spend — the opposite of the playbook being sold in US consultant decks.</p>
+        </div>
+        <div>
+          <div class="pullquote">
+            "He has, from the minute he hit the trail, campaigned on kitchen-table issues — Hungary's stagnating economy and its poor health care — and almost nothing else."
+          </div>
+          <p style="font-family:var(--mono); font-size:13px; letter-spacing:.16em; text-transform:uppercase; margin-top:20px; color:#0e4166;">— CNN live coverage, 12 April 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 08 SPLIT DIPTYCH ============= -->
+  <section class="s-diptych">
+    <div class="panel left">
+      <div class="kicker" style="color:#ffe6d9;">No. 08A · Global Left</div>
+      <div class="loc">Barcelona · 17–18 April</div>
+      <h2>A Barcelona summit tries to give the global left a joint operating system.</h2>
+      <p>The Global Progressive Mobilisation opens today in Barcelona, convened by Pedro Sánchez and Stefan Löfven with backing from Brazil's Lula. The Party of European Socialists, the Socialist International, and the Progressive Alliance are attempting to coordinate a cross-border answer to the far right's post-2024 momentum.</p>
+      <p>The agenda includes joint action on the green transition, migration framing, and democratic defence. It is also — more quietly — a venue for trading the digital tooling that has allowed right-wing movements to operate as a networked coalition while the left has not.</p>
+      <p class="tag-bottom">Sources · Al Jazeera · FEPS</p>
+    </div>
+    <div class="panel right">
+      <div class="kicker" style="color:#f3c65a;">No. 08B · US House</div>
+      <div class="loc">NJ-11 · Special election</div>
+      <h2>Analilia Mejía's New Jersey win narrows the House majority to one defection.</h2>
+      <p>Progressive Democrat Analilia Mejía, a former national political director for the Sanders campaign and longtime union organiser, took the special election to fill Mikie Sherrill's seat. Once sworn in, Speaker Mike Johnson can afford exactly one Republican defection on a party-line vote.</p>
+      <p>The tactical reading, per Votebeat and Democracy Now: the seat flipped on ground game and base turnout, not on messaging about the Iran ceasefire or the AI rules debate that have dominated national airtime.</p>
+      <p class="tag-bottom">Sources · Reuters · Democracy Now · Votebeat</p>
+    </div>
+  </section>
+
+  <!-- ============= 09 INFLUENCER / SOCIAL GRADIENT ============= -->
+  <section class="spread s-influencer">
+    <div class="kicker">No. 09 · Social Media Trends</div>
+    <h2>The <em>long-form</em> video cycle.</h2>
+    <div class="deck">The 2026 consensus among digital strategists: YouTube, not TikTok, is now the platform campaigns build around. Audiences watch long. Creator partnerships scale further than paid ads. And AI closes the content gap.</div>
+
+    <div class="blocks">
+      <div class="block">
+        <div class="big">40%</div>
+        <h4>Of US adults 18–29 regularly get their news from TikTok.</h4>
+        <p>But campaign-side strategists are betting that retention, not reach, decides the cycle — and retention is a YouTube metric.</p>
+      </div>
+      <div class="block">
+        <div class="big">No. 1</div>
+        <h4>YouTube is the leading way Americans watch television.</h4>
+        <p>The 2026 playbook: reality-show-style candidate content, long-form sit-downs, and series formats — produced at a pace only AI-assisted workflows can keep up with.</p>
+      </div>
+      <div class="block">
+        <div class="big">45%</div>
+        <h4>Of TikTok users see at least some political content.</h4>
+        <p>Half of users under 30 see political content. The platform still matters — for discovery. It just no longer matters alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 10 LONG-FORM NEWSPRINT ESSAY ============= -->
+  <section class="spread s-essay">
+    <div class="head">
+      <div class="masthead">The Weekend Read.</div>
+      <div class="dateline">Edition of 18 April 2026 · By the desk</div>
+    </div>
+    <h2>The world's democracy scoreboard stabilises. America keeps sliding down it.</h2>
+    <div class="deck">The Economist Intelligence Unit's Democracy Index 2025, released this month, shows the first broad global improvement since 2017. The United States is the largest exception in the dataset — and the reasons are domestic, not geopolitical.</div>
+
+    <div class="body">
+      <h3>The headline</h3>
+      <p>After eight consecutive years of worsening scores, the EIU Democracy Index 2025 registered "one of the biggest increases" in the global index since 2012. The movement is modest — a handful of countries nudging from "flawed" to "full" — but the direction is new. Democracy, measured globally, is not currently getting worse.</p>
+
+      <p>The United States is the most-cited exception. Its overall score fell 0.2 points to 7.65, dropping it six places to thirty-fourth in the ranking. It remains where it has sat since 2016: in the "flawed democracies" category, below Chile, Mauritius, and the Czech Republic.</p>
+
+      <h3>What drove the fall</h3>
+      <p>The EIU attributes the decline to two specific sub-indices: "functioning of government" and "civil liberties." Staff reductions across the federal civil service, politically inflected dismissals, and the stalled appropriations cycle all depress the first. The civil-liberties sub-index picked up reductions in press access, restrictions on federal research data release, and the legal status of certain protest activity.</p>
+
+      <p>None of these is a single dramatic event. That is, in the EIU's framing, the point: the index is picking up cumulative wear.</p>
+
+      <h3>What the public thinks</h3>
+      <p>The EIU's quantitative findings align with Pew's public opinion data from this week. Sixty-nine percent of Americans say they are dissatisfied with how democracy is working. Seventy-seven percent say the political system needs major changes or complete reform — the highest share among any advanced democracy Pew surveyed.</p>
+
+      <p>The optimism gap is the unusual finding. Americans are more likely than Europeans to want sweeping change, and less likely than Europeans to believe it will happen. Half of the country is what Pew labels a "pessimistic reformer."</p>
+
+      <h3>The technology layer</h3>
+      <p>Neither the EIU nor Pew treats artificial intelligence as an index component — yet. The Atlantic Council's geopolitics brief this month argues that the next edition will have to: synthetic media, AI-driven voter simulation, and automated content pipelines affect at least three of the EIU's five sub-indices directly, and two indirectly.</p>
+
+      <p>The Carnegie Endowment has made a parallel argument from the opposite direction: AI is as likely to expand representative participation as to constrict it. Translation interfaces, constituent-response systems, and synthetic deliberation tools are all being deployed by democratic governments this year. They are simply less visible than the deepfake ads.</p>
+
+      <h3>Where this lands</h3>
+      <p>A country where 77% of voters want systemic change, where the election-security agency is unfunded, and where the incumbent party is running deepfake ads against senators — is still, per the EIU, thirty-fourth out of the world's democracies. Not first. Not bottom. Somewhere specific. Worth marking.</p>
+    </div>
+  </section>
+
+  <!-- ============= COLOPHON ============= -->
+  <section class="colophon">
+    <div class="mast">Morning<br>Edition.</div>
+    <p style="max-width:54ch; font-family:var(--serif); font-style:italic; font-size:22px; color:#d8cfba;">A daily magazine for the politics-tech curious — AI, elections, campaigns, and the machinery of power. Filed at 08:00, for Ben.</p>
+    <div class="grid">
+      <div>
+        <h4>Masthead</h4>
+        <p>Editor · Automated desk, Morning Edition</p>
+        <p>Volume · I</p>
+        <p>Issue · No. 004</p>
+        <p>Filed · Saturday, 18 April 2026</p>
+      </div>
+      <div>
+        <h4>Sources this issue</h4>
+        <p>Bloomberg · CNN · Reuters · Washington Post · New York Times · Axios · The American Prospect · The Economist (EIU) · Pew Research · Al Jazeera · Nextgov · Votebeat · NCSL · Brennan Center · Bangor Daily News · NBC News · Democracy Now · FEPS.</p>
+      </div>
+      <div>
+        <h4>Typography</h4>
+        <p>Fraunces (Undercase Type) for display and serif body.</p>
+        <p>Inter (Rasmus Andersson) for sans.</p>
+        <p>JetBrains Mono for terminal and data marks.</p>
+      </div>
+    </div>
+    <div class="footer-rule">
+      <span>Morning Edition · 2026</span>
+      <span>No emojis. No filler. Ten spreads, every morning.</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
