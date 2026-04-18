@@ -3,1262 +3,1139 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#000000" />
-<title>Morning Edition — April 18, 2026</title>
+<meta name="theme-color" content="#0d0e14" />
+<title>First Coffee Campaign News — April 18, 2026</title>
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Morning Edition — April 18, 2026" />
-<meta property="og:description" content="The AI super PAC war crosses $150M, CISA's election-security shop is being quietly hollowed out, and Hungary's 16-year Orbán era ends. Ten stories on politics, technology and the machinery of persuasion. Issue No. 004." />
+<meta property="og:title" content="First Coffee Campaign News — April 18, 2026" />
+<meta property="og:description" content="Missouri voters oust council members over AI data centers, the DOJ sues 29 states for voter rolls, and OpenAI and Anthropic wage a proxy war in a single congressional primary. Fourteen spreads on politics, technology, and the machinery of persuasion." />
 <meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-04-18.html" />
-<meta property="og:site_name" content="Morning Edition" />
+<meta property="og:site_name" content="First Coffee Campaign News" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,700;1,9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
 <style>
-  /* =====================================================
-     EVERY — Design Tokens
-     ===================================================== */
-  :root {
-    /* Type */
-    --font-primary: "Switzer", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    --font-serif: "Source Serif 4", "Signifier", "Hoefler Text", "Baskerville Old Face", Garamond, Georgia, "Times New Roman", serif;
-    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+/* ===================================================
+   FIRST COFFEE CAMPAIGN NEWS — Issue 005
+   Mobile-first, editorial-magazine layout
+   Fonts: Fraunces (display), Inter (body), JetBrains Mono (code)
+   =================================================== */
+:root {
+  --serif: "Fraunces", "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --ink: #111015;
+  --paper: #f5f1ea;
+  --parchment: #eee4cc;
+  --cream: #f4efe3;
+  --midnight: #0a0f1f;
+  --crimson: #c7221f;
+  --rose: #e84855;
+  --gold: #c9a227;
+  --teal: #0d5c63;
+  --terminal: #00ff88;
+  --slate: #2c2f3a;
+  --lavender: #e8e0f0;
+  --blush: #f5e6e0;
+  --warm-neutral: #3a2e28;
 
-    --fs-xs: 12px;
-    --fs-sm: 13px;
-    --fs-md: 14px;
-    --fs-lg: 15px;
-    --fs-xl: 16px;
-    --fs-2xl: 18px;
-    --fs-3xl: 20px;
-    --fs-4xl: 24px;
+  --pad-x: clamp(22px, 6.5vw, 96px);
+  --pad-y: clamp(44px, 10vw, 110px);
+  --gutter: clamp(18px, 4vw, 40px);
+}
 
-    --fw-base: 400;
-    --lh-base: 22.5px;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: 0.75; }
+p { font-size: 17px; line-height: 1.6; }
+@media (min-width: 720px) { p { font-size: 18px; line-height: 1.65; } }
+@media (min-width: 1100px) { p { font-size: 19px; } }
 
-    /* Color */
-    --c-text-primary:   #ffffff;
-    --c-text-secondary: #d6d3d1;
-    --c-text-tertiary:  #d0d0d0;
-    --c-text-muted:     #8a8784;
-    --c-surface-base:   #000000;
-    --c-surface-muted:  #c0f0fb;   /* cyan inversion blocks */
-    --c-surface-raised: #020202;
-    --c-surface-strong: #492711;   /* rust feature blocks */
-    --c-border-default: #e5e7eb;
-    --c-border-muted:   #3c3c3c;
+.spread {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--pad-y) var(--pad-x);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    /* Space */
-    --s-1: 5px;
-    --s-2: 8px;
-    --s-3: 10px;
-    --s-4: 12px;
-    --s-5: 16px;
-    --s-6: 20px;
-    --s-7: 24px;
-    --s-8: 31px;
+.folio {
+  position: absolute;
+  top: 20px;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.55;
+  flex-wrap: wrap;
+}
+.folio-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.45;
+  flex-wrap: wrap;
+}
+@media (min-width: 720px) {
+  .folio, .folio-bottom { font-size: 13px; }
+  .folio { top: 28px; }
+  .folio-bottom { bottom: 28px; }
+}
 
-    /* Radius / motion */
-    --r-xs: 4px;
-    --r-sm: 6px;
-    --r-md: 10px;
-    --r-pill: 9999px;
-    --m-instant: 150ms;
-    --m-fast: 300ms;
-  }
+.rule { height: 2px; background: currentColor; width: 100%; }
+.rule-thin { height: 1px; background: currentColor; width: 100%; opacity: 0.4; }
+.kicker {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+@media (min-width: 720px) { .kicker { font-size: 16px; } }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-  body {
-    font-family: var(--font-primary);
-    font-size: var(--fs-lg);
-    font-weight: var(--fw-base);
-    line-height: var(--lh-base);
-    color: var(--c-text-primary);
-    background: var(--c-surface-base);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
+.source {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 2vh;
+}
 
-  a { color: inherit; text-decoration: none; transition: color var(--m-instant) ease; }
-  a:hover { color: var(--c-surface-muted); }
-  a:focus-visible { outline: 2px solid var(--c-surface-muted); outline-offset: 2px; border-radius: var(--r-xs); }
+/* ============ COVER ============ */
+.cover {
+  background: var(--midnight);
+  color: var(--cream);
+  justify-content: space-between;
+}
+.cover .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+@media (min-width: 720px) { .cover .topbar { font-size: 18px; } }
+.cover h1 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(60px, 14vw, 220px);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  margin: 6vh 0 2vh;
+}
+.cover .tagline {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.8vw, 40px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold);
+  max-width: 26ch;
+  line-height: 1.15;
+  margin-top: 2vh;
+}
+.cover .lede {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.35;
+  max-width: 38ch;
+  margin-top: 4vh;
+  color: #c8c4bc;
+}
+.cover .meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5vh;
+}
+.cover .meta-pills span {
+  padding: 6px 16px;
+  border: 1px solid rgba(201,162,39,0.5);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
 
-  /* =====================================================
-     LAYOUT PRIMITIVES
-     ===================================================== */
-  .shell {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 var(--s-7);
-  }
-  @media (min-width: 720px) { .shell { padding: 0 var(--s-8); } }
+/* ============ TOC ============ */
+.toc {
+  background: var(--ink);
+  color: var(--cream);
+}
+.toc .kicker { color: var(--gold); }
+.toc h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(50px, 8vw, 130px);
+  line-height: 0.95;
+  margin: 3vh 0;
+  letter-spacing: -0.02em;
+}
+.toc ol {
+  list-style: none;
+  counter-reset: c;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8vh;
+  margin-top: 4vh;
+}
+@media (min-width: 720px) {
+  .toc ol { grid-template-columns: 1fr 1fr; gap: 2vh 5vw; }
+}
+.toc ol li {
+  counter-increment: c;
+  display: flex;
+  gap: 1.2vw;
+  align-items: baseline;
+  border-top: 1px solid rgba(244,239,227,0.2);
+  padding-top: 1.2vh;
+  font-size: 17px;
+  line-height: 1.25;
+}
+.toc ol li::before {
+  content: counter(c, decimal-leading-zero);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  color: var(--gold);
+  min-width: 1.5em;
+}
+.toc ol li .t {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.15;
+  font-weight: 500;
+}
+.toc ol li .s {
+  display: block;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  font-weight: 600;
+  margin-top: 0.3em;
+}
 
-  .stack > * + * { margin-top: var(--s-5); }
-  .stack-lg > * + * { margin-top: var(--s-7); }
+/* ============ RESEARCH INSIGHTS — Academic Drop-Cap ============ */
+.research {
+  background: var(--cream);
+  color: var(--ink);
+}
+.research .paper-title {
+  font-family: var(--sans);
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: clamp(16px, 1.8vw, 22px);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  max-width: 50ch;
+}
+.research .paper-authors {
+  font-family: var(--sans);
+  font-variant: small-caps;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: #555;
+  margin-top: 0.5vh;
+}
+.research h2 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 0.95;
+  margin: 3vh 0;
+  letter-spacing: -0.02em;
+}
+.research .body-copy {
+  max-width: 60ch;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 2vh;
+}
+.research .body-copy::first-letter {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 72px;
+  float: left;
+  line-height: 0.8;
+  margin-right: 10px;
+  margin-top: 6px;
+  color: var(--crimson);
+}
+.research .sidebar {
+  margin-top: 4vh;
+  border-top: 3px solid var(--crimson);
+  border-bottom: 3px solid var(--crimson);
+  padding: 2.5vh 0;
+  max-width: 50ch;
+}
+.research .sidebar .label {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 1vh;
+}
+.research .sidebar p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #333;
+}
 
-  .rule {
-    height: 1px;
-    background: var(--c-border-muted);
-    border: 0;
-    margin: var(--s-7) 0;
-  }
+/* ============ QUOTE OF THE DAY — Editorial Photo-Caption ============ */
+.quote-spread {
+  background: var(--warm-neutral);
+  color: #f3ead5;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.quote-spread blockquote {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(26px, 4vw, 56px);
+  line-height: 1.25;
+  max-width: 22ch;
+  margin: 0 auto;
+  letter-spacing: -0.01em;
+}
+.quote-spread .attribution {
+  font-family: var(--sans);
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: clamp(14px, 1.6vw, 19px);
+  letter-spacing: 0.12em;
+  margin-top: 5vh;
+  color: #c8b89a;
+}
 
-  /* =====================================================
-     UTILITIES — eyebrows, badges, tags
-     ===================================================== */
-  .eyebrow {
-    font-family: var(--font-primary);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--c-text-tertiary);
-  }
-  .eyebrow--accent { color: var(--c-surface-muted); }
-  .eyebrow--rust   { color: #e9a079; }
+/* ============ HERO GRADIENT ============ */
+.hero-gradient {
+  color: var(--cream);
+  justify-content: flex-end;
+}
+.hero-gradient h2 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(40px, 7vw, 100px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+.hero-gradient .deck {
+  max-width: 56ch;
+  margin-top: 3vh;
+  font-size: 18px;
+  line-height: 1.65;
+}
+@media (min-width: 720px) { .hero-gradient .deck { font-size: 20px; } }
 
-  .tag {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--s-2);
-    font-family: var(--font-primary);
-    font-size: var(--fs-xs);
-    font-weight: 500;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--c-text-secondary);
-    padding: var(--s-1) var(--s-3);
-    border: 1px solid var(--c-border-muted);
-    border-radius: var(--r-pill);
-    background: transparent;
-    line-height: 1;
-  }
-  .tag--accent {
-    color: var(--c-surface-base);
-    background: var(--c-surface-muted);
-    border-color: var(--c-surface-muted);
-  }
-  .tag--rust {
-    color: var(--c-surface-muted);
-    background: var(--c-surface-strong);
-    border-color: var(--c-surface-strong);
-  }
+/* ============ DARK / MIDNIGHT ============ */
+.dark-spread {
+  background: var(--midnight);
+  color: #e8e4dc;
+}
+.dark-spread h2 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(34px, 5.5vw, 80px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  color: #fff;
+}
+.dark-spread .deck {
+  max-width: 56ch;
+  margin-top: 3vh;
+  font-size: 18px;
+  line-height: 1.65;
+}
+.dark-spread .stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  margin-top: 4vh;
+}
+.dark-spread .stat-row .stat {
+  text-align: center;
+}
+.dark-spread .stat-row .stat .num {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 1;
+  color: var(--gold);
+}
+.dark-spread .stat-row .stat .label {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.5vh;
+  color: #999;
+}
 
-  .num {
-    font-family: var(--font-primary);
-    font-variant-numeric: tabular-nums;
-    font-weight: 500;
-    letter-spacing: -.01em;
-  }
+/* ============ ROSE-ALERT-STAMP ============ */
+.rose-stamp {
+  background: var(--blush);
+  color: var(--ink);
+  position: relative;
+}
+.rose-stamp::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: var(--pad-x);
+  transform: translateY(-50%) rotate(-12deg);
+  width: clamp(120px, 18vw, 280px);
+  height: clamp(120px, 18vw, 280px);
+  border: 6px solid var(--rose);
+  border-radius: 50%;
+  opacity: 0.12;
+}
+.rose-stamp h2 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(34px, 5vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  color: var(--crimson);
+}
+.rose-stamp .deck {
+  max-width: 56ch;
+  margin-top: 3vh;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #333;
+}
+.rose-stamp .alert-tag {
+  display: inline-block;
+  background: var(--rose);
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 3px;
+  margin-bottom: 2vh;
+}
 
-  /* =====================================================
-     HEADER — global nav
-     ===================================================== */
-  .siteheader {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(0,0,0,.86);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--c-border-muted);
-  }
-  .siteheader .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--s-4) 0;
-    gap: var(--s-7);
-  }
-  .siteheader .brand {
-    display: inline-flex;
-    align-items: baseline;
-    gap: var(--s-3);
-    font-family: var(--font-primary);
-    font-weight: 700;
-    font-size: var(--fs-xl);
-    letter-spacing: -.005em;
-  }
-  .siteheader .brand .dot {
-    width: var(--s-2); height: var(--s-2);
-    border-radius: var(--r-pill);
-    background: var(--c-surface-muted);
-    display: inline-block;
-  }
-  .siteheader nav {
-    display: none;
-    gap: var(--s-7);
-  }
-  @media (min-width: 820px) { .siteheader nav { display: inline-flex; } }
-  .siteheader nav a {
-    font-size: var(--fs-md);
-    color: var(--c-text-secondary);
-    font-weight: 500;
-  }
-  .siteheader .meta {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    color: var(--c-text-muted);
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
+/* ============ BIG-STAT ============ */
+.big-stat {
+  background: var(--cream);
+  color: var(--ink);
+  align-items: center;
+  text-align: center;
+}
+.big-stat .number {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(80px, 18vw, 300px);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--crimson);
+}
+.big-stat .unit {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 28px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 1vh;
+  color: #555;
+}
+.big-stat h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(26px, 3.5vw, 52px);
+  line-height: 1.05;
+  margin-top: 4vh;
+  max-width: 22ch;
+  letter-spacing: -0.02em;
+}
+.big-stat .deck {
+  max-width: 50ch;
+  margin-top: 2.5vh;
+  font-size: 18px;
+  line-height: 1.65;
+  text-align: left;
+  color: #333;
+}
 
-  /* =====================================================
-     HERO / MASTHEAD
-     ===================================================== */
-  .hero {
-    padding: var(--s-8) 0 var(--s-8);
-    border-bottom: 1px solid var(--c-border-muted);
-  }
-  .hero .wrap { padding-top: var(--s-7); padding-bottom: var(--s-7); }
-  .hero .topline {
-    display: flex; flex-wrap: wrap; gap: var(--s-3);
-    margin-bottom: var(--s-7);
-  }
-  .hero h1 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: clamp(44px, 8.5vw, 116px);
-    line-height: 1.02;
-    letter-spacing: -.025em;
-    color: var(--c-text-primary);
-    max-width: 18ch;
-    margin-bottom: var(--s-7);
-  }
-  .hero h1 em { font-style: italic; color: var(--c-surface-muted); font-family: var(--font-serif); }
-  .hero .lede {
-    font-family: var(--font-primary);
-    font-size: clamp(var(--fs-2xl), 1.8vw, var(--fs-4xl));
-    line-height: 1.45;
-    color: var(--c-text-secondary);
-    max-width: 56ch;
-    margin-bottom: var(--s-8);
-  }
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-5);
-    margin-top: var(--s-7);
-  }
-  @media (min-width: 720px) { .hero-grid { grid-template-columns: 1fr 1fr 1fr; } }
-  .hero-card {
-    background: var(--c-surface-raised);
-    border: 1px solid var(--c-border-muted);
-    border-radius: var(--r-md);
-    padding: var(--s-7);
-    transition: border-color var(--m-fast) ease, transform var(--m-fast) ease;
-  }
-  .hero-card:hover { border-color: var(--c-surface-muted); transform: translateY(-2px); }
-  .hero-card .eyebrow { margin-bottom: var(--s-4); display: block; }
-  .hero-card h3 {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: var(--fs-4xl);
-    line-height: 1.15;
-    color: var(--c-text-primary);
-    margin-bottom: var(--s-4);
-  }
-  .hero-card p { font-size: var(--fs-md); color: var(--c-text-secondary); line-height: 1.55; }
-  .hero-card .source { display: block; font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--c-text-muted); margin-top: var(--s-5); letter-spacing: .12em; text-transform: uppercase; }
+/* ============ LONG-FORM NEWSPRINT ESSAY ============ */
+.newsprint {
+  background: var(--paper);
+  color: var(--ink);
+}
+.newsprint .byline {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 2vh;
+}
+.newsprint h2 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 2vh;
+  margin-bottom: 3vh;
+}
+.newsprint .columns {
+  column-count: 1;
+  column-gap: 4vw;
+  max-width: 80ch;
+  font-size: 18px;
+  line-height: 1.7;
+}
+@media (min-width: 800px) { .newsprint .columns { column-count: 2; } }
+.newsprint .columns p + p { margin-top: 1.5vh; text-indent: 1.5em; }
+.newsprint .ongoing-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 3px;
+  margin-bottom: 2vh;
+}
 
-  /* =====================================================
-     SECTION SHARED
-     ===================================================== */
-  section.story {
-    padding: var(--s-8) 0;
-    border-bottom: 1px solid var(--c-border-muted);
-  }
-  .story-head {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-5);
-    margin-bottom: var(--s-8);
-  }
-  @media (min-width: 820px) { .story-head { grid-template-columns: 80px 1fr auto; align-items: end; gap: var(--s-7); } }
-  .story-head .index {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-size: 64px;
-    line-height: .9;
-    color: var(--c-text-primary);
-    letter-spacing: -.02em;
-  }
-  .story-head .titles h2 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: clamp(32px, 4.4vw, 56px);
-    line-height: 1.05;
-    letter-spacing: -.015em;
-    color: var(--c-text-primary);
-    margin-bottom: var(--s-4);
-    max-width: 26ch;
-  }
-  .story-head .titles h2 em { font-style: italic; color: var(--c-surface-muted); }
-  .story-head .titles .deck {
-    font-family: var(--font-primary);
-    font-size: var(--fs-2xl);
-    color: var(--c-text-secondary);
-    line-height: 1.5;
-    max-width: 60ch;
-  }
-  .story-head .meta-col {
-    display: flex; flex-direction: column; gap: var(--s-3);
-    align-items: flex-start;
-  }
-  @media (min-width: 820px) { .story-head .meta-col { align-items: flex-end; } }
+/* ============ INFLUENCER / SOCIAL GRADIENT ============ */
+.social-gradient {
+  color: #fff;
+}
+.social-gradient h2 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 88px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+.social-gradient .deck {
+  max-width: 56ch;
+  margin-top: 3vh;
+  font-size: 18px;
+  line-height: 1.65;
+}
+.social-gradient .poll-bar {
+  margin-top: 4vh;
+  display: flex;
+  height: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 500px;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 16px;
+}
+.social-gradient .poll-bar .left {
+  background: #d32f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.social-gradient .poll-bar .right {
+  background: #1565c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
 
-  .story-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-7);
+/* ============ SPLIT GRAPH — Diptych ============ */
+.split-graph {
+  background: var(--paper);
+  color: var(--ink);
+  padding-top: clamp(60px, 12vh, 140px);
+  padding-bottom: clamp(60px, 12vh, 140px);
+}
+.split-graph .super-headline {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: clamp(14px, 1.5vw, 20px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4vh;
+  color: #555;
+}
+.split-graph .diptych {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (min-width: 720px) {
+  .split-graph .diptych { flex-direction: row; }
+}
+.split-graph .half {
+  flex: 1;
+  padding: 4vh 3vw;
+}
+.split-graph .half-left {
+  border-right: none;
+  border-bottom: 1px solid #aaa;
+}
+.split-graph .half-right {
+  border-left: none;
+  border-top: none;
+}
+@media (min-width: 720px) {
+  .split-graph .half-left {
+    border-right: 1px solid #aaa;
+    border-bottom: none;
   }
-  @media (min-width: 820px) { .story-body { grid-template-columns: 80px 1fr; gap: var(--s-7); } }
-  .story-body .gutter {
-    display: none;
+  .split-graph .half-right {
+    border-left: none;
   }
-  @media (min-width: 820px) { .story-body .gutter { display: block; } }
-  .story-body .gutter .label {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--c-text-muted);
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
-  .story-body p {
-    font-size: var(--fs-2xl);
-    line-height: 1.6;
-    color: var(--c-text-secondary);
-    max-width: 68ch;
-    margin-bottom: var(--s-5);
-  }
-  .story-body p strong { color: var(--c-text-primary); font-weight: 600; }
+}
+.split-graph .half h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(22px, 2.8vw, 38px);
+  line-height: 1.1;
+  margin-bottom: 2vh;
+}
+.split-graph .half-left h3 { color: var(--teal); }
+.split-graph .half-right h3 { color: var(--crimson); }
+.split-graph .half p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #333;
+}
+.split-graph .half .src {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 2vh;
+}
 
-  /* Three-up cards used inside several stories */
-  .three-up {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-5);
-    margin-top: var(--s-7);
-  }
-  @media (min-width: 720px) { .three-up { grid-template-columns: 1fr 1fr 1fr; } }
+/* ============ TERMINAL / MONO ============ */
+.terminal {
+  background: #0c0c0c;
+  color: var(--terminal);
+  font-family: var(--mono);
+}
+.terminal h2 {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 60px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.terminal .body-mono {
+  max-width: 68ch;
+  margin-top: 3vh;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #c0ffd8;
+}
+@media (min-width: 720px) { .terminal .body-mono { font-size: 17px; } }
+.terminal .takeaway {
+  margin-top: 4vh;
+  padding: 2vh 0;
+  border-top: 1px solid rgba(0,255,136,0.3);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--terminal);
+}
+.terminal .takeaway::before {
+  content: "> ";
+  opacity: 0.7;
+}
 
-  .card {
-    background: var(--c-surface-raised);
-    border: 1px solid var(--c-border-muted);
-    border-radius: var(--r-md);
-    padding: var(--s-7);
-    transition: border-color var(--m-fast) ease;
-  }
-  .card:hover { border-color: var(--c-surface-muted); }
-  .card .eyebrow { display: block; margin-bottom: var(--s-4); }
-  .card h4 {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: var(--fs-3xl);
-    line-height: 1.2;
-    color: var(--c-text-primary);
-    margin-bottom: var(--s-3);
-  }
-  .card p { font-size: var(--fs-md); color: var(--c-text-secondary); line-height: 1.55; }
-
-  /* =====================================================
-     STORY 02 — Stat panel
-     ===================================================== */
-  .stat-block {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-4);
-    background: var(--c-surface-raised);
-    border: 1px solid var(--c-border-muted);
-    border-radius: var(--r-md);
-    padding: var(--s-7);
-    margin-top: var(--s-5);
-  }
-  @media (min-width: 720px) { .stat-block { grid-template-columns: repeat(4, 1fr); gap: var(--s-7); } }
-  .stat-block .stat .v {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 1;
-    color: var(--c-surface-muted);
-    letter-spacing: -.02em;
-  }
-  .stat-block .stat .l {
-    margin-top: var(--s-3);
-    font-size: var(--fs-sm);
-    color: var(--c-text-tertiary);
-    line-height: 1.4;
-  }
-
-  /* =====================================================
-     STORY 03 — Alert callout
-     ===================================================== */
-  .callout {
-    background: var(--c-surface-strong);
-    color: #fbe5d6;
-    border-radius: var(--r-md);
-    padding: var(--s-7);
-    margin-top: var(--s-7);
-    display: flex;
-    flex-direction: column;
-    gap: var(--s-4);
-  }
-  .callout .label {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: #f1a877;
-  }
-  .callout p { color: #fbe5d6; font-size: var(--fs-2xl); line-height: 1.5; max-width: 60ch; }
-
-  /* =====================================================
-     STORY 04 — Code / terminal
-     ===================================================== */
-  pre.terminal {
-    background: var(--c-surface-raised);
-    border: 1px solid var(--c-border-muted);
-    border-radius: var(--r-md);
-    padding: var(--s-7);
-    font-family: var(--font-mono);
-    font-size: var(--fs-md);
-    line-height: 1.7;
-    color: var(--c-text-secondary);
-    overflow-x: auto;
-    white-space: pre-wrap;
-    margin-top: var(--s-5);
-  }
-  pre.terminal .k { color: var(--c-surface-muted); }
-  pre.terminal .c { color: var(--c-text-muted); }
-  pre.terminal .v { color: #e9a079; }
-
-  /* =====================================================
-     STORY 06 — Big number
-     ===================================================== */
-  .feature-num {
-    background: var(--c-surface-muted);
-    color: var(--c-surface-base);
-    border-radius: var(--r-md);
-    padding: var(--s-8);
-    margin-top: var(--s-7);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-7);
-    align-items: end;
-  }
-  @media (min-width: 720px) { .feature-num { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
-  .feature-num .pct {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-size: clamp(120px, 22vw, 280px);
-    line-height: .85;
-    letter-spacing: -.04em;
-    color: var(--c-surface-base);
-  }
-  .feature-num .copy {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 400;
-    font-size: var(--fs-4xl);
-    line-height: 1.35;
-    color: var(--c-surface-base);
-    max-width: 38ch;
-  }
-  .feature-num .src {
-    margin-top: var(--s-5);
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--c-surface-base);
-  }
-
-  /* =====================================================
-     STORY 07 — Photo card
-     ===================================================== */
-  .photo-card {
-    background: linear-gradient(140deg, #021c30 0%, #0e4166 60%, #1e6aa3 100%);
-    border-radius: var(--r-md);
-    padding: var(--s-8);
-    color: #f9f7f0;
-    margin-top: var(--s-5);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-7);
-    border: 1px solid var(--c-border-muted);
-  }
-  @media (min-width: 820px) { .photo-card { grid-template-columns: 1.4fr 1fr; align-items: end; } }
-  .photo-card h3 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: clamp(36px, 4.6vw, 64px);
-    line-height: 1.05;
-    letter-spacing: -.015em;
-    color: #f9f7f0;
-    max-width: 16ch;
-  }
-  .photo-card .caption {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: var(--fs-3xl);
-    line-height: 1.4;
-    color: #cfe1f4;
-    max-width: 38ch;
-  }
-  .photo-card .stamp {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--s-2);
-    margin-bottom: var(--s-5);
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    background: #f9f7f0;
-    color: #0e4166;
-    padding: var(--s-1) var(--s-3);
-    border-radius: var(--r-pill);
-  }
-
-  /* =====================================================
-     STORY 08 — Diptych
-     ===================================================== */
-  .diptych {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-5);
-    margin-top: var(--s-5);
-  }
-  @media (min-width: 820px) { .diptych { grid-template-columns: 1fr 1fr; } }
-  .diptych .panel {
-    border: 1px solid var(--c-border-muted);
-    border-radius: var(--r-md);
-    padding: var(--s-8);
-    transition: border-color var(--m-fast) ease;
-  }
-  .diptych .panel:hover { border-color: var(--c-surface-muted); }
-  .diptych .panel.left  { background: var(--c-surface-strong); color: #fbe5d6; }
-  .diptych .panel.right { background: var(--c-surface-raised); color: var(--c-text-primary); }
-  .diptych .panel h3 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: var(--fs-4xl);
-    line-height: 1.15;
-    margin-bottom: var(--s-4);
-    color: inherit;
-  }
-  .diptych .panel p { font-size: var(--fs-md); line-height: 1.55; margin-bottom: var(--s-3); color: inherit; opacity: .92; }
-  .diptych .panel .label {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    margin-bottom: var(--s-4);
-    display: inline-block;
-  }
-  .diptych .panel.left .label { color: #f1a877; }
-  .diptych .panel.right .label { color: var(--c-surface-muted); }
-
-  /* =====================================================
-     STORY 09 — Inverted accent (cyan) feature row
-     ===================================================== */
-  .invert {
-    background: var(--c-surface-muted);
-    color: var(--c-surface-base);
-    border-radius: var(--r-md);
-    padding: var(--s-8);
-    margin-top: var(--s-5);
-  }
-  .invert .label {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--c-surface-strong);
-    margin-bottom: var(--s-5);
-    display: inline-block;
-  }
-  .invert h3 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: clamp(36px, 4.6vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -.015em;
-    margin-bottom: var(--s-7);
-    max-width: 22ch;
-    color: var(--c-surface-base);
-  }
-  .invert .row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-7);
-    border-top: 1px solid rgba(0,0,0,.18);
-    padding-top: var(--s-7);
-  }
-  @media (min-width: 720px) { .invert .row { grid-template-columns: 1fr 1fr 1fr; } }
-  .invert .row .item .big {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 1;
-    color: var(--c-surface-strong);
-    letter-spacing: -.02em;
-    margin-bottom: var(--s-3);
-  }
-  .invert .row .item h4 {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: var(--fs-3xl);
-    line-height: 1.2;
-    color: var(--c-surface-base);
-    margin-bottom: var(--s-3);
-  }
-  .invert .row .item p {
-    font-size: var(--fs-md);
-    color: var(--c-surface-base);
-    opacity: .8;
-    line-height: 1.5;
-  }
-
-  /* =====================================================
-     STORY 10 — Long-read editorial
-     ===================================================== */
-  .longread { padding-top: var(--s-7); }
-  .longread h3 {
-    font-family: var(--font-primary);
-    font-size: var(--fs-xs);
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--c-surface-muted);
-    margin: var(--s-7) 0 var(--s-3);
-  }
-  .longread p {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-size: var(--fs-2xl);
-    line-height: 1.7;
-    color: var(--c-text-secondary);
-    max-width: 68ch;
-    margin-bottom: var(--s-4);
-  }
-  .longread p:first-of-type::first-letter {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: 64px;
-    line-height: .9;
-    float: left;
-    color: var(--c-surface-muted);
-    padding: var(--s-1) var(--s-3) 0 0;
-  }
-
-  /* =====================================================
-     TOC index
-     ===================================================== */
-  .toc { padding: var(--s-8) 0; border-bottom: 1px solid var(--c-border-muted); }
-  .toc h2 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: clamp(30px, 4vw, 44px);
-    color: var(--c-text-primary);
-    letter-spacing: -.01em;
-    margin-bottom: var(--s-7);
-  }
-  .toc ol {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  @media (min-width: 720px) { .toc ol { grid-template-columns: 1fr 1fr; column-gap: var(--s-8); } }
-  .toc li {
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    align-items: baseline;
-    gap: var(--s-5);
-    padding: var(--s-5) 0;
-    border-top: 1px solid var(--c-border-muted);
-  }
-  .toc li:hover { background: var(--c-surface-raised); }
-  .toc li .n {
-    font-family: var(--font-mono);
-    font-size: var(--fs-md);
-    color: var(--c-text-muted);
-    letter-spacing: .08em;
-  }
-  .toc li .t {
-    font-family: var(--font-primary);
-    font-size: var(--fs-2xl);
-    color: var(--c-text-primary);
-    font-weight: 500;
-    line-height: 1.3;
-  }
-  .toc li .t .sub {
-    display: block;
-    margin-top: var(--s-1);
-    font-size: var(--fs-sm);
-    color: var(--c-text-muted);
-    font-weight: 400;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-  .toc li .arrow {
-    font-family: var(--font-mono);
-    font-size: var(--fs-md);
-    color: var(--c-text-muted);
-  }
-  .toc li:hover .arrow { color: var(--c-surface-muted); }
-
-  /* =====================================================
-     COLOPHON
-     ===================================================== */
-  footer.colophon {
-    padding: var(--s-8) 0;
-    background: var(--c-surface-base);
-  }
-  footer.colophon .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--s-7);
-    border-top: 1px solid var(--c-border-muted);
-    padding-top: var(--s-7);
-  }
-  @media (min-width: 720px) { footer.colophon .grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
-  footer.colophon h4 {
-    font-family: var(--font-primary);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--c-text-tertiary);
-    margin-bottom: var(--s-4);
-  }
-  footer.colophon p { font-size: var(--fs-md); color: var(--c-text-secondary); line-height: 1.55; margin-bottom: var(--s-3); }
-  footer.colophon .mast {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: clamp(36px, 5vw, 60px);
-    line-height: 1;
-    letter-spacing: -.02em;
-    color: var(--c-text-primary);
-    margin-bottom: var(--s-5);
-  }
-  footer.colophon .end {
-    margin-top: var(--s-7);
-    padding-top: var(--s-5);
-    border-top: 1px solid var(--c-border-muted);
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    color: var(--c-text-muted);
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s-3);
-  }
+/* ============ COLOPHON ============ */
+.colophon {
+  background: var(--ink);
+  color: #888;
+  min-height: auto;
+  padding: 8vh var(--pad-x);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.colophon .title {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(28px, 4vw, 48px);
+  color: var(--cream);
+  margin-bottom: 3vh;
+}
+.colophon p + p { margin-top: 1.2vh; }
 </style>
 </head>
 <body>
 
-<!-- ============= HEADER ============= -->
-<header class="siteheader">
-  <div class="shell inner">
-    <a class="brand" href="#top">
-      <span class="dot" aria-hidden="true"></span>
-      Morning Edition
-    </a>
-    <nav aria-label="Sections">
-      <a href="#contents">Contents</a>
-      <a href="#story-01">AI Money</a>
-      <a href="#story-07">Hungary</a>
-      <a href="#story-10">Long Read</a>
-    </nav>
-    <span class="meta">No. 004 · 18 Apr 2026</span>
+<!-- ======================================================
+     COVER
+     ====================================================== -->
+<section class="spread cover" id="cover">
+  <div class="topbar">
+    <span>First Coffee Campaign News</span>
+    <span>Issue No. 005</span>
   </div>
-</header>
+  <div>
+    <h1>First<br>Coffee.</h1>
+    <div class="tagline">The backlash arrives at the ballot box.</div>
+    <div class="lede">Missouri voters oust half their city council over a data-center deal. The DOJ sues twenty-nine states for voter data. And OpenAI and Anthropic wage a proxy war in a single New York congressional primary.</div>
+  </div>
+  <div class="meta-pills">
+    <span>AI in Politics</span>
+    <span>GovTech</span>
+    <span>Global Elections</span>
+    <span>Political Tech</span>
+    <span>Social Media</span>
+  </div>
+  <div class="folio-bottom">
+    <span>Saturday, 18 April 2026</span>
+    <span>14 Spreads</span>
+  </div>
+</section>
 
-<main id="top">
+<!-- ======================================================
+     TABLE OF CONTENTS
+     ====================================================== -->
+<section class="spread toc" id="toc">
+  <div class="kicker">In This Issue</div>
+  <h2>Contents</h2>
+  <ol>
+    <li><div><span class="t">Research Insights: Parasocial Politicians</span><span class="s">Academic Drop-Cap</span></div></li>
+    <li><div><span class="t">Quote of the Day: Peter Magyar</span><span class="s">Editorial Photo-Caption</span></div></li>
+    <li><div><span class="t">The Town That Voted Against the Algorithm</span><span class="s">Hero Gradient</span></div></li>
+    <li><div><span class="t">Twenty-Nine States, Twenty-Nine Lawsuits</span><span class="s">Dark / Midnight</span></div></li>
+    <li><div><span class="t">The Proxy War in New York's Twelfth</span><span class="s">Rose-Alert-Stamp</span></div></li>
+    <li><div><span class="t">$185 Million on Everything Except AI</span><span class="s">Big-Stat</span></div></li>
+    <li><div><span class="t">Hungary's First Hundred Hours</span><span class="s">Long-Form Newsprint Essay</span></div></li>
+    <li><div><span class="t">Brazil: A Dead Heat at Eighty</span><span class="s">Influencer / Social Gradient</span></div></li>
+    <li><div><span class="t">Twenty-Eight States, One Constitutional Question</span><span class="s">Hero Gradient</span></div></li>
+    <li><div><span class="t">The White House Says No New Regulator</span><span class="s">Dark / Midnight</span></div></li>
+    <li><div><span class="t">Tillis Draws a Line on NATO</span><span class="s">Rose-Alert-Stamp</span></div></li>
+    <li><div><span class="t">The AI Adoption Gap</span><span class="s">Big-Stat</span></div></li>
+    <li><div><span class="t">Split Graph: Who Should Regulate AI?</span><span class="s">Split Diptych</span></div></li>
+    <li><div><span class="t">Political Tech: Quiller AI</span><span class="s">Terminal (Mono)</span></div></li>
+  </ol>
+  <div class="folio-bottom" style="color:#666;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-  <!-- ============= HERO ============= -->
-  <section class="hero">
-    <div class="shell wrap">
-      <div class="topline">
-        <span class="tag tag--accent">Issue No. 004</span>
-        <span class="tag">Volume I</span>
-        <span class="tag">Saturday · 18 April 2026</span>
-      </div>
+<!-- ======================================================
+     01 — RESEARCH INSIGHTS
+     ====================================================== -->
+<section class="spread research" id="s01">
+  <div class="folio" style="color:#888;">
+    <span>01 / Research Insights</span>
+    <span>Academic Drop-Cap</span>
+  </div>
+  <div class="kicker" style="color:var(--crimson);">Research Insights of the Day</div>
+  <h2>Parasocial Politicians</h2>
+  <div class="paper-title">Political Parasocial Relationships on Social Media: The Role of User Experiences and Emotions in Shaping eWOM and Voting Intention</div>
+  <div class="paper-authors">Published in Telematics and Informatics Reports, 2025 &middot; ScienceDirect</div>
+  <div class="body-copy">
+    Politicians who share personal narratives, unscripted moments, and behind-the-scenes content on social media are not just building followings — they are building parasocial relationships, the psychological one-way bonds audiences form with media figures. A new study examining voter behavior during the 2024 Indonesian presidential election finds that these bonds drive political action more powerfully than policy agreement alone. Voters who perceived homophily — a sense that the candidate was "like them" — and who had repeated relationship experiences with a political figure's content reported higher emotional engagement, stronger electronic word-of-mouth activity, and ultimately firmer voting intention. Pleasure, not anger or anxiety, emerged as the strongest mediating emotion linking social media experience to the decision to vote for a candidate.
+  </div>
+  <div class="sidebar">
+    <div class="label">Practitioner Implication</div>
+    <p>Campaigns investing in parasocial content strategies — personal storytelling, direct-to-camera formats, and perceived authenticity — may see higher returns in voter mobilization than those focused solely on policy messaging or paid advertising.</p>
+  </div>
+  <div class="source">Source: Telematics and Informatics Reports, ScienceDirect, 2025</div>
+  <div class="folio-bottom" style="color:#888;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-      <h1>The AI money war meets a hollow <em>election‑security</em> apparatus.</h1>
-      <p class="lede">Ten stories on politics, technology, and the machinery of persuasion. Filed for a Saturday read — the AI super-PAC war crosses $150M, CISA goes another month unfunded, and Hungary closes a sixteen-year chapter.</p>
+<!-- ======================================================
+     02 — QUOTE OF THE DAY
+     ====================================================== -->
+<section class="spread quote-spread" id="s02">
+  <div class="folio" style="color:rgba(243,234,213,0.5);">
+    <span>02 / Quote of the Day</span>
+    <span>Editorial Photo-Caption</span>
+  </div>
+  <blockquote>
+    &ldquo;It is an immense honor that you have empowered us to work for the next four years for a free, European, functioning, and humane Hungary.&rdquo;
+  </blockquote>
+  <div class="attribution">
+    Peter Magyar &middot; Prime Minister-Designate of Hungary &middot; Social Media Statement &middot; 12 April 2026
+  </div>
+  <div class="folio-bottom" style="color:rgba(243,234,213,0.4);">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-      <div class="hero-grid">
-        <article class="hero-card">
-          <span class="eyebrow eyebrow--accent">Lead · Political Tech</span>
-          <h3>The pro-AI super PAC tops $150M — nobody is asking if that's a lot.</h3>
-          <p>Andreessen Horowitz added $25M to Leading the Future this week, taking it past $51M on hand. A parallel Trump-aligned vehicle is standing up another $100M. AI is now, by spend, a defining issue of the 2026 cycle.</p>
-          <span class="source">Bloomberg · CNBC</span>
-        </article>
-        <article class="hero-card">
-          <span class="eyebrow eyebrow--accent">World</span>
-          <h3>Orbán falls.</h3>
-          <p>After 16 years, Viktor Orbán has conceded to Péter Magyar's Tisza, projected to take a two-thirds parliamentary majority on a kitchen-table platform.</p>
-          <span class="source">CNN · Reuters</span>
-        </article>
-        <article class="hero-card">
-          <span class="eyebrow eyebrow--rust">GovTech</span>
-          <h3>CISA, unfunded.</h3>
-          <p>DHS has been dark for two months. The election-security agency cancels its CyberCorps summer class for the second straight year; FY27 would gut what remains.</p>
-          <span class="source">Nextgov · Brennan Center</span>
-        </article>
-      </div>
+<!-- ======================================================
+     03 — THE TOWN THAT VOTED AGAINST THE ALGORITHM
+     Hero Gradient
+     ====================================================== -->
+<section class="spread hero-gradient" id="s03" style="background:radial-gradient(ellipse at 30% 70%, #1a5276 0%, #0b2e4a 40%, #061a2e 100%);">
+  <div class="folio">
+    <span>03 / AI in Politics</span>
+    <span>Hero Gradient</span>
+  </div>
+  <div class="kicker" style="color:var(--gold);">AI in Politics</div>
+  <h2>The Town That Voted Against the Algorithm</h2>
+  <div class="deck">
+    In Festus, Missouri, voters ousted every incumbent council member who had approved a $6 billion hyperscale data center on 360 acres of community land. In nearby Independence, two more council members who voted for tax breaks exceeding $6 billion for a Nebius AI data center were similarly removed. The backlash was organized through a grassroots campaign called Stop The AI Data Center, which coordinated both online and in-person efforts to mobilize voters concerned about eminent domain, skyrocketing electricity costs, and a lack of transparency in the approval process. The results represent a new phenomenon in American politics: communities using democratic power to push back against the physical infrastructure of artificial intelligence, turning local elections into referendums on the tech industry's expansion.
+  </div>
+  <div class="source" style="color:rgba(255,255,255,0.5);">Sources: GovTech, KCUR, Daily Caller, Newsweek &middot; April 2026</div>
+  <div class="folio-bottom" style="color:rgba(255,255,255,0.4);">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     04 — TWENTY-NINE STATES, TWENTY-NINE LAWSUITS
+     Dark / Midnight
+     ====================================================== -->
+<section class="spread dark-spread" id="s04">
+  <div class="folio" style="color:#666;">
+    <span>04 / Election Security</span>
+    <span>Dark / Midnight</span>
+  </div>
+  <div class="kicker" style="color:var(--gold);">Election Security</div>
+  <h2>Twenty-Nine States, Twenty-Nine Lawsuits</h2>
+  <div class="deck">
+    The Justice Department has sued twenty-nine states and the District of Columbia for refusing to hand over unredacted voter rolls — including driver's license and partial Social Security numbers. At the center of the fight is SAVE, a DHS database that has flagged 21,000 registered voters as potential non-citizens out of 60 million names submitted — a rate of 0.035 percent. The DOJ's key privacy officer resigned in April as plans were finalized to share state voter data with DHS. Only twelve states have fully complied. Thirty-one states and D.C. have refused outright. Legal scholars note the Constitution is clear: states, not the federal government, hold primary authority over election administration. Three early federal court rulings have gone against the DOJ.
+  </div>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="num">29</div>
+      <div class="label">States Sued</div>
     </div>
-  </section>
-
-  <!-- ============= TABLE OF CONTENTS ============= -->
-  <section class="toc" id="contents">
-    <div class="shell">
-      <h2>In this issue</h2>
-      <ol>
-        <li><span class="n">01</span><span class="t">The AI money war<span class="sub">Political Technology</span></span><span class="arrow">→</span></li>
-        <li><span class="n">02</span><span class="t">The quiet dismantling of CISA<span class="sub">GovTech · Election Security</span></span><span class="arrow">→</span></li>
-        <li><span class="n">03</span><span class="t">Deepfake is a line item<span class="sub">AI in Politics</span></span><span class="arrow">→</span></li>
-        <li><span class="n">04</span><span class="t">Synthetic voter panels<span class="sub">Political Technology</span></span><span class="arrow">→</span></li>
-        <li><span class="n">05</span><span class="t">The reform majority<span class="sub">Pew · Public Opinion</span></span><span class="arrow">→</span></li>
-        <li><span class="n">06</span><span class="t">Fifty percent<span class="sub">AI · Information Integrity</span></span><span class="arrow">→</span></li>
-        <li><span class="n">07</span><span class="t">Budapest, after Orbán<span class="sub">Global Elections</span></span><span class="arrow">→</span></li>
-        <li><span class="n">08</span><span class="t">Barcelona / Bergen County<span class="sub">Campaigning · Global Left</span></span><span class="arrow">→</span></li>
-        <li><span class="n">09</span><span class="t">YouTube eats TikTok<span class="sub">Social Media Trends</span></span><span class="arrow">→</span></li>
-        <li><span class="n">10</span><span class="t">A flawed democracy<span class="sub">Long Read</span></span><span class="arrow">→</span></li>
-      </ol>
+    <div class="stat">
+      <div class="num">0.035%</div>
+      <div class="label">SAVE Flag Rate</div>
     </div>
-  </section>
-
-  <!-- ============= 01 ============= -->
-  <section class="story" id="story-01">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">01</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--accent" style="display:block; margin-bottom: var(--s-4);">Political Technology</span>
-          <h2>The AI money war reaches the <em>midterm ad market</em>.</h2>
-          <p class="deck">Leading the Future now sits on more than $51M. A parallel Trump-aligned vehicle promises $100M more. AI has become the best-funded sleeper issue of the 2026 cycle.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">Bloomberg</span>
-          <span class="tag">CNBC</span>
-          <span class="tag">Quartz</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">By the desk · 18.04.2026</span></div>
-        <div>
-          <p><strong>Who is writing the cheques.</strong> Marc Andreessen and Ben Horowitz added $25M to Leading the Future this week. The pro-AI super PAC's total haul across entities is now north of $140M for the cycle, per filings reported by Bloomberg and Quartz.</p>
-          <p><strong>What it is buying.</strong> The committee is building air cover for House and Senate members who oppose state-level AI rules and support a pre-emptive federal framework — the same blueprint Trump released as a policy roadmap in March.</p>
-          <p><strong>The other side.</strong> Anthropic sent $20M to Public First Action in February, arguing — unusually for a frontier lab — that regulation is lagging the risk. The AI industry is not one voter.</p>
-
-          <div class="three-up">
-            <div class="card"><span class="eyebrow eyebrow--accent">Q1 2026</span><h4>$15M</h4><p>Raised by Leading the Future across all entities in the first quarter alone.</p></div>
-            <div class="card"><span class="eyebrow eyebrow--accent">Cycle total</span><h4>$140M+</h4><p>Combined haul reported for the 2026 election season as of mid-April.</p></div>
-            <div class="card"><span class="eyebrow eyebrow--rust">Counter-bloc</span><h4>$20M</h4><p>Anthropic's contribution to Public First Action — for tighter, not looser, AI rules.</p></div>
-          </div>
-        </div>
-      </div>
+    <div class="stat">
+      <div class="num">0–3</div>
+      <div class="label">DOJ Court Record</div>
     </div>
-  </section>
+  </div>
+  <div class="source" style="color:rgba(255,255,255,0.4);">Sources: CNN, NPR, Popular Information, Campaign Legal Center &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#555;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-  <!-- ============= 02 ============= -->
-  <section class="story" id="story-02">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">02</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--rust" style="display:block; margin-bottom: var(--s-4);">GovTech · Election Security</span>
-          <h2>The election-security office is being <em>quietly unfunded</em> — one internship at a time.</h2>
-          <p class="deck">CISA has now been operating without appropriations for two months. It cannot legally spend on anything beyond salaries.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">Nextgov</span>
-          <span class="tag">Votebeat</span>
-          <span class="tag">Brennan</span>
-        </div>
-      </header>
+<!-- ======================================================
+     05 — THE PROXY WAR IN NEW YORK'S TWELFTH
+     Rose-Alert-Stamp
+     ====================================================== -->
+<section class="spread rose-stamp" id="s05">
+  <div class="folio" style="color:#888;">
+    <span>05 / AI in Politics</span>
+    <span>Rose-Alert-Stamp</span>
+  </div>
+  <div class="alert-tag">Primary Alert</div>
+  <div class="kicker" style="color:var(--crimson);">AI in Politics</div>
+  <h2>The Proxy War in New York's Twelfth</h2>
+  <div class="deck">
+    The contest to replace retiring Representative Jerry Nadler in New York's 12th Congressional District has become the first true proxy fight between rival AI factions. New York Assembly member Alex Bores, the chief architect of a suite of state AI regulatory bills, is the target: Leading the Future, backed by OpenAI co-founder Greg Brockman and Palantir co-founder Joe Lonsdale, has spent $1.1 million in TV ads and mailers to defeat him. On the other side, Anthropic's $20 million contribution to Public First Action is backing candidates like Bores who support guardrails. The total AI-linked spending in this single House primary has already exceeded $2.4 million — in a district where the eventual winner will help write federal AI law for a decade. Both OpenAI and Anthropic are reportedly planning IPOs, making the regulatory stakes existential.
+  </div>
+  <div class="source">Sources: NBC News, Sludge, CNBC, Quartz &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#888;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-      <div class="story-body">
-        <div class="gutter"><span class="label">DHS dark since 14 Feb</span></div>
-        <div>
-          <p>Non-payroll costs require an Antideficiency Act exception. The agency has cancelled its CyberCorps Scholarship-for-Service summer class for the second consecutive year — up to one hundred undergraduate and postgraduate cyber interns who would have rotated through federal networks will not.</p>
-          <p>Town-hall sessions for the Cyber Incident Reporting for Critical Infrastructure Act have been postponed indefinitely. Staff travel is frozen. The president's FY27 request, released last week, goes further: it explicitly reduces the budget for the election-security mission, stakeholder engagement, and infrastructure-protection partnerships.</p>
-          <p>Votebeat and the Brennan Center report that state election officials describe the working relationship with CISA as "broken" — and that some now see federal engagement as a threat to their independence rather than a resource. This is happening seven months before the first Tuesday in November.</p>
+<!-- ======================================================
+     06 — $185 MILLION ON EVERYTHING EXCEPT AI
+     Big-Stat
+     ====================================================== -->
+<section class="spread big-stat" id="s06">
+  <div class="folio" style="color:#888;">
+    <span>06 / Political Campaigning</span>
+    <span>Big-Stat</span>
+  </div>
+  <div class="number">$185M+</div>
+  <div class="unit">AI Industry Political Spending — 2026 Cycle</div>
+  <h2>Everything Except AI</h2>
+  <div class="deck">
+    AI giants including OpenAI and Anthropic have collectively poured more than $185 million into the 2026 midterms through super PACs and affiliated entities. But there is a striking disconnect: almost none of their ads mention artificial intelligence. Instead, the industry's money is bankrolling spots about immigration enforcement, healthcare, and other hot-button wedge issues designed to elect sympathetic lawmakers. "We know AI isn't the first thing on every voter's mind when they go to the polls," said Brad Carson, who helps lead Public First Action. The strategy mirrors Silicon Valley's earlier playbook during the crypto-regulation fights: spend on what moves voters, elect allies, then shape the rules behind closed doors. The result is a midterm season where the single largest source of outside money is an industry most voters cannot identify from the ads it funds.
+  </div>
+  <div class="source">Sources: NBC News, CNBC, ABC News &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#888;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-          <div class="stat-block">
-            <div class="stat"><div class="v">2 mo.</div><div class="l">DHS unfunded since 14 February</div></div>
-            <div class="stat"><div class="v">100</div><div class="l">CyberCorps summer roles cancelled</div></div>
-            <div class="stat"><div class="v">FY27</div><div class="l">Budget targeting election-security cuts</div></div>
-            <div class="stat"><div class="v">205</div><div class="l">Days until Election Day</div></div>
-          </div>
-        </div>
-      </div>
+<!-- ======================================================
+     07 — HUNGARY'S FIRST HUNDRED HOURS
+     Long-Form Newsprint Essay
+     ====================================================== -->
+<section class="spread newsprint" id="s07">
+  <div class="folio" style="color:#888;">
+    <span>07 / Global Elections</span>
+    <span>Long-Form Newsprint Essay</span>
+  </div>
+  <div class="ongoing-tag">Ongoing: Hungary Transition</div>
+  <div class="byline">Global Elections</div>
+  <h2>Hungary's First Hundred Hours</h2>
+  <div class="columns">
+    <p>Six days after Peter Magyar's Tisza party won a two-thirds supermajority with 52.1 percent of the party-list vote and 136 of 199 parliamentary seats, Hungary's incoming government is moving at a pace its predecessor never permitted. Magyar has publicly demanded the resignation of President Tamas Sulyok, calling him "unfit to serve as the guardian of legality" and "unworthy of representing the unity of the Hungarian nation." He has announced a target date of May 5 for the new government to assume office.</p>
+    <p>The scale of Fidesz's collapse is historically unusual. Viktor Orban's party fell from 135 seats to 57 — a loss of 78 — on turnout of 79.6 percent, the highest since Hungary's democratic transition in 1990. Magyar's constitutional supermajority gives him the power to amend the constitution and reshape the institutional architecture that Orban spent sixteen years constructing: the courts, state media, the prosecution service, and the election commission.</p>
+    <p>In a press conference covered by Euronews on April 15, Magyar signaled that media reform would come first. "Every Hungarian deserves a public service media that broadcasts the truth," he said. European allies, cautious after years of dealing with Orban's blocking tactics in Brussels, are watching to see whether Magyar's rhetoric translates into structural change — or whether the gravitational pull of Hungary's captured institutions proves stronger than a single election.</p>
+  </div>
+  <div class="source">Sources: Al Jazeera, CNN, Bloomberg, Euronews, NPR, CEPA &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#888;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     08 — BRAZIL: A DEAD HEAT AT EIGHTY
+     Influencer / Social Gradient
+     ====================================================== -->
+<section class="spread social-gradient" id="s08" style="background:linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #880e4f 100%);">
+  <div class="folio">
+    <span>08 / Global Elections</span>
+    <span>Influencer / Social Gradient</span>
+  </div>
+  <div class="kicker" style="color:rgba(255,255,255,0.7);">Global Elections</div>
+  <h2>Brazil: A Dead Heat at Eighty</h2>
+  <div class="deck">
+    The latest Datafolha poll shows President Luiz Inacio Lula da Silva, now eighty years old, in a statistical tie with Senator Flavio Bolsonaro in a projected second-round matchup: 45 percent to 46 percent. Lula's approval has fallen to a third-term low of 44 percent against 51 percent disapproval, according to Genial/Quaest. His response has been policy-driven: a push for a shorter work week aimed at working-class voters who carried him in 2022, and the confirmation of Vice President Geraldo Alckmin as his running mate. The October general election will determine the presidency, all of Congress, and every state governorship — making it the most consequential single election day in the Americas this year.
+  </div>
+  <div class="poll-bar">
+    <div class="left" style="width:46%;">Bolsonaro 46%</div>
+    <div class="right" style="width:45%;">Lula 45%</div>
+  </div>
+  <div style="font-size:13px;margin-top:1vh;opacity:0.6;font-family:var(--sans);letter-spacing:0.1em;text-transform:uppercase;">Datafolha second-round projection, April 2026</div>
+  <div class="source" style="color:rgba(255,255,255,0.45);">Sources: Bloomberg, Peoples Dispatch, AS/COA, US News &middot; April 2026</div>
+  <div class="folio-bottom" style="color:rgba(255,255,255,0.4);">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     09 — TWENTY-EIGHT STATES, ONE CONSTITUTIONAL QUESTION
+     Hero Gradient
+     ====================================================== -->
+<section class="spread hero-gradient" id="s09" style="background:radial-gradient(ellipse at 70% 30%, #4a1942 0%, #2c1033 50%, #110818 100%);">
+  <div class="folio">
+    <span>09 / Political Technology</span>
+    <span>Hero Gradient</span>
+  </div>
+  <div class="kicker" style="color:var(--gold);">Political Technology</div>
+  <h2>Twenty-Eight States, One Constitutional Question</h2>
+  <div class="deck">
+    Since 2022, 170 state laws have been enacted targeting AI deepfake technology, with 146 bills introduced in 2025 alone. Twenty-eight states now require political advertisements containing AI-generated content to carry disclosure labels. But the legal ground is shifting beneath these laws: a federal judge struck down portions of California's AB 2839 in August 2025, finding that key provisions conflicted with Section 230 and the First Amendment. The tension is structural: deepfake disclosure mandates are content-based speech regulations, which face strict scrutiny under the First Amendment. Lawmakers are now looking beyond punishing individual deepfake creators toward regulating the platforms that enable production — generative AI services, hosting platforms, and cloud providers. The question is whether any regulatory architecture can survive the constitutional tests that are already underway.
+  </div>
+  <div class="source" style="color:rgba(255,255,255,0.45);">Sources: MultiState, NBC News, Orrick AI Law Center &middot; April 2026</div>
+  <div class="folio-bottom" style="color:rgba(255,255,255,0.4);">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     10 — THE WHITE HOUSE SAYS NO NEW REGULATOR
+     Dark / Midnight
+     ====================================================== -->
+<section class="spread dark-spread" id="s10">
+  <div class="folio" style="color:#666;">
+    <span>10 / GovTech</span>
+    <span>Dark / Midnight</span>
+  </div>
+  <div class="kicker" style="color:var(--gold);">GovTech</div>
+  <h2>The White House Says No New Regulator</h2>
+  <div class="deck">
+    On March 20, the White House released its National Policy Framework for Artificial Intelligence — and made a definitive choice: no new federal rulemaking body. Instead, AI governance will be distributed across existing regulatory agencies with subject-matter expertise, supplemented by industry-led standards. The framework also recommends that Congress preempt state AI laws that "impose undue burdens," aiming for a single national standard rather than fifty competing ones. For the AI industry, the framework validates the deregulatory bet that companies like OpenAI and its investors have made through Leading the Future. For state legislators who have spent two years building deepfake disclosure laws, voting-AI guardrails, and algorithmic accountability requirements, it is a direct threat. The framework sets the terms for what Congress will debate through the rest of the year.
+  </div>
+  <div class="source" style="color:rgba(255,255,255,0.4);">Sources: Consumer Finance Monitor, Baker Botts, CFR &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#555;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     11 — TILLIS DRAWS A LINE ON NATO
+     Rose-Alert-Stamp
+     ====================================================== -->
+<section class="spread rose-stamp" id="s11">
+  <div class="folio" style="color:#888;">
+    <span>11 / Political Campaigning</span>
+    <span>Rose-Alert-Stamp</span>
+  </div>
+  <div class="alert-tag">Bipartisan Pushback</div>
+  <div class="kicker" style="color:var(--crimson);">Political Campaigning</div>
+  <h2>Tillis Draws a Line on NATO</h2>
+  <div class="deck">
+    Republican Senator Thom Tillis of North Carolina and Democratic Senator Jeanne Shaheen of New Hampshire, co-chairs of the Senate NATO Observer Group, issued a joint statement in April directly challenging President Trump's threats to withdraw from NATO. "Any president that contemplates attempting to withdraw from NATO is not only fulfilling Vladimir Putin and Xi Jinping's greatest dreams but would be undermining America's own national security interests," Tillis said. The senators noted that a bipartisan law — originally drafted by then-Senator Marco Rubio — prevents any president from unilaterally withdrawing from NATO without congressional authorization. The statement came as Trump called NATO members "cowards" amid pressure to support the U.S. engagement in Iran. The bipartisan rebuke represents a rare instance of Republican foreign-policy leadership publicly breaking with a sitting president of their own party.
+  </div>
+  <div class="source">Sources: Senate Foreign Relations Committee, UPI, Newsweek, The Hill &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#888;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     12 — THE AI ADOPTION GAP
+     Big-Stat
+     ====================================================== -->
+<section class="spread big-stat" id="s12" style="background:var(--midnight);color:#e8e4dc;">
+  <div class="folio" style="color:#555;">
+    <span>12 / Social Media Trends</span>
+    <span>Big-Stat</span>
+  </div>
+  <div class="number" style="color:var(--gold);">2:1</div>
+  <div class="unit" style="color:#999;">GOP-to-Democratic AI Campaign Adoption Ratio</div>
+  <h2 style="color:#fff;">The AI Adoption Gap</h2>
+  <div class="deck" style="color:#bbb;">
+    Republican campaigns have gone all-in on AI for the 2026 midterms — not just for generating attack ads, but for real-time opinion modeling, social media trend scanning, and rapid simulation of voter attitudes toward breaking events like the Iran conflict. GOP strategists are using AI to scan millions of social media posts for up-to-the-second shifts in public sentiment. Democratic operatives, meanwhile, remain significantly more cautious, with party leaders worried about privacy risks, job displacement within the campaign industry, and the optics of deploying technology many of their voters distrust. The result is an emerging adoption gap: one party is treating AI as a strategic weapon, the other as a reputational liability. Whether the gap translates into an electoral advantage in November remains the cycle's open question.
+  </div>
+  <div class="source" style="color:rgba(255,255,255,0.35);">Sources: Axios, The American Prospect &middot; April 2026</div>
+  <div class="folio-bottom" style="color:#555;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
+
+<!-- ======================================================
+     13 — SPLIT GRAPH: WHO SHOULD REGULATE AI?
+     Split Diptych
+     ====================================================== -->
+<section class="spread split-graph" id="s13">
+  <div class="folio" style="color:#888;">
+    <span>13 / Split Graph</span>
+    <span>Split Diptych</span>
+  </div>
+  <div class="super-headline">The Question: Who Should Regulate Artificial Intelligence?</div>
+  <div class="diptych">
+    <div class="half half-left">
+      <h3>The Case for Aggressive State and Federal Regulation</h3>
+      <p>Illinois State Senator Mary Edly-Allen (D) warned that the consequences of inaction are already visible: "If we got social media wrong, and we did, we cannot afford to get AI wrong." Proponents of strong regulation argue that the White House framework's reliance on industry self-governance and existing agencies is inadequate for a technology moving faster than any regulator can follow. Anthropic's $20 million contribution to Public First Action backs this position, supporting candidates who favor enforceable guardrails on AI deployment, algorithmic transparency, and worker protections.</p>
+      <div class="src">Sources: Capitol News Illinois, CNBC, The Fulcrum &middot; April 2026</div>
     </div>
-  </section>
-
-  <!-- ============= 03 ============= -->
-  <section class="story" id="story-03">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">03</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--rust" style="display:block; margin-bottom: var(--s-4);">AI in Politics · Synthetic Media</span>
-          <h2>The deepfake ad is no longer an outlier. It is a <em>line item</em>.</h2>
-          <p class="deck">At least fifteen campaign ads featuring AI-generated content have aired since November, per NBC News and Bloomberg tallies. Two dropped this month alone.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">CNN</span>
-          <span class="tag">Bangor Daily</span>
-          <span class="tag">NCSL</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Synthetic media beat</span></div>
-        <div>
-          <div class="callout">
-            <span class="label">Alert · Synthetic Media</span>
-            <p>The 2026 cycle is the first US midterm in which AI-generated ads have moved from rumour to standard operating procedure inside a national party committee.</p>
-          </div>
-
-          <div class="three-up">
-            <div class="card">
-              <span class="eyebrow eyebrow--accent">Maine · US Senate</span>
-              <h4>A minute of a candidate who never spoke.</h4>
-              <p>The NRSC's spot against Democrat Graham Platner used an AI-generated version of him to deliver attacks the real candidate never gave. It ran full length — unusual for synthetic content, which normally surfaces in fragments.</p>
-            </div>
-            <div class="card">
-              <span class="eyebrow eyebrow--accent">Texas · US Senate</span>
-              <h4>Talarico, in words that were never his.</h4>
-              <p>Last month's NRSC deepfake of James Talarico has drawn a complaint to the FEC. CNN reported the spot as "the latest in a series" from the national GOP committee in the past year.</p>
-            </div>
-            <div class="card">
-              <span class="eyebrow eyebrow--rust">Regulation</span>
-              <h4>A patchwork, growing by the month.</h4>
-              <p>Twenty-six states now regulate AI-generated political speech in some form — up from five in 2023. There is still no federal framework. The Trump AI roadmap would pre-empt the state laws entirely.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="half half-right">
+      <h3>The Case for Light-Touch Federal Preemption</h3>
+      <p>The White House framework explicitly recommends against creating any new federal rulemaking body, calling instead for AI to be governed through existing agencies with subject-matter expertise. Backers of this approach — including Leading the Future's investors, such as Andreessen Horowitz and Palantir co-founder Joe Lonsdale — argue that a patchwork of fifty state laws would strangle innovation and drive AI development overseas. Their position: establish a single, minimally burdensome national standard, let industry lead on safety standards, and preserve America's competitive advantage in the global AI race.</p>
+      <div class="src">Sources: White House, Consumer Finance Monitor, Science &middot; March-April 2026</div>
     </div>
-  </section>
+  </div>
+  <div class="folio-bottom" style="color:#888;">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-  <!-- ============= 04 ============= -->
-  <section class="story" id="story-04">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">04</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--accent" style="display:block; margin-bottom: var(--s-4);">Political Technology · Tooling</span>
-          <h2>Republicans now poll <em>imagined voters</em>.</h2>
-          <p class="deck">The American Association of Political Consultants reports 64% of Republican operatives use AI daily; 49% of Democrats do. Aaru and MiroFish sell synthetic panels as panel-replacements.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">American Prospect</span>
-          <span class="tag">Axios</span>
-          <span class="tag">NCSL</span>
-        </div>
-      </header>
+<!-- ======================================================
+     14 — POLITICAL TECH APPLICATION: QUILLER AI
+     Terminal (Mono)
+     ====================================================== -->
+<section class="spread terminal" id="s14">
+  <div class="folio" style="color:rgba(0,255,136,0.4);">
+    <span>14 / Political Tech Application</span>
+    <span>Terminal (Mono)</span>
+  </div>
+  <div style="font-size:14px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.5;margin-bottom:2vh;">Political Tech Application</div>
+  <h2>Quiller AI / Grassroots Analytics</h2>
+  <div class="body-mono">
+    <strong>What it does:</strong> Quiller is a generative-AI platform built for progressive campaigns and nonprofits. It produces first-draft fundraising emails, SMS blasts, press releases, op-eds, and digital ad copy in under 20 seconds. Organizations train a private workspace on their own talking points, platform positions, and writing samples, then generate unlimited drafts calibrated to their voice.
+    <br><br>
+    <strong>Who is using it:</strong> Grassroots Analytics, a data-segmentation firm serving Democratic campaigns, acquired Quiller in early 2026. The combined platform merges AI-generated content with donor-targeting data, creating an end-to-end fundraising pipeline. Quiller 2.0 is now operational as a standalone tool with a human support hotline, and deeper data integrations are planned for later this cycle.
+    <br><br>
+    <strong>Reported outcome:</strong> Quiller produces copy that users describe as "70 percent of the way done" — a first draft requiring human editing for tone and strategy but eliminating the blank-page problem that consumes hours of campaign staff time. The Grassroots Analytics merger aims to close the loop between who to ask and what to say.
+  </div>
+  <div class="takeaway">
+    The acquisition signals that the next wave of campaign AI isn't about generating content or targeting donors — it's about merging both into a single workflow. Expect the right-leaning equivalent within the cycle.
+  </div>
+  <div class="source" style="color:rgba(0,255,136,0.35);">Sources: Campaigns &amp; Elections, The Hill, Grassroots Analytics &middot; 2025-2026</div>
+  <div class="folio-bottom" style="color:rgba(0,255,136,0.3);">
+    <span>First Coffee Campaign News</span>
+    <span>18 April 2026</span>
+  </div>
+</section>
 
-      <div class="story-body">
-        <div class="gutter"><span class="label">Tooling beat</span></div>
-        <div>
-          <p>Both platforms sell themselves as cheaper, faster alternatives to live panels; neither has been independently benchmarked against actual turnout. The technology has not yet made bad polls good — but it has made bad polls cheap.</p>
+<!-- ======================================================
+     COLOPHON
+     ====================================================== -->
+<section class="colophon">
+  <div class="title">First Coffee.</div>
+  <p>Issue No. 005 &middot; Saturday, 18 April 2026</p>
+  <p>A daily magazine for the politics-tech curious. AI, elections, campaigns, and the machinery of power.</p>
+  <p style="margin-top:2vh;">Curated from: The Washington Post, The New York Times, Campaigns &amp; Elections, The Economist, The Atlantic, Axios, Reuters, CNN, Al Jazeera, Bloomberg, NBC News, NPR, CNBC, GovTech, KCUR, Capitol News Illinois, Euronews, Sludge, The Hill, CEPA, Baker Botts, Consumer Finance Monitor, CFR, ScienceDirect, and peer outlets.</p>
+  <p style="margin-top:2vh;">Built for Ben. Delivered at first coffee.</p>
+  <p style="margin-top:4vh;font-size:13px;opacity:0.5;">This edition was curated and composed by an AI system. All facts are sourced; all quotes are publicly on record. No editorial endorsement is implied.</p>
+</section>
 
-<pre class="terminal">
-<span class="c"># Aaru.synthetic_panel — 2026-04-18 08:42 UTC</span>
-<span class="k">&gt;</span> spawn_agents(n=<span class="v">1200</span>, seed_from=<span class="v">"PA-SD-7"</span>, issues=[<span class="v">"iran","economy","immigration"</span>])
-<span class="k">&gt;</span> simulate_event(event=<span class="v">"iran_ceasefire_announced"</span>)
-<span class="k">&gt;</span> aggregate(demo=<span class="v">"white_college,50+"</span>)
-  ─ baseline_favor: <span class="v">0.41</span>
-  ─ post_event:     <span class="v">0.53</span>   <span class="c">(+12pp, ci [0.09, 0.14])</span>
-  ─ movement_driver: <span class="v">"restraint / veterans' framing"</span>
-
-<span class="c"># MiroFish.scan — open-source social, last 12h</span>
-  ─ trend:           <span class="v">"no more forever wars"</span> — 2.3x baseline
-  ─ salient clip:    00:07–00:15, veteran monologue
-  ─ recommended_ad_hook: 8-word affirmation of restraint
-</pre>
-
-          <p style="margin-top: var(--s-7);">The real change is not the model output but the dashboard: agencies can now ship a fielded "result" inside an afternoon, with cost roughly an order of magnitude below traditional panels.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= 05 ============= -->
-  <section class="story" id="story-05">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">05</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--accent" style="display:block; margin-bottom: var(--s-4);">Pew Research · Public Opinion</span>
-          <h2>A reform majority — on both sides of the aisle — and <em>nobody's confident</em> it can happen.</h2>
-          <p class="deck">Seventy-seven percent of Americans now say the political system needs major changes or complete reform — the highest share among twelve wealthy democracies Pew surveyed.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">Pew Research</span>
-          <span class="tag">March 2026</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Polling desk · n≈3,600</span></div>
-        <div>
-          <p>Dissatisfaction with how democracy is working rose to 69% in a separate March survey, a seven-point jump from 2025. Democrats remain overwhelmingly dissatisfied — 86% to 13%. Republicans split almost evenly: 51% dissatisfied, 48% satisfied. The partisan split on the mechanics of democracy is now narrower than the split on almost any policy question.</p>
-
-          <div class="stat-block">
-            <div class="stat"><div class="v">77%</div><div class="l">Want major changes or complete reform</div></div>
-            <div class="stat"><div class="v">69%</div><div class="l">Dissatisfied with US democracy (+7pp YoY)</div></div>
-            <div class="stat"><div class="v">49%</div><div class="l">"Pessimistic reformers" — change unlikely</div></div>
-            <div class="stat"><div class="v">23%</div><div class="l">Status-quo supporters</div></div>
-          </div>
-
-          <p style="margin-top: var(--s-7);">Three-quarters of the country wants the system to look different, and most of that three-quarters has given up on it getting there. That is the electorate the midterms are being fought over.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= 06 ============= -->
-  <section class="story" id="story-06">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">06</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--rust" style="display:block; margin-bottom: var(--s-4);">By the Numbers</span>
-          <h2>Nearly half of voters say a deepfake <em>influenced their decision</em> — even while distrusting the medium.</h2>
-          <p class="deck">Cycle survey data reported across The Japan Times, Honolulu Star-Advertiser and The Express Tribune.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">Japan Times</span>
-          <span class="tag">R Street</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Information integrity</span></div>
-        <div>
-          <div class="feature-num">
-            <div class="pct">50%</div>
-            <div>
-              <div class="copy">"Even voters who swear they don't trust synthetic media are telling pollsters it has reached them."</div>
-              <div class="src">Sources · Japan Times · Tribune · R Street Institute</div>
-            </div>
-          </div>
-
-          <p style="margin-top: var(--s-7);">Synthetic political content now reaches an estimated two in three voters across digital channels during a competitive race, per AccuPay's industry survey. Reach is no longer the bottleneck. Attribution is.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= 07 ============= -->
-  <section class="story" id="story-07">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">07</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--accent" style="display:block; margin-bottom: var(--s-4);">Global Elections · Budapest dispatch</span>
-          <h2>After sixteen years: <em>Orbán concedes</em>.</h2>
-          <p class="deck">Péter Magyar's Tisza party is projected to take a two-thirds parliamentary majority. The victory speech did not mention Vladimir Putin, Ursula von der Leyen, or Donald Trump.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">CNN</span>
-          <span class="tag">Al Jazeera</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Budapest · 12.04.2026</span></div>
-        <div>
-          <div class="photo-card">
-            <div>
-              <span class="stamp">Budapest · 12 April</span>
-              <h3>The campaign ran on healthcare, not geopolitics.</h3>
-            </div>
-            <div class="caption">"He has, from the minute he hit the trail, campaigned on kitchen-table issues — Hungary's stagnating economy and its poor health care — and almost nothing else." — CNN, 12 April 2026</div>
-          </div>
-
-          <p style="margin-top: var(--s-7);">Magyar, a former Fidesz insider turned insurgent, built a coalition out of small-town dissatisfaction with stagnating wages, deteriorating hospitals, and corruption fatigue. CNN and Al Jazeera both note how little he said, during the campaign, about the EU or the war in Ukraine.</p>
-          <p>For European capitals, the result removes the most consistent obstacle inside the European Council to coordinated policy on Ukraine, migration, and sanctions. For Washington, it is a setback: President Trump endorsed Orbán during the campaign.</p>
-          <p>For political-tech watchers, the more interesting finding is that Magyar's insurgent apparatus ran a largely unglamorous, door-to-door, data-led ground game with only modest digital spend — the opposite of the playbook being sold in US consultant decks.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= 08 ============= -->
-  <section class="story" id="story-08">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">08</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--rust" style="display:block; margin-bottom: var(--s-4);">Campaigning · Global Left</span>
-          <h2>Two ground games: <em>Barcelona</em> opens a summit; <em>Bergen County</em> narrows the House.</h2>
-          <p class="deck">A weekend of organising on either side of the Atlantic.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">Reuters</span>
-          <span class="tag">Democracy Now</span>
-          <span class="tag">FEPS</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Twin dispatches</span></div>
-        <div>
-          <div class="diptych">
-            <article class="panel left">
-              <span class="label">No. 08A · Barcelona · 17–18 April</span>
-              <h3>A summit tries to give the global left a joint operating system.</h3>
-              <p>The Global Progressive Mobilisation opens today, convened by Pedro Sánchez and Stefan Löfven with backing from Brazil's Lula. The Party of European Socialists, the Socialist International, and the Progressive Alliance are coordinating a cross-border answer to the post-2024 far-right surge.</p>
-              <p>The agenda includes joint action on the green transition, migration framing, and democratic defence — plus, more quietly, a venue for trading the digital tooling that has allowed right-wing movements to operate as a networked coalition while the left has not.</p>
-            </article>
-            <article class="panel right">
-              <span class="label">No. 08B · NJ-11 · Special election</span>
-              <h3>Mejía's win narrows the House majority to one defection.</h3>
-              <p>Progressive Democrat Analilia Mejía, a former national political director for the Sanders campaign and longtime union organiser, took the special election to fill Mikie Sherrill's seat. Once sworn in, Speaker Mike Johnson can afford exactly one Republican defection on a party-line vote.</p>
-              <p>The tactical reading per Votebeat and Democracy Now: the seat flipped on ground game and base turnout, not on national messaging about Iran or AI.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= 09 ============= -->
-  <section class="story" id="story-09">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">09</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--accent" style="display:block; margin-bottom: var(--s-4);">Social Media Trends</span>
-          <h2>The <em>long-form</em> video cycle.</h2>
-          <p class="deck">2026 consensus among digital strategists: YouTube, not TikTok, is now the platform campaigns build around. Audiences watch long, creator partnerships scale, AI closes the content gap.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">Anchor Change</span>
-          <span class="tag">Pew</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Platform beat</span></div>
-        <div>
-          <div class="invert">
-            <span class="label">Where the time goes</span>
-            <h3>Discovery is TikTok. Retention is YouTube. Spend follows retention.</h3>
-            <div class="row">
-              <div class="item">
-                <div class="big">40%</div>
-                <h4>Of US adults 18–29 regularly get news from TikTok.</h4>
-                <p>Strategists are betting that retention, not reach, decides the cycle — and retention is a YouTube metric.</p>
-              </div>
-              <div class="item">
-                <div class="big">No. 1</div>
-                <h4>YouTube is the leading way Americans watch television.</h4>
-                <p>Reality-show-style candidate content, long-form sit-downs, and series formats — produced at AI-assisted pace.</p>
-              </div>
-              <div class="item">
-                <div class="big">45%</div>
-                <h4>Of TikTok users see at least some political content.</h4>
-                <p>Half of users under 30 see political content. The platform still matters — for discovery. Just not alone.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= 10 ============= -->
-  <section class="story" id="story-10">
-    <div class="shell">
-      <header class="story-head">
-        <div class="index">10</div>
-        <div class="titles">
-          <span class="eyebrow eyebrow--accent" style="display:block; margin-bottom: var(--s-4);">The Weekend Read · Democracy</span>
-          <h2>The world's democracy scoreboard <em>stabilises</em>. America keeps sliding down it.</h2>
-          <p class="deck">The Economist Intelligence Unit's Democracy Index 2025, released this month, shows the first broad global improvement since 2017. The United States is the largest exception in the dataset.</p>
-        </div>
-        <div class="meta-col">
-          <span class="tag">EIU</span>
-          <span class="tag">Pew</span>
-          <span class="tag">Atlantic Council</span>
-        </div>
-      </header>
-
-      <div class="story-body">
-        <div class="gutter"><span class="label">Long read · 5 min</span></div>
-        <div class="longread">
-          <p>After eight consecutive years of worsening scores, the EIU Democracy Index 2025 registered "one of the biggest increases" in the global index since 2012. The movement is modest — a handful of countries nudging from "flawed" to "full" — but the direction is new. Democracy, measured globally, is not currently getting worse.</p>
-          <p>The United States is the most-cited exception. Its overall score fell 0.2 points to 7.65, dropping it six places to thirty-fourth in the ranking. It remains where it has sat since 2016: in the "flawed democracies" category, below Chile, Mauritius, and the Czech Republic.</p>
-
-          <h3>What drove the fall</h3>
-          <p>The EIU attributes the decline to two specific sub-indices: "functioning of government" and "civil liberties." Staff reductions across the federal civil service, politically inflected dismissals, and the stalled appropriations cycle all depress the first. The civil-liberties sub-index picked up reductions in press access, restrictions on federal research data release, and the legal status of certain protest activity. None of these is a single dramatic event. That is, in the EIU's framing, the point: the index is picking up cumulative wear.</p>
-
-          <h3>What the public thinks</h3>
-          <p>The EIU's quantitative findings align with Pew's public opinion data from this week. Sixty-nine percent of Americans say they are dissatisfied with how democracy is working. Seventy-seven percent say the political system needs major changes or complete reform — the highest share among any advanced democracy Pew surveyed.</p>
-
-          <h3>The technology layer</h3>
-          <p>Neither the EIU nor Pew treats artificial intelligence as an index component — yet. The Atlantic Council's geopolitics brief this month argues that the next edition will have to: synthetic media, AI-driven voter simulation, and automated content pipelines affect at least three of the EIU's five sub-indices directly, and two indirectly. Carnegie has made the parallel argument from the opposite direction: AI is as likely to expand representative participation as to constrict it.</p>
-
-          <h3>Where this lands</h3>
-          <p>A country where 77% of voters want systemic change, where the election-security agency is unfunded, and where the incumbent party is running deepfake ads against senators — is still, per the EIU, thirty-fourth out of the world's democracies. Not first. Not bottom. Somewhere specific. Worth marking.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= COLOPHON ============= -->
-  <footer class="colophon">
-    <div class="shell">
-      <div class="mast">Morning Edition.</div>
-      <p style="font-size: var(--fs-2xl); color: var(--c-text-secondary); max-width: 56ch;">A daily magazine for the politics-tech curious — AI, elections, campaigns, and the machinery of power. Filed at 08:00, for Ben.</p>
-
-      <div class="grid">
-        <div>
-          <h4>Masthead</h4>
-          <p>Editor — Automated desk</p>
-          <p>Volume — I</p>
-          <p>Issue — No. 004</p>
-          <p>Filed — Saturday, 18 April 2026</p>
-        </div>
-        <div>
-          <h4>Sources</h4>
-          <p>Bloomberg, CNN, Reuters, Washington Post, Axios, American Prospect, EIU, Pew, Al Jazeera, Nextgov, Votebeat, NCSL, Brennan Center, Bangor Daily News, NBC News, Democracy Now, FEPS.</p>
-        </div>
-        <div>
-          <h4>Typography</h4>
-          <p>Switzer (Indian Type Foundry / Fontshare)</p>
-          <p>Source Serif 4 — Signifier-style fallback</p>
-          <p>JetBrains Mono — terminal &amp; data marks</p>
-        </div>
-        <div>
-          <h4>Design system</h4>
-          <p>Tokenized to the Every spec — semantic colour, spacing scale 5/8/10/12/16/20/24/31, motion 150/300ms.</p>
-        </div>
-      </div>
-
-      <div class="end">
-        <span>Morning Edition · 2026</span>
-        <span>Ten stories. No filler.</span>
-      </div>
-    </div>
-  </footer>
-
-</main>
 </body>
 </html>
