@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0e14">
+<title>First Coffee Campaign News — April 19, 2026</title>
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="First Coffee Campaign News — April 19, 2026" />
+<meta property="og:description" content="Democrats borrow Hungary's anti-corruption playbook, AI industry floods midterms with $140M in ads that never mention AI, and Maine becomes the first state to ban large data centers. Fourteen spreads on campaigns, technology, and persuasion." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-04-19.html" />
+<meta property="og:site_name" content="First Coffee Campaign News" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --serif: "Fraunces", "Georgia", serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --ink: #111;
+  --paper: #f5f1ea;
+  --gold: #c9a54a;
+  --rose: #c4344e;
+  --midnight: #0f172a;
+  --teal: #1a5653;
+  --lavender: #6c5b7b;
+  --sage: #4a6741;
+  --sky: #e8f0fe;
+  --terminal-green: #00ff41;
+  --terminal-bg: #0a0e12;
+  --pad-x: clamp(22px, 6.5vw, 96px);
+  --pad-y: clamp(44px, 10vw, 110px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: #2a2a2a;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+a:hover { opacity: 0.75; }
+p { font-size: 17px; line-height: 1.65; }
+@media (min-width: 720px) { p { font-size: 18px; } }
+@media (min-width: 1100px) { p { font-size: 19px; } }
+
+.spread {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--pad-y) var(--pad-x);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.spread-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+.folio {
+  position: absolute;
+  top: 20px;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.55;
+}
+@media (min-width: 720px) { .folio { top: 28px; font-size: 13px; } }
+
+.story-number {
+  font-family: var(--serif);
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.06;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+.tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  margin-bottom: 1.2rem;
+}
+h2 {
+  font-family: var(--serif);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.body-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 680px;
+}
+.source-line {
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 1.8rem;
+  opacity: 0.5;
+}
+.flag-ongoing {
+  display: inline-block;
+  background: var(--gold);
+  color: #000;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+/* ============ COVER ============ */
+.cover {
+  background: #0d0e14;
+  color: #f3ead5;
+  justify-content: space-between;
+  gap: 30px;
+}
+.cover-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1.5px solid var(--gold);
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+.cover-top .brand {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+}
+.cover-top .meta {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9182;
+}
+@media (min-width: 720px) {
+  .cover-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .cover-top .brand, .cover-top .meta { font-size: 15px; }
+}
+.cover .masthead-title {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(52px, 14vw, 200px);
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  font-style: italic;
+  color: #f3ead5;
+}
+.cover .masthead-title span { color: var(--gold); }
+.cover-deck {
+  margin-top: 28px;
+  max-width: 820px;
+  font-family: var(--serif);
+  font-size: clamp(18px, 4.5vw, 32px);
+  line-height: 1.35;
+  font-weight: 300;
+  color: #d7cfbc;
+  font-style: italic;
+}
+.cover-bottom {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  border-top: 1px solid #3a3729;
+  padding-top: 20px;
+}
+@media (min-width: 560px) { .cover-bottom { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .cover-bottom { grid-template-columns: repeat(4, 1fr); } }
+.cover-bottom div {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9a9182;
+}
+.cover-bottom div strong {
+  display: block;
+  color: #f3ead5;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+/* ============ TOC ============ */
+.toc { background: #f3ead5; color: #1a1a1a; }
+.toc h2 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(40px, 10vw, 100px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+.toc-list {
+  list-style: none;
+  max-width: 800px;
+}
+.toc-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  font-size: 1rem;
+}
+.toc-list .toc-num {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.1rem;
+  min-width: 28px;
+  color: var(--gold);
+}
+.toc-list .toc-title {
+  flex: 1;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.toc-list .toc-archetype {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  white-space: nowrap;
+}
+
+/* ============ ACADEMIC DROP-CAP (Research Insights) ============ */
+.academic {
+  background: #faf7f2;
+  color: var(--ink);
+}
+.academic .paper-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.academic .paper-authors {
+  font-family: var(--sans);
+  font-variant: small-caps;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.academic .body-text::first-letter {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 0.75;
+  margin-right: 0.15em;
+  margin-top: 0.08em;
+  color: var(--teal);
+}
+.academic .implication {
+  border-left: 3px solid var(--teal);
+  padding: 1.2rem 1.5rem;
+  margin-top: 2rem;
+  background: rgba(26,86,83,0.05);
+  max-width: 680px;
+}
+.academic .implication strong {
+  font-family: var(--sans);
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--teal);
+}
+
+/* ============ QUOTE OF THE DAY ============ */
+.quote-spread {
+  background: #2c2418;
+  color: #f3ead5;
+  text-align: center;
+  align-items: center;
+}
+.quote-spread .quote-text {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5vw, 3.6rem);
+  line-height: 1.35;
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  font-style: italic;
+  color: #f3ead5;
+}
+.quote-spread .quote-attr {
+  font-family: var(--sans);
+  font-variant: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+}
+
+/* ============ HERO GRADIENT ============ */
+.hero-gradient {
+  background: linear-gradient(135deg, #faf7f2 0%, #f0e6d3 100%);
+  color: var(--ink);
+}
+.hero-gradient .story-number {
+  font-size: clamp(8rem, 22vw, 18rem);
+  top: -1rem;
+  right: var(--pad-x);
+  color: rgba(0,0,0,0.04);
+}
+.hero-gradient .tag { background: #b45309; color: #fff; }
+.hero-gradient h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.hero-gradient .body-text { color: #3f3f3f; }
+.hero-gradient .pull-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.45rem;
+  color: #b45309;
+  border-left: 4px solid #b45309;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+/* ============ DARK / MIDNIGHT ============ */
+.dark-midnight {
+  background: var(--midnight);
+  color: #e2e8f0;
+}
+.dark-midnight .story-number {
+  font-size: clamp(7rem, 20vw, 16rem);
+  bottom: -2rem;
+  left: var(--pad-x);
+  color: rgba(255,255,255,0.03);
+}
+.dark-midnight .tag { background: #60a5fa; color: #0f172a; }
+.dark-midnight h2 {
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 1.5rem;
+}
+.dark-midnight .body-text { color: #94a3b8; }
+.dark-midnight .stat-row {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.dark-midnight .stat-item .stat-big {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #60a5fa;
+  line-height: 1;
+}
+.dark-midnight .stat-item .stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-top: 0.3rem;
+}
+
+/* ============ ROSE ALERT STAMP ============ */
+.rose-alert {
+  background: #fdf2f4;
+  color: var(--ink);
+  border-left: 6px solid var(--rose);
+}
+.rose-alert .stamp {
+  display: inline-block;
+  border: 3px solid var(--rose);
+  color: var(--rose);
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  transform: rotate(-2deg);
+  margin-bottom: 1.5rem;
+}
+.rose-alert h2 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.rose-alert .body-text { color: #4a4a4a; }
+.rose-alert .story-number {
+  font-size: clamp(8rem, 22vw, 18rem);
+  bottom: -2rem;
+  right: var(--pad-x);
+  color: rgba(196,52,78,0.04);
+}
+
+/* ============ BIG STAT ============ */
+.big-stat {
+  background: #1a1a2e;
+  color: #e2e8f0;
+  text-align: center;
+  align-items: center;
+}
+.big-stat .tag { background: var(--gold); color: #000; }
+.big-stat .hero-number {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(5rem, 18vw, 16rem);
+  line-height: 0.9;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.big-stat .hero-unit {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #818cf8;
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+}
+.big-stat h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.big-stat .body-text {
+  text-align: left;
+  margin: 0 auto;
+  color: #94a3b8;
+}
+
+/* ============ LONG-FORM NEWSPRINT ============ */
+.newsprint {
+  background: #f5f1ea;
+  color: var(--ink);
+}
+.newsprint .spread-inner { max-width: 720px; }
+.newsprint .dateline {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+.newsprint h2 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+.newsprint .subtitle {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+.newsprint .body-text {
+  max-width: 720px;
+  column-count: 1;
+}
+@media (min-width: 800px) {
+  .newsprint .body-text.two-col {
+    column-count: 2;
+    column-gap: 2.5rem;
+  }
+}
+.newsprint .dropcap::first-letter {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 4rem;
+  float: left;
+  line-height: 0.78;
+  margin-right: 0.12em;
+  margin-top: 0.06em;
+  color: var(--ink);
+}
+
+/* ============ SOCIAL / INFLUENCER GRADIENT ============ */
+.social-gradient {
+  background: linear-gradient(160deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+.social-gradient .tag { background: rgba(255,255,255,0.2); color: #fff; }
+.social-gradient h2 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.social-gradient .body-text { color: rgba(255,255,255,0.85); }
+.social-gradient .story-number {
+  font-size: clamp(7rem, 20vw, 16rem);
+  top: -1rem;
+  right: var(--pad-x);
+  color: rgba(255,255,255,0.06);
+}
+.social-gradient .source-line { color: rgba(255,255,255,0.4); }
+
+/* ============ SPLIT GRAPH (DIPTYCH) ============ */
+.split-graph {
+  background: #faf7f2;
+  color: var(--ink);
+  padding: 0;
+}
+.split-super {
+  text-align: center;
+  padding: clamp(2rem, 5vw, 4rem) var(--pad-x) 0;
+}
+.split-super .tag { background: #555; color: #fff; }
+.split-super h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.split-super .sub {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+.split-halves {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+@media (min-width: 720px) {
+  .split-halves { flex-direction: row; min-height: 70vh; }
+}
+.split-left, .split-right {
+  flex: 1;
+  padding: clamp(2rem, 4vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-left {
+  background: #e8f4f8;
+  border-right: none;
+}
+.split-right {
+  background: #fdf2e9;
+}
+@media (min-width: 720px) {
+  .split-left { border-right: 1px solid #ccc; }
+}
+.split-left h3, .split-right h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.split-left .body-text, .split-right .body-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 100%;
+}
+.split-left .accent { color: #2563eb; }
+.split-right .accent { color: #dc2626; }
+.split-source {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  opacity: 0.5;
+}
+
+/* ============ TERMINAL (Political Tech App) ============ */
+.terminal-spread {
+  background: var(--terminal-bg);
+  color: var(--terminal-green);
+  font-family: var(--mono);
+}
+.terminal-spread .spread-inner { max-width: 800px; }
+.terminal-spread .terminal-header {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--terminal-green);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.terminal-spread .terminal-sub {
+  font-size: 0.85rem;
+  color: #4ade80;
+  margin-bottom: 2rem;
+  letter-spacing: 0.03em;
+}
+.terminal-spread .terminal-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #a3e635;
+  max-width: 700px;
+}
+.terminal-spread .terminal-body p {
+  margin-bottom: 1.2rem;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+}
+.terminal-spread .takeaway {
+  border-top: 1px solid #1a3a1a;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  color: var(--terminal-green);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.terminal-spread .terminal-prompt { color: #60a5fa; }
+
+/* ============ COLOPHON ============ */
+.colophon {
+  background: #0d0e14;
+  color: #9a9182;
+  text-align: center;
+  min-height: 50vh;
+  align-items: center;
+}
+.colophon .brand {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: #f3ead5;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.colophon p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.colophon .edition-mark {
+  margin-top: 2rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #555;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     COVER
+     ════════════════════════════════════════════════════════ -->
+<section class="spread cover">
+  <div class="cover-top">
+    <div class="brand">First Coffee Campaign News</div>
+    <div class="meta">Saturday, April 19, 2026 &mdash; Issue No. 4</div>
+  </div>
+  <div>
+    <div class="masthead-title">First <span>Coffee</span></div>
+    <div class="cover-deck">Democrats borrow Hungary&rsquo;s anti-corruption playbook, AI industry floods the midterms with $140 million in ads that never mention AI, and Maine becomes the first state to ban large data centers.</div>
+  </div>
+  <div class="cover-bottom">
+    <div><strong>Political Campaigning</strong>House Democrats launch anti-corruption task force, borrowing directly from the playbook that unseated Orb&aacute;n.</div>
+    <div><strong>AI in Politics</strong>The AI lobby has spent $140M on midterm ads. Not one mentions artificial intelligence.</div>
+    <div><strong>GovTech</strong>Maine passes the country&rsquo;s first statewide ban on large data centers, setting a national precedent.</div>
+    <div><strong>Social Media</strong>LSE research finds U.S. social media is getting smaller, angrier, and more Republican.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TABLE OF CONTENTS
+     ════════════════════════════════════════════════════════ -->
+<section class="spread toc">
+  <div class="spread-inner">
+    <h2>In this issue.</h2>
+    <ol class="toc-list">
+      <li><span class="toc-num">01</span><span class="toc-title">Research Insights: Disinformation as Cultural Narrative</span><span class="toc-archetype">Academic Drop-Cap</span></li>
+      <li><span class="toc-num">02</span><span class="toc-title">Quote of the Day: Hakeem Jeffries on Institutional Trust</span><span class="toc-archetype">Editorial Caption</span></li>
+      <li><span class="toc-num">03</span><span class="toc-title">Democrats Launch Anti-Corruption Task Force, Borrow Orb&aacute;n Playbook</span><span class="toc-archetype">Hero Gradient</span></li>
+      <li><span class="toc-num">04</span><span class="toc-title">AI Industry Floods Midterms With $140M &mdash; But Won&rsquo;t Mention AI</span><span class="toc-archetype">Dark / Midnight</span></li>
+      <li><span class="toc-num">05</span><span class="toc-title">Maine Enacts the First Statewide Data Center Ban</span><span class="toc-archetype">Rose Alert Stamp</span></li>
+      <li><span class="toc-num">06</span><span class="toc-title">The AI Adoption Gap: 64% of GOP Consultants vs. 49% of Democrats</span><span class="toc-archetype">Big Stat</span></li>
+      <li><span class="toc-num">07</span><span class="toc-title">U.S. Social Media Is Getting Smaller, Angrier, and More Republican</span><span class="toc-archetype">Newsprint Essay</span></li>
+      <li><span class="toc-num">08</span><span class="toc-title">Meta Deploys AI Election Integrity Machine for 2026</span><span class="toc-archetype">Social Gradient</span></li>
+      <li><span class="toc-num">09</span><span class="toc-title">Hungary&rsquo;s Magyar Targets May Inauguration</span><span class="toc-archetype">Hero Gradient</span></li>
+      <li><span class="toc-num">10</span><span class="toc-title">The Public Turns on AI: 57% Say Risks Outweigh Benefits</span><span class="toc-archetype">Big Stat</span></li>
+      <li><span class="toc-num">11</span><span class="toc-title">IRGC Closes Hormuz Again as Pakistan Talks Stall</span><span class="toc-archetype">Dark / Midnight</span></li>
+      <li><span class="toc-num">12</span><span class="toc-title">GovTech 2026: $11.1 Billion Market Pivots to AI at Scale</span><span class="toc-archetype">Social Gradient</span></li>
+      <li><span class="toc-num">13</span><span class="toc-title">Split Graph: The Iran Ceasefire Through Two Lenses</span><span class="toc-archetype">Split Diptych</span></li>
+      <li><span class="toc-num">14</span><span class="toc-title">Political Tech: Colloquy Agentic AI Replaces the Door Knock</span><span class="toc-archetype">Terminal Mono</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 01 — RESEARCH INSIGHTS (Academic Drop-Cap)
+     ════════════════════════════════════════════════════════ -->
+<section class="spread academic">
+  <div class="folio"><span>01 &middot; Research Insights</span><span>First Coffee Campaign News</span></div>
+  <div class="spread-inner">
+    <div class="tag" style="background: var(--teal); color: #fff;">Research Insights of the Day</div>
+    <div class="paper-title">Disinformation as Cultural Narrative: Conceptualizing Disinformation as Cross-Platform, Identity-Affirming, Cathartic Stories</div>
+    <div class="paper-authors">Published in Political Communication, 2026 &middot; Taylor &amp; Francis</div>
+    <p class="body-text">Disinformation is not merely a set of false facts traveling through feeds &mdash; it functions as storytelling. This 2026 paper examines three of the most successful disinformation campaigns in the United States from 2017 to 2019 (one right-wing, one left-wing, and one nonpartisan) by constructing a corpus of content shared across Facebook and Twitter. The authors argue that disinformation should be understood as cross-platform, identity-affirming, cathartic narratives that work precisely because they meet deep psychological needs for social cohesion and group belonging. Shared beliefs, even when demonstrably inaccurate, can unite communities and create powerful senses of purpose &mdash; making fact-checking alone an insufficient countermeasure.</p>
+    <div class="implication">
+      <strong>Practitioner implication:</strong>
+      <p style="margin-top:0.5rem; font-size:0.95rem; line-height:1.6;">Campaign communicators should treat disinformation not as a debunking problem but as a narrative competition &mdash; countering false stories requires equally compelling, identity-resonant alternative stories, not just corrections.</p>
+    </div>
+    <div class="source-line">Source: Political Communication (Taylor &amp; Francis), April 2026 &middot; DOI: 10.1080/10584609.2026.2644198</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 02 — QUOTE OF THE DAY (Editorial Caption)
+     ════════════════════════════════════════════════════════ -->
+<section class="spread quote-spread">
+  <div class="folio" style="color: rgba(255,255,255,0.35);"><span>02 &middot; Quote of the Day</span><span>First Coffee Campaign News</span></div>
+  <div class="spread-inner" style="display:flex; flex-direction:column; align-items:center;">
+    <div class="tag" style="background: rgba(201,165,74,0.2); color: var(--gold);">Quote of the Day</div>
+    <p class="quote-text">&ldquo;I fear that we&rsquo;re losing Americans&rsquo; faith and trust in government and institutions.&rdquo;</p>
+    <p class="quote-attr">Hakeem Jeffries &middot; House Minority Leader &middot; PBS News &middot; April 15, 2026</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 03 — HERO GRADIENT: Democrats Anti-Corruption Task Force
+     ════════════════════════════════════════════════════════ -->
+<section class="spread hero-gradient">
+  <div class="folio"><span>03 &middot; Political Campaigning</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">03</div>
+  <div class="spread-inner">
+    <div class="tag">Political Campaigning</div>
+    <h2>Democrats Launch Anti-Corruption Task Force, Borrow the Playbook That Unseated Orb&aacute;n</h2>
+    <p class="body-text">Days after P&eacute;ter Magyar&rsquo;s anti-corruption campaign toppled Viktor Orb&aacute;n&rsquo;s sixteen-year grip on Hungary, House Democrats unveiled a bipartisan-style task force aimed squarely at the Trump administration. Led by Rep. Joe Morelle and stacked with both progressives and moderates &mdash; Alexandria Ocasio-Cortez, Jamie Raskin, Greg Casar, Brad Schneider &mdash; the group will draft proposals to ban stock trading by government officials, impose Supreme Court term limits, and establish a binding code of ethics. The implicit message: if Budapest can do it, so can Washington.</p>
+    <div class="pull-quote">&ldquo;We want the same thing the Hungarian voters wanted &mdash; accountability at every level of government.&rdquo;</div>
+    <p class="body-text">The task force will focus on overhauling ethics rules, protecting voting rights, and highlighting the Trump family&rsquo;s business entanglements. Whether this framing proves more than rhetorical &mdash; whether Democrats can make &ldquo;corruption&rdquo; cut through a media environment saturated with crisis &mdash; is the open question heading into the fall primaries.</p>
+    <div class="source-line">Sources: PBS News, Washington Times, NYC Today &middot; April 15, 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 04 — DARK/MIDNIGHT: AI Industry $140M
+     ════════════════════════════════════════════════════════ -->
+<section class="spread dark-midnight">
+  <div class="folio" style="color:rgba(255,255,255,0.35);"><span>04 &middot; AI in Politics</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">04</div>
+  <div class="spread-inner">
+    <div class="tag">AI in Politics</div>
+    <h2>AI Industry Floods the Midterms With $140 Million &mdash; But Won&rsquo;t Mention AI</h2>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-big">$140M</div>
+        <div class="stat-label">Total raised by Leading the Future PAC</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-big">$15M</div>
+        <div class="stat-label">Q1 2026 haul alone</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-big">0</div>
+        <div class="stat-label">Ads mentioning &ldquo;AI&rdquo;</div>
+      </div>
+    </div>
+    <p class="body-text">Super PAC &ldquo;Leading the Future,&rdquo; bankrolled by Andreessen Horowitz, OpenAI co-founder Greg Brockman, Palantir&rsquo;s Joe Lonsdale, and Perplexity, has amassed $140 million for the 2026 cycle. But here is the twist NBC News uncovered: not a single one of their ads mentions artificial intelligence. The spots focus on inflation, health care, and immigration &mdash; anything that polls well. The industry sees AI regulation as an existential threat and has decided the best defense is to elect friendly legislators without ever debating the product itself. At least 15 additional campaign ads featuring AI-generated content have aired since November, compounding the paradox: AI money shapes the race while AI as a policy issue stays invisible.</p>
+    <div class="source-line" style="color:#64748b;">Sources: NBC News, CNBC, Popular.info &middot; April 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 05 — ROSE ALERT: Maine Data Center Ban
+     ════════════════════════════════════════════════════════ -->
+<section class="spread rose-alert">
+  <div class="folio"><span>05 &middot; GovTech</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">05</div>
+  <div class="spread-inner">
+    <div class="stamp">Breaking Precedent</div>
+    <h2>Maine Enacts the First Statewide Ban on Large Data Centers</h2>
+    <p class="body-text">On April 14, the Maine Senate passed LD 307, banning data centers that draw more than 20 megawatts of power until November 2027 &mdash; making it the first state in the country to impose such a moratorium. The bill stymies proposed developments in the rural mill town of Jay and the former Loring Air Force Base near the Canadian border. A Quinnipiac poll found 65% of Americans oppose data center construction in their communities, with just 24% in favor. The Data Center Coalition warned the ban could &ldquo;send a signal that the state is closed for business,&rdquo; while environmental advocates called it a necessary pause to study grid reliability and water consumption.</p>
+    <p class="body-text" style="margin-top:1rem;">The political dynamics cut across party lines: most Democrats favored the ban on environmental grounds, while most Republicans opposed it as anti-business &mdash; but Republican officials in other states have raised their own concerns about tax incentives and energy grid strain. At least $156 billion in data center projects nationwide were blocked or delayed in 2025 amid local opposition, making this one of the fastest-growing NIMBY movements in American politics.</p>
+    <div class="source-line">Sources: Washington Post, CNN, WBUR, Governing &middot; April 14&ndash;16, 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 06 — BIG STAT: AI Adoption Gap
+     ════════════════════════════════════════════════════════ -->
+<section class="spread big-stat">
+  <div class="folio" style="color:rgba(255,255,255,0.35);"><span>06 &middot; Political Technology</span><span>First Coffee Campaign News</span></div>
+  <div class="spread-inner">
+    <div class="tag">Political Technology</div>
+    <div class="hero-number">64%</div>
+    <div class="hero-unit">of Republican consultants use AI daily</div>
+    <h2>The Campaign AI Gap Is Real &mdash; and Growing</h2>
+    <p class="body-text">A survey by the American Association of Political Consultants found that 64% of Republican political consultants use artificial intelligence in their daily work, compared with just 49% of their Democratic counterparts. GOP strategists are deploying AI to simulate voter attitudes toward breaking events, scan millions of social media posts for real-time opinion shifts, and generate rapid-response messaging. Democratic operatives, many of them wary of privacy risks and concerned about job displacement, have been far slower to adopt. The gap is widening at exactly the moment AI capabilities are accelerating &mdash; raising the question of whether technological adoption, rather than message or money, becomes the decisive advantage in 2026.</p>
+    <div class="source-line" style="color:#64748b;">Source: Axios &middot; April 14, 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 07 — NEWSPRINT ESSAY: Social Media
+     ════════════════════════════════════════════════════════ -->
+<section class="spread newsprint">
+  <div class="folio"><span>07 &middot; Social Media Trends</span><span>First Coffee Campaign News</span></div>
+  <div class="spread-inner">
+    <div class="dateline">LSE Impact of Social Sciences &middot; March 24, 2026</div>
+    <h2>U.S. Social Media Is Getting Smaller, Angrier, and More Republican</h2>
+    <div class="subtitle">The digital public sphere no longer mirrors the electorate &mdash; it mirrors the electorate&rsquo;s most partisan fringe.</div>
+    <p class="body-text dropcap two-col">Between 2020 and 2024, the average number of social media platforms used by American adults fell modestly. But the compositional change was dramatic. On Twitter/X, Democrats held a roughly 56-percentage-point advantage among political posters in 2020. By 2024, that advantage had not merely vanished &mdash; it had reversed. Republicans now hold a modest majority, a swing of approximately 73 percentage points in four years. Democratic users did not leave the platform entirely; they simply stopped posting, retreating into passive consumption or migrating to smaller, ideologically congenial spaces like Bluesky and Mastodon.</p>
+    <p class="body-text two-col" style="margin-top:1.2rem;">The implication for campaigns is profound. The online public sphere no longer reflects the political views of the American public &mdash; it reflects the views of those willing to post, who are systematically angrier and more polarized than the broader population. Republican users are moving from ideologically homogeneous venues like Truth Social into mainstream platforms, amplifying their voice. Meanwhile, recent research published in the same period finds that social media exposure can shift partisan political feeling in a single week by an amount usually seen over three years. The medium is not neutral ground; it is tilted terrain, and campaigns that treat it as a representative sample of voter sentiment are building strategy on a funhouse mirror.</p>
+    <div class="source-line">Source: LSE Impact of Social Sciences Blog &middot; March 24, 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 08 — SOCIAL GRADIENT: Meta Election Integrity
+     ════════════════════════════════════════════════════════ -->
+<section class="spread social-gradient">
+  <div class="folio" style="color:rgba(255,255,255,0.35);"><span>08 &middot; Political Technology</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">08</div>
+  <div class="spread-inner">
+    <div class="tag">Political Technology</div>
+    <h2>Meta Deploys Its AI Election Integrity Machine for 2026</h2>
+    <p class="body-text">Meta has unveiled a multi-layered election security plan for the 2026 midterms. The centerpiece is Community Notes, a crowd-sourced fact-checking system open to any U.S. user over 18 with a verified account at least six months old &mdash; designed to scale without armies of paid moderators. All political advertisers must disclose AI-generated or AI-altered content; ads will carry mandatory labels. In the final week before Election Day, Meta will block all new political advertisements entirely. Behind the scenes, an Election Operations Center will coordinate threat intelligence across Facebook, Instagram, and Threads, building on the 200 coordinated disinformation networks it has removed since 2017. Voters will receive top-of-feed notifications directing them to accurate, localized, multilingual voting information. With over $30 billion invested in safety infrastructure over the past decade, Meta is making the argument that platform self-regulation &mdash; not government mandates &mdash; can hold the center.</p>
+    <div class="source-line">Sources: Meta Newsroom, Social Media Today, TechBuzz.ai &middot; February&ndash;April 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 09 — HERO GRADIENT: Hungary's Magyar
+     ════════════════════════════════════════════════════════ -->
+<section class="spread hero-gradient">
+  <div class="folio"><span>09 &middot; Global Elections</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">09</div>
+  <div class="spread-inner">
+    <span class="flag-ongoing">Ongoing</span>
+    <div class="tag" style="background:var(--teal); color:#fff;">Global Elections</div>
+    <h2>Hungary&rsquo;s Magyar Targets May Inauguration as the Orb&aacute;n Era Ends</h2>
+    <p class="body-text">One week after his Tisza party secured a supermajority in Hungary&rsquo;s April 12 election, Prime Minister-designate P&eacute;ter Magyar announced that the president has assured him a new government can take power in the first week of May. With a two-thirds parliamentary majority, the incoming administration has the constitutional firepower to unwind Orb&aacute;n&rsquo;s institutional legacy: Magyar has vowed to create separate ministries for health, environmental protection, and education that Orb&aacute;n had dissolved, and to conduct a &ldquo;complete change of regime.&rdquo; European officials in Brussels breathed a visible sigh of relief, hoping Budapest will finally adopt a more pro-European posture. Trump, who had backed Orb&aacute;n, will now need to recalibrate his relationship with Central Europe&rsquo;s most strategically positioned capital.</p>
+    <div class="source-line">Sources: Euronews, Al Jazeera, CNN, Fortune &middot; April 12&ndash;16, 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 10 — BIG STAT: Public Turns on AI
+     ════════════════════════════════════════════════════════ -->
+<section class="spread big-stat">
+  <div class="folio" style="color:rgba(255,255,255,0.35);"><span>10 &middot; AI in Politics</span><span>First Coffee Campaign News</span></div>
+  <div class="spread-inner">
+    <div class="tag">AI in Politics</div>
+    <div class="hero-number">57%</div>
+    <div class="hero-unit">of voters say AI risks outweigh benefits</div>
+    <h2>The Public Has Turned on Artificial Intelligence</h2>
+    <p class="body-text">A March NBC News survey of registered voters found that 57% believe the risks of artificial intelligence outweigh its benefits, with just 34% holding the opposite view. A separate Quinnipiac poll reported 55% expect AI will do more harm than good in their daily lives. Public hostility toward data centers, AI-generated content, and surveillance-style voter targeting is converging into a single backlash narrative &mdash; one that neither party has fully figured out how to ride. For the AI industry, the timing is painful: OpenAI and Anthropic are both eyeing IPOs, and a hostile electorate could embolden regulators at the state level long before federal legislation materializes.</p>
+    <div class="source-line" style="color:#64748b;">Sources: NBC News, Quinnipiac University, CNBC &middot; March&ndash;April 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 11 — DARK/MIDNIGHT: Iran Hormuz
+     ════════════════════════════════════════════════════════ -->
+<section class="spread dark-midnight">
+  <div class="folio" style="color:rgba(255,255,255,0.35);"><span>11 &middot; Geopolitics</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">11</div>
+  <div class="spread-inner">
+    <span class="flag-ongoing" style="background:#60a5fa; color:#0f172a;">Ongoing</span>
+    <div class="tag">Geopolitics</div>
+    <h2>IRGC Closes Hormuz Again as Pakistan Talks Stall</h2>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-big">15</div>
+        <div class="stat-label">U.S. Navy ships in region</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-big">Day 51</div>
+        <div class="stat-label">of the Middle East conflict</div>
+      </div>
+    </div>
+    <p class="body-text">The fragile Iran ceasefire frayed further on Friday. Iran&rsquo;s Islamic Revolutionary Guard Corps announced the Strait of Hormuz will remain restricted until the United States lifts its naval blockade on Iranian ports &mdash; reversing the brief reopening that sent oil prices crashing earlier in the week. Two Indian commercial vessels crossing the strait came under fire. The White House maintains it feels &ldquo;good about prospects of a deal,&rdquo; but Pakistan-hosted talks have yielded no framework agreement, and Iran&rsquo;s deputy foreign minister said negotiations cannot proceed without a shared diplomatic baseline. With at least 15 U.S. Navy warships, including an aircraft carrier and 11 destroyers, in the region, the blockade has become the de facto lever &mdash; and the likeliest flashpoint for escalation.</p>
+    <div class="source-line" style="color:#64748b;">Sources: Al Jazeera, CNN, CNBC, PBS News &middot; April 14&ndash;18, 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 12 — SOCIAL GRADIENT: GovTech 100
+     ════════════════════════════════════════════════════════ -->
+<section class="spread social-gradient" style="background: linear-gradient(160deg, #0ea5e9 0%, #2563eb 100%);">
+  <div class="folio" style="color:rgba(255,255,255,0.35);"><span>12 &middot; GovTech</span><span>First Coffee Campaign News</span></div>
+  <div class="story-number">12</div>
+  <div class="spread-inner">
+    <div class="tag">GovTech</div>
+    <h2>GovTech 2026: $11.1 Billion Market Signals Government&rsquo;s AI Pivot</h2>
+    <p class="body-text">Government Technology released its eleventh annual GovTech 100 list, and the numbers tell a clear story: the companies shaping state and local government technology have collectively raised $11.1 billion across 292 funding rounds, hold 8,092 patents, and include eight publicly traded firms. But the editorial shift matters more than the funding figures. This year&rsquo;s list is dominated by practical AI applications &mdash; automated permit processing, predictive infrastructure maintenance, AI-assisted 911 dispatch &mdash; rather than experimental moonshots. Physical AI is the emerging category: drones for post-earthquake structural assessment, autonomous vehicles for severe-weather road maintenance. The GovTech sector has also seen a wave of leadership changes, with new hires concentrated in cybersecurity, cloud, and AI roles, suggesting agencies are staffing up for adoption rather than piloting.</p>
+    <div class="source-line">Sources: Government Technology (e.Republic), Deloitte GovTech Trends 2026 &middot; 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 13 — SPLIT GRAPH (Diptych): Iran Ceasefire
+     ════════════════════════════════════════════════════════ -->
+<section class="spread split-graph">
+  <div class="split-super">
+    <div class="tag">Split Graph</div>
+    <h2>The Iran Ceasefire Through Two Lenses</h2>
+    <p class="sub">One event, two framings &mdash; neither editorialized, both sourced.</p>
+  </div>
+  <div class="split-halves">
+    <div class="split-left">
+      <h3 class="accent">The International / Left-Leaning View</h3>
+      <p class="body-text">The ceasefire offers an off-ramp from immediate escalation but resolves nothing. PBS News reported that the Pakistan-hosted talks &ldquo;failed,&rdquo; and the agreement lacks clear terms and enforcement mechanisms. Critics argue it is an improvised halt in hostilities that defers the central contradiction in U.S. policy: preventing Iran from emerging as a nuclear-armed regional hegemon while simultaneously provoking it with a naval blockade. Time Magazine warned the truce &ldquo;won&rsquo;t last&rdquo; without a structural settlement.</p>
+      <div class="split-source">Sources: PBS News, Time Magazine, Washington Post &middot; April 2026</div>
+    </div>
+    <div class="split-right">
+      <h3 class="accent">The Conservative / Right-Leaning View</h3>
+      <p class="body-text">Conservative commentators initially celebrated Trump&rsquo;s ceasefire as a show of strength, but cracks are forming. CNN reported that some on the right now &ldquo;fear what could come next&rdquo; in negotiations. Iran&rsquo;s public 10-point plan includes a recognized right to enrich uranium, and Mark Levin called the proposal &ldquo;an absolute disaster.&rdquo; The concern among hawks is that Hormuz reopening hands Iran a lever &ldquo;far more usable than nuclear weapons&rdquo; &mdash; control of global shipping &mdash; in exchange for a ceasefire that buys Tehran time.</p>
+      <div class="split-source">Sources: CNN Politics, Times of Israel, Fox News &middot; April 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SPREAD 14 — TERMINAL: Political Tech Application
+     ════════════════════════════════════════════════════════ -->
+<section class="spread terminal-spread">
+  <div class="folio" style="color: rgba(0,255,65,0.3);"><span>14 &middot; Political Tech Application</span><span>First Coffee Campaign News</span></div>
+  <div class="spread-inner">
+    <div class="tag" style="background: rgba(0,255,65,0.15); color: var(--terminal-green);">Political Tech Application of the Day</div>
+    <div class="terminal-header">Colloquy Agentic AI</div>
+    <div class="terminal-sub">// Chemeria Consultancy &middot; Deployed in 2026 cycle</div>
+    <div class="terminal-body">
+      <p><span class="terminal-prompt">$ what:</span> Colloquy is an agentic AI platform built to replace traditional door-to-door canvassing. It makes automated outbound calls, then schedules personalized, online face-to-face sessions between candidates and individual voters &mdash; turning mass-scale outreach into one-on-one interactions.</p>
+      <p><span class="terminal-prompt">$ who:</span> Developed by Chemeria Consultancy and marketed to campaigns across the political spectrum. Republican campaigns have been early adopters, with platforms like Aaru and MiroFish handling adjacent voter-modeling tasks. Democratic adoption has been slower, with 49% of consultants reporting regular AI use compared with 64% on the GOP side (AAPC survey).</p>
+      <p><span class="terminal-prompt">$ capabilities:</span> Inbound voter inquiries, volunteer sign-ups, event scheduling, polling, GOTV reminders, SMS, email, voice calls, and callback calendaring. The system handles the full lifecycle of voter contact from first touch to Election Day mobilization.</p>
+      <p><span class="terminal-prompt">$ scale:</span> The platform claims capacity for one million outbound contacts per day per campaign deployment, with comprehensive analytics dashboards.</p>
+    </div>
+    <div class="takeaway"><span class="terminal-prompt">&gt; takeaway:</span> The door knock is not dead, but the human doing it is increasingly optional. Campaigns that adopt agentic AI for voter contact gain a volume advantage that traditional field operations cannot match &mdash; the question is whether voters can tell the difference, and whether they care.</div>
+    <div class="source-line" style="color: rgba(0,255,65,0.3);">Sources: MarketerMedia, Axios, GoodParty.org &middot; April 2026</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     COLOPHON
+     ════════════════════════════════════════════════════════ -->
+<section class="spread colophon">
+  <div class="spread-inner">
+    <div class="brand">First Coffee</div>
+    <p>A daily editorial briefing on campaigns, political technology, and the machinery of persuasion. Curated for strategists, technologists, and the politically curious.</p>
+    <p style="margin-top:1rem;">Saturday, April 19, 2026 &middot; Issue No. 4</p>
+    <div class="edition-mark">FIRST-COFFEE-2026-04-19 // END OF EDITION</div>
+  </div>
+</section>
+
+</body>
+</html>
