@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Coffee Campaign News — May 15, 2026</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="First Coffee Campaign News — May 15, 2026" />
+<meta property="og:description" content="Voters are losing the redistricting battle as thrown-out ballots pile up. Missouri upholds a 7-1 gerrymander. Trump's Iran quote exposes a 30% approval floor. Anthropic's Mythos AI gets a live demo on Capitol Hill." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-05-15.html" />
+<meta property="og:site_name" content="First Coffee Campaign News" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --cream: #FAF7F2;
+  --ink: #1A1A1A;
+  --warm-gray: #E8E4DF;
+  --cool-gray: #D1CEC9;
+  --accent-red: #C4453C;
+  --accent-blue: #2B4C7E;
+  --accent-gold: #C9A94E;
+  --accent-teal: #2A7B6F;
+  --accent-rose: #D4707A;
+  --midnight: #0F1923;
+  --midnight-text: #E8E4DF;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+html { font-size: 18px; scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: var(--font-body); line-height: 1.65; }
+
+.spread {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.spread-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* COVER */
+.cover {
+  background: linear-gradient(135deg, #0F1923 0%, #1E3A5F 50%, #2B4C7E 100%);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.cover .edition-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+.cover h1 {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.cover .date-line {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.7;
+  margin-bottom: 2.5rem;
+}
+.cover .lead-headline {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+.cover .lead-deck {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* TOC */
+.toc { background: var(--cream); padding: 4rem 2rem; }
+.toc h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+.toc-list { list-style: none; max-width: 700px; margin: 0 auto; }
+.toc-list li {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0.75rem 0; border-bottom: 1px solid var(--cool-gray); font-size: 0.95rem;
+}
+.toc-list li .toc-num { font-family: var(--font-mono); font-weight: 700; color: var(--accent-blue); min-width: 2.5rem; }
+.toc-list li .toc-title { flex: 1; font-weight: 500; }
+.toc-list li .toc-archetype { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; text-align: right; min-width: 140px; margin-left: 1rem; }
+
+/* ACADEMIC */
+.academic { background: #F5F2ED; border-top: 4px solid var(--accent-teal); }
+.academic .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-teal); margin-bottom: 1.5rem; }
+.academic .paper-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem; }
+.academic .paper-authors { font-family: var(--font-body); font-size: 0.85rem; font-variant: small-caps; letter-spacing: 0.05em; color: #666; margin-bottom: 1.5rem; }
+.academic .body-text { font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem; }
+.academic .body-text.drop-cap::first-letter { font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; float: left; line-height: 0.85; margin-right: 0.15em; margin-top: 0.05em; color: var(--accent-teal); }
+.academic .sidebar { border-left: 3px solid var(--accent-teal); padding: 1rem 1.5rem; background: rgba(42,123,111,0.06); font-size: 0.9rem; font-style: italic; margin-top: 1rem; }
+.academic .sidebar strong { font-style: normal; font-weight: 600; }
+.academic .source-line { font-family: var(--font-mono); font-size: 0.72rem; color: #888; margin-top: 1rem; }
+
+/* QUOTE */
+.quote-spread { background: #2C2420; color: #F5F2ED; text-align: center; padding: 6rem 2rem; }
+.quote-spread .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 3rem; }
+.quote-spread blockquote { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; line-height: 1.4; max-width: 700px; margin: 0 auto 2.5rem; font-style: italic; }
+.quote-spread .attribution { font-family: var(--font-body); font-size: 0.85rem; font-variant: small-caps; letter-spacing: 0.15em; color: var(--accent-gold); }
+
+/* HERO GRADIENT */
+.hero-gradient { background: linear-gradient(160deg, #1E3A5F 0%, #2B4C7E 40%, #3A6B9F 100%); color: #fff; }
+.hero-gradient .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.6; margin-bottom: 1.5rem; }
+.hero-gradient h2 { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; }
+.hero-gradient .deck { font-size: 1.05rem; line-height: 1.7; opacity: 0.9; margin-bottom: 1rem; }
+.hero-gradient .source-line { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.5; margin-top: 1.5rem; }
+.hero-gradient .ongoing-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(255,255,255,0.15); padding: 0.25rem 0.75rem; border-radius: 3px; margin-bottom: 1rem; }
+
+/* MIDNIGHT */
+.midnight { background: var(--midnight); color: var(--midnight-text); }
+.midnight .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1.5rem; }
+.midnight h2 { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+.midnight .deck { font-size: 1rem; line-height: 1.75; opacity: 0.85; margin-bottom: 1rem; }
+.midnight .source-line { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.4; margin-top: 1.5rem; }
+
+/* ROSE ALERT */
+.rose-alert { background: var(--cream); border-left: 6px solid var(--accent-rose); position: relative; }
+.rose-alert::before { content: 'ALERT'; position: absolute; top: 2rem; right: 2rem; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.3em; color: var(--accent-rose); border: 2px solid var(--accent-rose); padding: 0.3rem 0.8rem; transform: rotate(3deg); }
+.rose-alert .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-rose); margin-bottom: 1.5rem; }
+.rose-alert h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; color: var(--ink); }
+.rose-alert .deck { font-size: 1rem; line-height: 1.75; margin-bottom: 1rem; }
+.rose-alert .source-line { font-family: var(--font-mono); font-size: 0.72rem; color: #999; margin-top: 1.5rem; }
+.rose-alert .ongoing-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(212,112,122,0.1); padding: 0.25rem 0.75rem; border-radius: 3px; margin-bottom: 1rem; color: var(--accent-rose); }
+
+/* BIG STAT */
+.big-stat { background: linear-gradient(135deg, #F5F2ED 0%, #E8E4DF 100%); text-align: center; }
+.big-stat .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 2rem; }
+.big-stat .stat-number { font-family: var(--font-display); font-size: 7rem; font-weight: 900; line-height: 1; color: var(--accent-blue); margin-bottom: 0.5rem; }
+.big-stat .stat-unit { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--accent-blue); opacity: 0.7; margin-bottom: 2rem; }
+.big-stat h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1.5rem; }
+.big-stat .deck { font-size: 1rem; line-height: 1.75; max-width: 650px; margin: 0 auto; text-align: left; }
+.big-stat .source-line { font-family: var(--font-mono); font-size: 0.72rem; color: #999; margin-top: 2rem; }
+
+/* NEWSPRINT */
+.newsprint { background: #FFFDF8; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.newsprint .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #888; margin-bottom: 1.5rem; }
+.newsprint h2 { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; line-height: 1.15; margin-bottom: 0.75rem; }
+.newsprint .byline { font-family: var(--font-body); font-size: 0.85rem; color: #888; margin-bottom: 2rem; font-style: italic; }
+.newsprint .body-text { font-size: 1rem; line-height: 1.85; margin-bottom: 1.25rem; text-align: justify; hyphens: auto; }
+.newsprint .body-text.drop-cap::first-letter { font-family: var(--font-display); font-size: 3.2rem; font-weight: 800; float: left; line-height: 0.85; margin-right: 0.12em; margin-top: 0.07em; color: var(--ink); }
+.newsprint .source-line { font-family: var(--font-mono); font-size: 0.72rem; color: #999; margin-top: 1.5rem; }
+.newsprint .ongoing-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(0,0,0,0.06); padding: 0.25rem 0.75rem; border-radius: 3px; margin-bottom: 1rem; color: #888; }
+
+/* SOCIAL GRADIENT */
+.social-gradient { background: linear-gradient(150deg, #FAF7F2 0%, #F0E6F6 50%, #E6F0FA 100%); }
+.social-gradient .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #8B5CF6; margin-bottom: 1.5rem; }
+.social-gradient h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+.social-gradient .deck { font-size: 1rem; line-height: 1.75; margin-bottom: 1rem; }
+.social-gradient .source-line { font-family: var(--font-mono); font-size: 0.72rem; color: #999; margin-top: 1.5rem; }
+.social-gradient .ongoing-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(139,92,246,0.1); padding: 0.25rem 0.75rem; border-radius: 3px; margin-bottom: 1rem; color: #8B5CF6; }
+
+/* SPLIT DIPTYCH */
+.split-diptych { background: var(--cream); padding: 4rem 2rem; }
+.split-diptych .section-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #888; margin-bottom: 1rem; text-align: center; }
+.split-diptych .super-headline { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; text-align: center; margin-bottom: 2.5rem; line-height: 1.25; }
+.split-container { display: flex; gap: 0; max-width: 860px; margin: 0 auto; }
+.split-left, .split-right { flex: 1; padding: 2rem; }
+.split-left { border-right: 1px solid var(--cool-gray); }
+.split-left h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 1rem; line-height: 1.25; }
+.split-right h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--accent-red); margin-bottom: 1rem; line-height: 1.25; }
+.split-left .deck, .split-right .deck { font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem; }
+.split-left .source-line, .split-right .source-line { font-family: var(--font-mono); font-size: 0.68rem; color: #999; }
+
+/* TERMINAL */
+.terminal { background: #0C0C0C; color: #00FF88; font-family: var(--font-mono); }
+.terminal .section-label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #00FF88; opacity: 0.6; margin-bottom: 1.5rem; }
+.terminal h2 { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #00FF88; }
+.terminal .body-text { font-size: 0.92rem; line-height: 1.8; color: #C0C0C0; margin-bottom: 1.25rem; }
+.terminal .takeaway { color: #00FF88; font-weight: 700; margin-top: 1.5rem; font-size: 0.92rem; line-height: 1.6; }
+.terminal .source-line { font-size: 0.68rem; color: #555; margin-top: 1.5rem; }
+
+/* COLOPHON */
+.colophon { background: var(--ink); color: var(--warm-gray); text-align: center; padding: 4rem 2rem; }
+.colophon h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: #fff; }
+.colophon p { font-size: 0.85rem; line-height: 1.7; max-width: 500px; margin: 0 auto 0.75rem; opacity: 0.7; }
+
+@media (max-width: 700px) {
+  html { font-size: 16px; }
+  .cover h1 { font-size: 2.4rem; }
+  .cover .lead-headline { font-size: 1.4rem; }
+  .hero-gradient h2, .midnight h2, .newsprint h2 { font-size: 1.8rem; }
+  .big-stat .stat-number { font-size: 5rem; }
+  .quote-spread blockquote { font-size: 1.6rem; }
+  .split-container { flex-direction: column; }
+  .split-left { border-right: none; border-bottom: 1px solid var(--cool-gray); }
+  .spread { padding: 3rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== COVER ========== -->
+<section class="spread cover">
+  <div class="spread-inner">
+    <div class="edition-label">Volume I &middot; Issue CLXV</div>
+    <h1>First Coffee<br>Campaign News</h1>
+    <div class="date-line">Thursday, May 15, 2026 &middot; Washington, D.C.</div>
+    <div class="lead-headline">Thrown-Out Ballots, a 7-1 Gerrymander, and a 30% Approval Floor: The Redistricting Wars Come for the Voters</div>
+    <div class="lead-deck">Missouri locks in a GOP supermajority map. Across three states, absentee ballots are being discarded mid-count. Trump's Iran remark craters his economic approval. And Anthropic's Mythos AI gets its first live demo on Capitol Hill.</div>
+  </div>
+</section>
+
+<!-- ========== TOC ========== -->
+<section class="spread toc" id="toc">
+  <div class="spread-inner">
+    <h2>In This Issue</h2>
+    <ul class="toc-list">
+      <li><span class="toc-num">01</span><span class="toc-title">Research Insights: AI Chatbot Voter Persuasion Outperforms Traditional Ads</span><span class="toc-archetype">Academic Drop-Cap</span></li>
+      <li><span class="toc-num">02</span><span class="toc-title">Quote of the Day: Sen. Chris Murphy on Ending the Iran Blockade</span><span class="toc-archetype">Editorial Caption</span></li>
+      <li><span class="toc-num">03</span><span class="toc-title">Thrown-Out Ballots and Map Confusion: Voters Are Losing the Redistricting Battle</span><span class="toc-archetype">Hero Gradient</span></li>
+      <li><span class="toc-num">04</span><span class="toc-title">Missouri Supreme Court Upholds 7-1 Gerrymandered Congressional Map</span><span class="toc-archetype">Dark / Midnight</span></li>
+      <li><span class="toc-num">05</span><span class="toc-title">Trump's Iran Bind: The Quote That Cratered His Economic Approval to 30%</span><span class="toc-archetype">Rose Alert Stamp</span></li>
+      <li><span class="toc-num">06</span><span class="toc-title">90 MPs and Counting: Streeting Quits as UK Labour's Leadership Crisis Deepens</span><span class="toc-archetype">Big Stat</span></li>
+      <li><span class="toc-num">07</span><span class="toc-title">Agentic AI Sweeps Federal Government &mdash; But Only 8% Are Incident-Ready</span><span class="toc-archetype">Newsprint Essay</span></li>
+      <li><span class="toc-num">08</span><span class="toc-title">Anthropic Mythos Goes to Capitol Hill: A Live Cyber-AI Demo for Homeland Security</span><span class="toc-archetype">Hero Gradient</span></li>
+      <li><span class="toc-num">09</span><span class="toc-title">Colombia&rsquo;s Cepeda Surges to 44.3% as Right-Wing Rivals Battle for Runoff</span><span class="toc-archetype">Social Gradient</span></li>
+      <li><span class="toc-num">10</span><span class="toc-title">The New American TikTok: Six Months Under U.S. Ownership</span><span class="toc-archetype">Dark / Midnight</span></li>
+      <li><span class="toc-num">11</span><span class="toc-title">Intraparty Tensions Shape the 2026 Primary Landscape</span><span class="toc-archetype">Rose Alert Stamp</span></li>
+      <li><span class="toc-num">12</span><span class="toc-title">IAPP AI Governance Global Europe Heads to Dublin, June 1&ndash;4</span><span class="toc-archetype">Social Gradient</span></li>
+      <li><span class="toc-num">13</span><span class="toc-title">Split Graph: Who Draws the Lines &mdash; Courts or Legislatures?</span><span class="toc-archetype">Split Diptych</span></li>
+      <li><span class="toc-num">14</span><span class="toc-title">Political Tech Application: NRSC AI Campaign Infrastructure</span><span class="toc-archetype">Terminal (Mono)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== 01 RESEARCH INSIGHTS ========== -->
+<section class="spread academic" id="spread-01">
+  <div class="spread-inner">
+    <div class="section-label">01 &middot; Research Insights of the Day</div>
+    <div class="paper-title">Persuading Voters Using Human&ndash;Artificial Intelligence Dialogues</div>
+    <div class="paper-authors">Bai, Voelkel, Eichstaedt, Willer &middot; Cornell University, Stanford University</div>
+    <p class="body-text drop-cap">Politically biased AI chatbots can shift voter preferences by several percentage points after just one six-minute conversation, an effect roughly four times larger than the average impact of traditional political advertisements. Published in Nature, this study deployed pre-registered experiments across the 2024 U.S. presidential election, the 2025 Canadian federal election, and the 2025 Polish presidential election, randomly assigning thousands of participants to converse with large language models that advocated for one of the top two candidates in each race.</p>
+    <p class="body-text">The mechanisms matter: the chatbots persuaded through calm, evidence-oriented dialogue that acknowledged concerns and connected arguments to broadly shared values. Psychological persuasion tactics such as social influence, storytelling, or anger proved less effective. However, a critical caveat emerged across all three countries: models advocating for right-wing candidates made significantly more inaccurate factual claims than those supporting left-wing candidates. The most persuasion-optimized model shifted opposition voters by a striking 25 percentage points, but this extreme effectiveness correlated with lower factual accuracy.</p>
+    <div class="sidebar">
+      <strong>Practitioner implication:</strong> The era of AI-mediated voter persuasion is no longer hypothetical. Campaigns can now deploy conversational AI that outperforms television advertising at a fraction of the cost. Regulators face an urgent question: should AI-to-voter conversations be disclosed, and who bears responsibility for factual accuracy in automated political dialogue?
+    </div>
+    <div class="source-line">Nature, December 2025 &middot; doi.org/10.1038/s41586-025-09771-9 &middot; Cornell Chronicle, MIT Technology Review</div>
+  </div>
+</section>
+
+<!-- ========== 02 QUOTE OF THE DAY ========== -->
+<section class="spread quote-spread" id="spread-02">
+  <div class="spread-inner">
+    <div class="section-label">02 &middot; Quote of the Day</div>
+    <blockquote>&ldquo;I think the best prospect is for the president to end the blockade and declare an end to the war right now and hope that some other nations that are smarter and better than the current leadership of the United States will be able to use effective diplomacy to get the strait reopened.&rdquo;</blockquote>
+    <div class="attribution">Sen. Chris Murphy (D-CT) &middot; U.S. Senator &middot; The Hayride &middot; May 12, 2026</div>
+  </div>
+</section>
+
+<!-- ========== 03 HERO GRADIENT ========== -->
+<section class="spread hero-gradient" id="spread-03">
+  <div class="spread-inner">
+    <div class="ongoing-tag">Ongoing: Redistricting Wars</div>
+    <div class="section-label">03 &middot; Political Campaigning</div>
+    <h2>Thrown-Out Ballots and Map Confusion: Voters Are Losing the Redistricting Battle</h2>
+    <p class="deck">Across Virginia, Louisiana, and Alabama, the human cost of mid-cycle redistricting is coming into sharp focus. In Louisiana and Alabama, tens of thousands of absentee ballots that had already been cast are being discarded after courts approved new maps mid-primary. State officials notified polling sites that congressional votes on already-printed ballots would simply not count. In Virginia, the state supreme court threw out maps that more than three million voters had approved in a referendum, ruling that Democratic lawmakers failed to follow the correct legislative process.</p>
+    <p class="deck">The practical consequences are cascading: voters do not know which district they live in, which candidates are running in their race, or whether their ballot will be counted. Election administrators, already stretched thin, face the prospect of reprinting ballots, reassigning precincts, and retraining poll workers weeks before elections. Based on eight new maps enacted over the past year, Republicans could gain as many as 14 seats compared to six for Democrats.</p>
+    <div class="source-line">NPR, May 14, 2026 &middot; Connecticut Public &middot; KPBS</div>
+  </div>
+</section>
+
+<!-- ========== 04 MIDNIGHT ========== -->
+<section class="spread midnight" id="spread-04">
+  <div class="spread-inner">
+    <div class="section-label">04 &middot; GovTech / Political Campaigning</div>
+    <h2>Missouri Supreme Court Upholds 7-1 Gerrymandered Congressional Map</h2>
+    <p class="deck">In a unanimous decision delivered just hours after oral arguments, the Missouri Supreme Court ruled that a congressional map drawn in a 2025 special session is constitutional and will be used in the August primary. The map, signed by Gov. Mike Kehoe, dices up the Democratic district surrounding Kansas City and targets Rep. Emanuel Cleaver, transforming his seat into a GOP-leaning district. The ruling gives Republicans a projected 7-1 advantage over Democrats in the state's congressional delegation.</p>
+    <p class="deck">The court rejected two separate challenges. In one, plaintiffs argued the map violated the state constitutional provision requiring districts to be compact and equal in population. In the other, challengers sought to suspend the map because 300,000 petition signatures seeking a referendum had been submitted. Chief Justice W. Brent Powell wrote that drawing district maps is a political process and courts should not second-guess legislative decisions. Democracy Docket called the decision a blow to direct democracy in Missouri.</p>
+    <div class="source-line">Missouri Independent, May 12, 2026 &middot; Democracy Docket &middot; St. Louis Public Radio &middot; UPI</div>
+  </div>
+</section>
+
+<!-- ========== 05 ROSE ALERT ========== -->
+<section class="spread rose-alert" id="spread-05">
+  <div class="spread-inner">
+    <div class="ongoing-tag">Ongoing: Iran War &amp; Midterm Economics</div>
+    <div class="section-label">05 &middot; Political Campaigning</div>
+    <h2>Trump's Iran Bind: The Quote That Cratered His Economic Approval to 30%</h2>
+    <p class="deck">President Trump's remark this week that he does not think about Americans' financial situation as he weighs his next moves on Iran has crystallized the political risk the war poses to Republican midterm prospects. Wholesale inflation spiked to 6 percent in April, up from 4 percent in March, driven by higher energy costs from the Iran conflict, ongoing tariffs, and the AI infrastructure buildout. Gas prices have surged, mortgage rates are climbing on inflation fears, and shipping disruptions around the Strait of Hormuz are hitting consumers directly.</p>
+    <p class="deck">The political fallout is severe. The president holds a career-low 30 percent approval rating on the economy. Only 26 percent of Americans approve of his handling of inflation. Seventy-five percent say the Iran war has hurt their finances. For the first time since 2010, voters in a Fox News poll say they trust Democrats more than Republicans to handle the economy, 52 percent to 48 percent. Six months from November, Democrats are favored to take the House and are increasingly optimistic about the Senate.</p>
+    <div class="source-line">Time, May 13, 2026 &middot; Axios, May 14 &middot; CNN &middot; Washington Post &middot; The Hill &middot; Fox News Poll</div>
+  </div>
+</section>
+
+<!-- ========== 06 BIG STAT ========== -->
+<section class="spread big-stat" id="spread-06">
+  <div class="spread-inner">
+    <div class="section-label">06 &middot; Global Elections</div>
+    <div class="stat-number">90</div>
+    <div class="stat-unit">Labour MPs Call for Starmer to Go</div>
+    <h2>Streeting Quits as UK Labour&rsquo;s Leadership Crisis Deepens</h2>
+    <p class="deck">Wes Streeting resigned as Britain's Health Secretary on May 14, writing that he has lost confidence in Prime Minister Keir Starmer's leadership and that remaining in government would be dishonourable. The move comes after Labour suffered a drubbing in local elections across England, Scotland, and Wales, triggering the most serious internal revolt since Starmer took office. Nearly 90 Labour MPs have now publicly called for his resignation. To trigger a formal leadership contest, Streeting needs the support of one-fifth of Labour's parliamentary party, currently 81 lawmakers. Starmer appointed James Murray as the new Health Secretary, but the political crisis is far from contained. The question now is whether Streeting's resignation is the beginning of a broader cabinet exodus.</p>
+    <div class="source-line">CNN, May 14, 2026 &middot; ITV News &middot; CBS News &middot; Political Wire</div>
+  </div>
+</section>
+
+<!-- ========== 07 NEWSPRINT ========== -->
+<section class="spread newsprint" id="spread-07">
+  <div class="spread-inner">
+    <div class="ongoing-tag">Ongoing: Federal AI Adoption</div>
+    <div class="section-label">07 &middot; GovTech / AI in Politics</div>
+    <h2>Agentic AI Sweeps Federal Government &mdash; But Only 8% Are Incident-Ready</h2>
+    <div class="byline">A governance gap widens between ambition and oversight</div>
+    <p class="body-text drop-cap">More than half of federal agencies are now exploring or actively planning pilots of agentic AI, the autonomous systems that can take actions, make decisions, and chain tasks together without human intervention at every step. A Market Connections survey of more than 200 technology executives across civilian and defense agencies, released in early May, found that 53 percent are in the exploration or active-planning phase, with another 15 percent already implementing or having completed agentic AI deployments. The Trump administration's AI Action Plan has made adoption a near-certainty for most agencies.</p>
+    <p class="body-text">But the governance infrastructure has not kept pace. Only 20 percent of respondents said their agencies have defined policies for pre-deployment testing. Just 8 percent have a defined framework for incident response. Fewer than half include liability clauses for AI vendors in their contracts. And fewer than one-third have documented kill-switch procedures for shutting down autonomous systems that malfunction or produce harmful outputs. The survey's authors captured the tension in a single finding: federal leaders say they want human control over high-risk AI, but less than a third have the mechanisms to enforce it.</p>
+    <p class="body-text">The World Economic Forum has published a readiness framework for agentic AI in government, and Deloitte is advising agencies on customized service delivery. But the gap between intent and capability remains the defining challenge for government AI in 2026.</p>
+    <div class="source-line">Nextgov/FCW, May 2026 &middot; Government Executive &middot; Market Connections Survey &middot; WEF &middot; Deloitte Insights</div>
+  </div>
+</section>
+
+<!-- ========== 08 HERO GRADIENT ========== -->
+<section class="spread hero-gradient" id="spread-08">
+  <div class="spread-inner">
+    <div class="section-label">08 &middot; AI in Politics / Political Technology</div>
+    <h2>Anthropic Mythos Goes to Capitol Hill: A Live Cyber-AI Demo for Homeland Security</h2>
+    <p class="deck">Members of the House Homeland Security Committee received a closed-door briefing from Anthropic executives this week, including a live demonstration of Mythos, the company's most advanced AI model that has alarmed national security officials for its ability to identify critical software vulnerabilities at a speed and depth that would normally require the world's best hackers. The White House is simultaneously crafting guidance to allow federal agencies to bypass a supply chain risk designation that the Pentagon placed on Anthropic earlier this year, after the company declined to ease restrictions on its products being used in domestic surveillance and fully autonomous weapons.</p>
+    <p class="deck">The political dynamics are remarkable: a defense establishment that wants access to a powerful AI tool is blocked by its own risk designation, imposed because the company that built the tool refused to relax its ethical guardrails. Lawmakers on the Homeland Security Committee are now pressing the White House to act faster on the cyber threat landscape, where AI-powered offensive capabilities are advancing rapidly and government defenses lag behind.</p>
+    <div class="source-line">Nextgov/FCW, May 2026 &middot; Axios, May 13 &middot; Bloomberg, April 16 &middot; The Hill &middot; GovTech</div>
+  </div>
+</section>
+
+<!-- ========== 09 SOCIAL GRADIENT ========== -->
+<section class="spread social-gradient" id="spread-09">
+  <div class="spread-inner">
+    <div class="ongoing-tag">Ongoing: Latin American Elections</div>
+    <div class="section-label">09 &middot; Global Elections</div>
+    <h2>Colombia&rsquo;s Cepeda Surges to 44.3% as Right-Wing Rivals Battle for Runoff Spot</h2>
+    <p class="deck">With sixteen days until Colombia's May 31 presidential election, the race has narrowed to three viable contenders. Left-wing Pacto Historico senator Ivan Cepeda leads with 44.3 percent in the latest Invamer survey, having consolidated support among core voters and expanded his appeal across all regions, with particularly strong gains among voters aged 20 to 30. Behind him, attorney Abelardo De la Espriella holds 21.5 percent and Centro Democratico senator Paloma Valencia has surged to 19.8 percent, nearly doubling her support in recent weeks.</p>
+    <p class="deck">The runoff math is decisive. In a hypothetical second round between Cepeda and De la Espriella, the left-wing candidate wins with 54.6 percent against 42.6 percent. Against Valencia, the margin narrows sharply to 51.2 versus 46.6 percent, making her the more competitive runoff opponent. Former Bogota mayor Claudia Lopez has collapsed from 11.7 to 3.6 percent. A candidate needs more than 50 percent to win outright on May 31; otherwise a runoff is held on June 21.</p>
+    <div class="source-line">AS/COA Poll Tracker, May 2026 &middot; Rio Times &middot; Americas Quarterly &middot; Statista &middot; Invamer Survey</div>
+  </div>
+</section>
+
+<!-- ========== 10 MIDNIGHT ========== -->
+<section class="spread midnight" id="spread-10">
+  <div class="spread-inner">
+    <div class="section-label">10 &middot; Social Media Trends / Political Technology</div>
+    <h2>The New American TikTok: Six Months Under U.S. Ownership</h2>
+    <p class="deck">Six months after a court-ordered restructuring transferred majority control of TikTok's U.S. operations to American investors, the platform faces a new set of questions about its role in democratic discourse. Content moderation decisions now fall under U.S. legal standards, including First Amendment protections, but a briefing paper from the London Social Media Observatory and Westminster Foundation for Democracy warns that emerging risks to democratic participation persist, including the potential of highly personalized feeds to fuel polarization and suppress political speech in subtle ways.</p>
+    <p class="deck">Harvard Law School's analysis of the post-takeover landscape asks whether the restructuring has genuinely made the platform safer, or simply shifted the locus of control without addressing the underlying algorithmic architecture. The EU's Digital Services Act, now fully active in 2026, adds another layer of regulatory pressure. Meanwhile, TikTok has introduced stricter rules for AI-generated content disclosures and updated its Community Guidelines, but critics argue these changes remain cosmetic compared to the structural reforms needed to prevent algorithmic manipulation of political content at scale.</p>
+    <div class="source-line">Harvard Law School, 2026 &middot; London Social Media Observatory &middot; GLAAD Social Media Safety Index &middot; TechPolicy.Press &middot; ITIF</div>
+  </div>
+</section>
+
+<!-- ========== 11 ROSE ALERT ========== -->
+<section class="spread rose-alert" id="spread-11">
+  <div class="spread-inner">
+    <div class="section-label">11 &middot; Political Campaigning</div>
+    <h2>Intraparty Tensions Shape the 2026 Primary Landscape</h2>
+    <p class="deck">A Brookings Institution analysis maps the fault lines running through both major parties ahead of the 2026 primaries. On the Republican side, Trump-backed candidates are clashing with establishment incumbents across multiple states, with the Kentucky primary between Rep. Thomas Massie and AIPAC-funded challenger Ed Gallrein standing as the most expensive House primary in American history. On the Democratic side, progressive challengers are testing whether economic populism and AI skepticism can unseat centrist incumbents in urban districts.</p>
+    <p class="deck">The pattern is consistent: primary elections are becoming ideological sorting mechanisms that reward candidates who align with their party's activist base rather than the general electorate. The resulting nominees may face electability challenges in November, particularly in swing districts where moderate voters hold the balance. Both parties face a structural dilemma: primaries that satisfy the base but complicate the general election path. The dynamics are particularly acute in states where redistricting has scrambled existing coalitions, forcing candidates to appeal to unfamiliar constituencies.</p>
+    <div class="source-line">Brookings Institution, May 2026 &middot; Axios &middot; Boston Globe &middot; NBC News</div>
+  </div>
+</section>
+
+<!-- ========== 12 SOCIAL GRADIENT ========== -->
+<section class="spread social-gradient" id="spread-12">
+  <div class="spread-inner">
+    <div class="ongoing-tag">Ongoing: Europe AI Governance</div>
+    <div class="section-label">12 &middot; AI in Politics / Conferences</div>
+    <h2>IAPP AI Governance Global Europe Heads to Dublin, June 1&ndash;4</h2>
+    <p class="deck">The International Association of Privacy Professionals will convene its AI Governance Global Europe conference in Dublin's Silicon Docks from June 1 to 4, bringing together more than a thousand practitioners, regulators, and technologists to wrestle with the operational realities of the EU AI Act. The agenda spans global regulatory and enforcement trends, AI risk assessment frameworks, bias mitigation, and the emerging challenge of governing agentic AI systems that can act autonomously.</p>
+    <p class="deck">Notable speakers include Niamh Smyth, Ireland's first Minister for Trade Promotion, Artificial Intelligence and Digital Transformation, and Helen Dixon, former Data Protection Commissioner of Ireland. Breakout sessions will address the interplay between the AI Act and GDPR, a tension that has become one of the most complex compliance challenges for organizations operating across both frameworks. The conference is part of a broader wave of European AI governance events in 2026, following the Rise of AI Conference in Berlin on May 6 and ahead of the RAISE Summit in Paris in July and the International AI Summit in Dublin in October under the Irish EU Presidency.</p>
+    <div class="source-line">IAPP, 2026 &middot; AI Expert Magazine &middot; Achilles Project &middot; Futurium / European Commission</div>
+  </div>
+</section>
+
+<!-- ========== 13 SPLIT GRAPH ========== -->
+<section class="spread split-diptych" id="spread-13">
+  <div class="section-label">13 &middot; Split Graph</div>
+  <div class="super-headline">Who Draws the Lines? Courts vs. Legislatures in the Redistricting Wars</div>
+  <div class="split-container">
+    <div class="split-left">
+      <h3>The Case for Judicial Oversight: Protecting Voters from Partisan Manipulation</h3>
+      <p class="deck">Progressive and voting-rights organizations argue that partisan gerrymandering is fundamentally incompatible with democratic representation. Democracy Docket, the National Redistricting Foundation, and the NAACP Legal Defense Fund contend that when legislatures draw maps to predetermine outcomes, they strip voters of meaningful choice. The Missouri 7-1 map, which dices up Kansas City to eliminate a Democratic seat despite 300,000 petition signatures opposing it, is cited as a textbook example of legislative overreach that courts must check.</p>
+      <p class="source-line">Democracy Docket &middot; NRF &middot; Common Dreams &middot; May 2026</p>
+    </div>
+    <div class="split-right">
+      <h3>The Case for Legislative Authority: Redistricting Is a Political Process</h3>
+      <p class="deck">Conservative legal scholars and Republican state officials argue that the Constitution vests redistricting authority in state legislatures, not courts. Missouri Chief Justice W. Brent Powell, writing for a unanimous court, held that drawing district maps is inherently political and courts should not second-guess legislative decisions. This view holds that judicial intervention in redistricting substitutes judges' preferences for those of elected representatives, undermining the separation of powers and the democratic accountability of the mapmaking process.</p>
+      <p class="source-line">Missouri Supreme Court &middot; Washington Examiner &middot; Jefferson City News-Tribune &middot; May 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 14 TERMINAL ========== -->
+<section class="spread terminal" id="spread-14">
+  <div class="spread-inner">
+    <div class="section-label">14 &middot; Political Tech Application</div>
+    <h2>$ nrsc --ai-campaign-ops</h2>
+    <p class="body-text">TOOL: NRSC AI Campaign Infrastructure</p>
+    <p class="body-text">WHAT IT DOES: The National Republican Senatorial Committee has built an integrated AI pipeline that spans ad creation, data analysis, and donor identification. The system generates campaign advertisements from text prompts, analyzes polling and voter-file data to identify persuadable segments, and mines transaction records to surface potential small-dollar donors who have never been contacted by a political campaign. The White House digital shop sets the tone, firing off AI-generated social media posts at a pace that would require a team of dozens using traditional methods.</p>
+    <p class="body-text">WHO IS USING IT: The NRSC is deploying the system across its 2026 Senate races, with individual campaigns in competitive states adopting the tools for localized ad production and micro-targeting. Republican campaigns at the House and gubernatorial level are following suit, creating what Axios describes as a significant partisan asymmetry in campaign technology adoption.</p>
+    <p class="body-text">REPORTED OUTCOME: The NRSC reports that AI-generated ad variants can be tested and deployed in hours rather than weeks, and that donor-identification models have expanded the committee's small-dollar fundraising pool by an undisclosed but reportedly significant margin. Democratic counterparts at the DSCC have been slower to adopt comparable tools, a gap that operatives on both sides acknowledge.</p>
+    <p class="takeaway">&gt; takeaway: The 2026 cycle is the first in which a major party committee has built AI into its core campaign operations rather than treating it as an experimental add-on. The partisan technology gap may narrow, but the first-mover advantage in data infrastructure tends to compound.</p>
+    <div class="source-line">Axios, April 14, 2026 &middot; Deseret News, May 4, 2026 &middot; NBC News</div>
+  </div>
+</section>
+
+<!-- ========== COLOPHON ========== -->
+<section class="spread colophon">
+  <div class="spread-inner">
+    <h2>Colophon</h2>
+    <p>First Coffee Campaign News is compiled and designed by Claude for Ben. All stories are sourced from public reporting and attributed inline. Set in Fraunces, Inter, and JetBrains Mono.</p>
+    <p>Volume I &middot; Issue CLXV &middot; May 15, 2026</p>
+    <p style="margin-top: 1.5rem; opacity: 0.4; font-size: 0.75rem;">Made with coffee, curiosity, and careful sourcing.</p>
+  </div>
+</section>
+
+</body>
+</html>
