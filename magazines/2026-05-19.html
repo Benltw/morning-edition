@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Coffee Campaign News — May 19, 2026</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="First Coffee Campaign News — May 19, 2026" />
+<meta property="og:description" content="Trump pivots to midterms after Beijing summit. 67 million voter records swept in largest-ever purge. Florida redraws the map. Gas prices reshape the battlefield." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-05-19.html" />
+<meta property="og:site_name" content="First Coffee Campaign News" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a1a;
+  --paper: #faf8f5;
+  --accent-gold: #c9a227;
+  --accent-rose: #c4454d;
+  --accent-navy: #0f1a2e;
+  --accent-midnight: #161b2e;
+  --accent-teal: #1a6b5a;
+  --accent-slate: #3a4a5c;
+  --accent-warm: #f5e6d0;
+  --accent-cool: #e0eaf5;
+  --gradient-social-1: #6366f1;
+  --gradient-social-2: #a855f7;
+  --gradient-social-3: #ec4899;
+  --gradient-hero-1: #0f172a;
+  --gradient-hero-2: #1e3a5f;
+  --gradient-hero-3: #c9a227;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 18px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+
+.spread {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.spread-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.spread-wide {
+  max-width: 1080px;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  line-height: 1.15;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.source {
+  font-size: 0.78rem;
+  color: #777;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.source a { color: #888; text-decoration: underline; }
+
+/* ---------- COVER ---------- */
+.cover {
+  background: linear-gradient(160deg, var(--gradient-hero-1) 0%, var(--gradient-hero-2) 60%, #1a3350 100%);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover .masthead-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.cover h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.cover .edition {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2rem;
+}
+
+.cover .tagline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 500px;
+}
+
+.cover .divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin: 1.5rem auto;
+}
+
+/* ---------- TOC ---------- */
+.toc {
+  background: var(--paper);
+}
+
+.toc h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-navy);
+}
+
+.toc-list {
+  list-style: none;
+  counter-reset: toc-counter;
+}
+
+.toc-list li {
+  counter-increment: toc-counter;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e0d8;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.toc-list li::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  min-width: 2rem;
+}
+
+.toc-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  flex: 1;
+}
+
+.toc-arch {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+/* ---------- ACADEMIC DROP-CAP (Research Insights) ---------- */
+.academic {
+  background: #f9f6f0;
+  border-top: 4px solid var(--accent-navy);
+}
+
+.academic .paper-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-navy);
+  margin-bottom: 0.4rem;
+}
+
+.academic .authors {
+  font-family: 'Inter', sans-serif;
+  font-variant: small-caps;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.academic .body-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.academic .body-text::first-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  color: var(--accent-navy);
+  font-weight: 800;
+}
+
+.academic .sidebar {
+  border-left: 3px solid var(--accent-gold);
+  padding: 1rem 1.25rem;
+  background: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent-navy);
+}
+
+.academic .sidebar em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ---------- EDITORIAL QUOTE (Quote of the Day) ---------- */
+.editorial-quote {
+  background: #2c2418;
+  color: #f5efe6;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editorial-quote .quote-text {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.45;
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  font-style: italic;
+}
+
+.editorial-quote .attribution {
+  font-family: 'Inter', sans-serif;
+  font-variant: small-caps;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: rgba(245, 239, 230, 0.6);
+}
+
+.editorial-quote .attribution span {
+  margin: 0 0.5rem;
+  color: var(--accent-gold);
+}
+
+/* ---------- HERO GRADIENT ---------- */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--gradient-hero-1) 0%, var(--gradient-hero-2) 70%, var(--accent-teal) 100%);
+  color: #fff;
+}
+
+.hero-gradient h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-gradient .deck {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+  max-width: 720px;
+}
+
+.hero-gradient .label { color: var(--accent-gold); }
+
+/* ---------- DARK / MIDNIGHT ---------- */
+.dark-midnight {
+  background: var(--accent-midnight);
+  color: #e0e4ea;
+}
+
+.dark-midnight h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.dark-midnight .deck {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(224, 228, 234, 0.85);
+  max-width: 720px;
+}
+
+.dark-midnight .label { color: var(--accent-gold); }
+
+/* ---------- ROSE ALERT STAMP ---------- */
+.rose-alert {
+  background: #fdf5f3;
+  border-left: 6px solid var(--accent-rose);
+  position: relative;
+}
+
+.rose-alert .stamp {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-rose);
+  border: 2px solid var(--accent-rose);
+  padding: 0.3rem 0.7rem;
+  transform: rotate(4deg);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.rose-alert h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent-rose);
+  margin-bottom: 1.5rem;
+}
+
+.rose-alert .deck {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+/* ---------- BIG STAT ---------- */
+.big-stat {
+  background: var(--paper);
+  text-align: center;
+}
+
+.big-stat .stat-number {
+  font-family: 'Fraunces', serif;
+  font-size: 7rem;
+  font-weight: 900;
+  color: var(--accent-navy);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.big-stat .stat-unit {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+}
+
+.big-stat h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.big-stat .deck {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ---------- LONG-FORM NEWSPRINT ---------- */
+.newsprint {
+  background: #f4f0e8;
+  border-top: 3px double var(--ink);
+  border-bottom: 3px double var(--ink);
+}
+
+.newsprint h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.newsprint .byline {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.newsprint .columns {
+  column-count: 2;
+  column-gap: 2.5rem;
+  column-rule: 1px solid #d4cfc4;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.newsprint .columns p {
+  margin-bottom: 1rem;
+  text-indent: 1.5rem;
+}
+
+.newsprint .columns p:first-child {
+  text-indent: 0;
+}
+
+.newsprint .columns p:first-child::first-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 3.2rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.4rem;
+  margin-top: 0.15rem;
+  font-weight: 800;
+}
+
+/* ---------- INFLUENCER / SOCIAL GRADIENT ---------- */
+.social-gradient {
+  background: linear-gradient(135deg, var(--gradient-social-1) 0%, var(--gradient-social-2) 50%, var(--gradient-social-3) 100%);
+  color: #fff;
+}
+
+.social-gradient h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.social-gradient .deck {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  max-width: 720px;
+}
+
+.social-gradient .label { color: rgba(255,255,255,0.6); }
+
+/* ---------- SPLIT DIPTYCH ---------- */
+.split-diptych {
+  background: var(--paper);
+  padding: 4rem 2rem;
+}
+
+.split-super {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-slate);
+  margin-bottom: 0.75rem;
+}
+
+.split-issue {
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2.5rem;
+}
+
+.split-container {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.split-half {
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+
+.split-half.left {
+  border-right: 1px solid #ccc;
+}
+
+.split-half h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.split-half.left h3 { color: var(--gradient-social-1); }
+.split-half.right h3 { color: var(--accent-rose); }
+
+.split-half .split-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.split-half .split-source {
+  font-size: 0.75rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* ---------- TERMINAL ---------- */
+.terminal {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal .tool-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #58a6ff;
+  margin-bottom: 1.5rem;
+}
+
+.terminal .term-body {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.terminal .term-body strong {
+  color: #f0883e;
+}
+
+.terminal .takeaway {
+  border-top: 1px solid #30363d;
+  padding-top: 1.2rem;
+  color: #7ee787;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.terminal .takeaway::before {
+  content: "> ";
+  color: #58a6ff;
+}
+
+.terminal .label { color: #8b949e; }
+
+/* ---------- COLOPHON ---------- */
+.colophon {
+  background: var(--accent-navy);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  font-size: 0.82rem;
+  min-height: auto;
+  padding: 3rem 2rem;
+}
+
+.colophon strong {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+  html { font-size: 16px; }
+  .cover h1 { font-size: 2.6rem; }
+  .hero-gradient h2, .dark-midnight h2, .newsprint h2 { font-size: 1.8rem; }
+  .rose-alert h2 { font-size: 1.7rem; }
+  .big-stat .stat-number { font-size: 4.5rem; }
+  .editorial-quote .quote-text { font-size: 1.5rem; }
+  .newsprint .columns { column-count: 1; }
+  .split-container { flex-direction: column; }
+  .split-half.left { border-right: none; border-bottom: 1px solid #ccc; }
+  .spread { padding: 3rem 1.25rem; }
+  .rose-alert .stamp { position: static; transform: none; margin-bottom: 1rem; display: inline-block; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<section class="spread cover">
+  <div class="masthead-label">Campaign Intelligence &middot; Daily Briefing</div>
+  <h1>First Coffee</h1>
+  <div class="divider"></div>
+  <div class="edition">Monday, May 19, 2026</div>
+  <div class="tagline">The pivot, the purge, and the price at the pump</div>
+</section>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<section class="spread toc">
+  <div class="spread-inner">
+    <p class="label" style="color: var(--accent-gold); margin-bottom: 0.5rem;">In This Issue</p>
+    <h2>Contents</h2>
+    <ol class="toc-list">
+      <li><span class="toc-title">Research Insights: AI Chatbots Steer Japanese Voters to the Communist Party</span><span class="toc-arch">Academic Drop-Cap</span></li>
+      <li><span class="toc-title">Quote of the Day: Barack Obama on the Colbert Show</span><span class="toc-arch">Editorial Quote</span></li>
+      <li><span class="toc-title">Trump Pivots to Midterms After Beijing Summit</span><span class="toc-arch">Hero Gradient</span></li>
+      <li><span class="toc-title">67 Million Records: America's Largest Voter-Roll Purge</span><span class="toc-arch">Rose Alert Stamp</span></li>
+      <li><span class="toc-title">Florida Redraws the Map: Four New GOP Seats After VRA Ruling</span><span class="toc-arch">Dark / Midnight</span></li>
+      <li><span class="toc-title">$4.48 a Gallon: How the Iran War Reshapes the Midterm Battlefield</span><span class="toc-arch">Newsprint Essay</span></li>
+      <li><span class="toc-title">Ongoing: Colombia &mdash; Valencia Surges to 25.4% as Runoff Math Shifts</span><span class="toc-arch">Big Stat</span></li>
+      <li><span class="toc-title">Colorado Guts Its Own AI Law After Two Years of Struggle</span><span class="toc-arch">Social Gradient</span></li>
+      <li><span class="toc-title">CISA CI Fortify: Critical Infrastructure Told to Prepare for Isolation</span><span class="toc-arch">Dark / Midnight</span></li>
+      <li><span class="toc-title">Higher Ground Labs Fund V: Betting on Agentic AI for Campaigns</span><span class="toc-arch">Hero Gradient</span></li>
+      <li><span class="toc-title">TikTok Leads Platforms in Misinformation at 20%</span><span class="toc-arch">Big Stat</span></li>
+      <li><span class="toc-title">DeSantis Signs Data-Center Bill: Shielding Consumers from the AI Boom</span><span class="toc-arch">Social Gradient</span></li>
+      <li><span class="toc-title">Split Graph: The Gas Tax Holiday &mdash; Gimmick or Emergency Relief?</span><span class="toc-arch">Split Diptych</span></li>
+      <li><span class="toc-title">Political Tech Application: Quiller AI &mdash; The Campaign Copilot Acquired</span><span class="toc-arch">Terminal</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 01 RESEARCH INSIGHTS ==================== -->
+<section class="spread academic">
+  <div class="spread-inner">
+    <p class="label" style="color: var(--accent-gold); margin-bottom: 1rem;">01 &middot; Research Insights of the Day</p>
+    <h2 class="paper-title">Five AI Chatbots, One Recommendation: The Communist Party</h2>
+    <p class="authors">Andrew Hall et al. &middot; Stanford Freeman Spogli Institute &middot; April 2026</p>
+    <p class="body-text">During Japan's snap Lower House election on February 8, 2026, Stanford researchers queried five major AI models from OpenAI, Google, and xAI, asking each to recommend a political party based on synthetic voter profiles. The results were striking: every model converged on recommending the Japanese Communist Party to voters with left-leaning policy positions, even though multiple other parties hold broadly similar stances on the issues tested. The bias appears driven by which information sources the models can access and how they weight policy-position matching, rather than any deliberate ideological tilt. The finding extends earlier work on AI persuasion into a new domain: not just swaying opinions, but funneling undecided voters toward specific parties through opaque recommendation logic.</p>
+    <div class="sidebar">
+      <em>Practitioner implication:</em> Any campaign deploying AI-based voter-advice tools must audit recommendation outputs across the full political spectrum before launch. Unexamined model defaults can concentrate referrals on fringe parties, distorting competitive dynamics in ways no human advisor would.
+    </div>
+    <p class="source">Source: Stanford FSI / APARC, April 2026 &middot; <a href="https://aparc.fsi.stanford.edu/news/voters-increasingly-use-ai-political-advisor-new-study-shows-risks">aparc.fsi.stanford.edu</a></p>
+  </div>
+</section>
+
+<!-- ==================== 02 QUOTE OF THE DAY ==================== -->
+<section class="spread editorial-quote">
+  <div class="spread-inner" style="max-width: 800px;">
+    <p class="label" style="color: var(--accent-gold); margin-bottom: 2rem;">02 &middot; Quote of the Day</p>
+    <p class="quote-text">&ldquo;We can survive a lot: bad policies, funky elections. There&rsquo;s a bunch of stuff we can overcome. We can&rsquo;t overcome the politicization of the criminal justice system &mdash; the awesome power of the state.&rdquo;</p>
+    <p class="attribution">Barack Obama <span>&middot;</span> 44th President of the United States <span>&middot;</span> The Late Show with Stephen Colbert <span>&middot;</span> May 5, 2026</p>
+  </div>
+</section>
+
+<!-- ==================== 03 HERO GRADIENT — Trump Pivots ==================== -->
+<section class="spread hero-gradient">
+  <div class="spread-inner">
+    <p class="label">03 &middot; Political Campaigning</p>
+    <h2>Trump Pivots to Midterms After Beijing Summit Yields Few Deals</h2>
+    <p class="deck">
+      Days after returning from a high-profile state visit to Beijing &mdash; his first trip to China since 2017 &mdash; President Trump and senior officials are fanning out across the country this week for events touting domestic achievements. The pivot is unmistakable: after months dominated by the Iran war, the China summit, and diplomatic crises in Cuba and Venezuela, the White House is racing to reframe the midterm narrative around affordability and economic wins.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      The Beijing meetings ended with spectacle but few concrete outcomes. Meanwhile, a CNBC report quotes a Democratic strategist summarizing the political terrain bluntly: voters are angry about the economy. Trump was elected on a promise to tame inflation and reduce costs, and with gas above four dollars a gallon and grocery prices elevated, that promise remains unfulfilled in the eyes of the electorate. The administration now faces a six-month sprint to persuade swing-district voters that the economic trajectory is improving &mdash; all while managing an unpopular foreign conflict with no clear exit ramp.
+    </p>
+    <p class="source"><a href="https://www.cnbc.com/2026/05/18/trump-hegseth-economy-2026-election-midterms-iran-china.html" style="color: rgba(255,255,255,0.5);">CNBC, May 18, 2026</a></p>
+  </div>
+</section>
+
+<!-- ==================== 04 ROSE ALERT — Voter Purge ==================== -->
+<section class="spread rose-alert">
+  <div class="spread-inner">
+    <div class="stamp">Alert</div>
+    <p class="label" style="color: var(--accent-rose); margin-bottom: 1rem;">04 &middot; Political Campaigning</p>
+    <h2>67 Million Records: America&rsquo;s Largest Voter-Roll Purge</h2>
+    <p class="deck">
+      The Trump administration has run at least 67 million registered voter names through an expanded version of the SAVE (Systematic Alien Verification for Entitlements) system, originally designed to check immigration status for benefit applications. Of those records, roughly 24,000 were flagged as potential non-citizens and 350,000 as deceased &mdash; but critics warn that even a small error rate at that scale means thousands of legitimate voters could be removed before November.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      The Washington Post has documented cases of naturalized citizens flagged because their immigration records were not updated. With voter-registration deadlines falling in September and October, the window for a wrongly purged voter to discover the problem and navigate the appeals process is dangerously narrow. Voting-rights groups from the Campaign Legal Center to Protect Democracy have filed legal challenges, arguing the program violates the National Voter Registration Act&rsquo;s 90-day quiet period. Republicans and the administration counter that the purges target only genuinely ineligible registrations and are essential to election integrity.
+    </p>
+    <p class="source"><a href="https://www.washingtonpost.com/politics/2026/05/17/trump-voter-eligibility-purge-noncitizens-disenfranchised/">Washington Post, May 17</a> &middot; <a href="https://www.pbs.org/newshour/politics/critics-fear-a-midterm-purge-as-the-trump-administration-promotes-program-to-check-voter-eligibility">PBS NewsHour, May 17</a> &middot; <a href="https://campaignlegal.org/update/inside-effort-purge-eligible-voters-ahead-2026-midterms">Campaign Legal Center</a></p>
+  </div>
+</section>
+
+<!-- ==================== 05 DARK — Florida Redistricting ==================== -->
+<section class="spread dark-midnight">
+  <div class="spread-inner">
+    <p class="label">05 &middot; GovTech</p>
+    <h2>Florida Redraws the Map: Four New GOP Seats After VRA Ruling</h2>
+    <p class="deck">
+      Florida has become the eighth state to complete mid-decade redistricting in the 2026 cycle, and the most consequential. Governor DeSantis proposed a new congressional map during a special legislative session, and lawmakers passed it within days &mdash; just hours after the Supreme Court weakened the Voting Rights Act in a Louisiana case. The new lines target four incumbent Democrats: Kathy Castor in Tampa, Darren Soto in Orlando, Lois Frankel in West Palm Beach, and Debbie Wasserman Schultz in Fort Lauderdale.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      Ongoing: The VRA fallout continues to ripple across the national map. Voting-rights groups have already filed suit, arguing the Florida plan violates the state constitution&rsquo;s anti-gerrymandering provision. But with the federal guardrail weakened, the legal path for challengers is narrower than ever. Florida&rsquo;s four new Republican-leaning seats could prove decisive in determining which party controls the House after November.
+    </p>
+    <p class="source" style="color: rgba(255,255,255,0.4);"><a href="https://www.nbcnews.com/politics/2026-election/florida-legislature-passes-redistricting-plan-creating-four-additional-rcna342656" style="color: rgba(255,255,255,0.4);">NBC News</a> &middot; <a href="https://www.democracydocket.com/news-alerts/an-hour-after-scotus-guts-voting-rights-act-florida-house-passes-gop-gerrymander/" style="color: rgba(255,255,255,0.4);">Democracy Docket</a> &middot; <a href="https://www.votebeat.org/national/2026/05/04/florida-redistricting-supreme-court-louisiana-callais-gerrymander-2026-election/" style="color: rgba(255,255,255,0.4);">Votebeat</a></p>
+  </div>
+</section>
+
+<!-- ==================== 06 NEWSPRINT — Gas Prices ==================== -->
+<section class="spread newsprint">
+  <div class="spread-inner spread-wide">
+    <p class="label" style="color: var(--accent-gold); margin-bottom: 1rem; text-align: center;">06 &middot; Political Campaigning</p>
+    <h2>$4.48 a Gallon: How the Iran War Reshapes the Midterm Battlefield</h2>
+    <p class="byline">Sources: NPR, Bloomberg, Axios, CNBC &middot; May 2026</p>
+    <div class="columns">
+      <p>Before the first American missile struck Iranian air defenses on February 28, the average price of a gallon of regular gasoline in the United States sat comfortably below three dollars. Twelve weeks later it has climbed to four dollars and forty-eight cents nationally, a spike of roughly fifty percent that has made the conflict&rsquo;s cost visceral at every fuel pump in the country. The Strait of Hormuz remains effectively closed. Crude oil trades above one hundred dollars a barrel. And the political consequences are landing squarely on the party in power.</p>
+      <p>An NPR/PBS poll released May 6 found that sixty-three percent of respondents blame President Trump for the increase in gas prices, including a third of self-identified Republicans. Only twenty-nine percent of Americans approve of the strikes on Iran, and two-thirds &mdash; including forty-four percent of Republicans &mdash; expect prices to keep climbing. The generic congressional ballot in the same survey showed Democrats leading fifty-two to forty-two, a margin that, if it held through November, would signal a wave election.</p>
+      <p>The Iran war&rsquo;s fuel-price shock is hitting hardest in the very states that will decide Senate control. Axios reported in March that the Senate battleground map overlaps almost perfectly with the states where gas-price sensitivity is highest. Affordability was already the Democrats&rsquo; central midterm message; the cost of an unpopular war now visible at the pump has supercharged it.</p>
+      <p>The White House response has been reactive. Trump told CNBC in April that gas prices could end up roughly where they are or perhaps a bit higher by the midterms. Congressional Republicans are now floating a federal gas-tax holiday &mdash; an idea many of them once derided as a fiscal gimmick &mdash; as the most visible short-term relief available. Whether an eighteen-cent-per-gallon savings can counter the broader narrative of a war-driven price shock remains the open question of the midterm cycle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 07 BIG STAT — Colombia ==================== -->
+<section class="spread big-stat">
+  <div class="spread-inner">
+    <p class="label" style="color: var(--accent-gold); margin-bottom: 1rem;">07 &middot; Global Elections</p>
+    <div class="stat-number">25.4%</div>
+    <div class="stat-unit">Paloma Valencia &mdash; and climbing</div>
+    <h2>Ongoing: Colombia&rsquo;s Runoff Math Tilts Against the Ruling Party</h2>
+    <p class="deck">
+      With twelve days until the May 31 first round, the race to become Colombia&rsquo;s next president has entered its most volatile phase. Ruling-party candidate Ivan Cepeda of Pacto Historico leads comfortably with between 37 and 44 percent across major polls, virtually assuring him a place in the June 21 runoff. But the identity of his opponent now matters more than his own lead: a Genesis Crea Foundation poll puts Centro Democratico senator Paloma Valencia at 25.4 percent, narrowing the gap with attorney Abelardo de la Espriella at 21.6 percent.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      The significance is in the runoff projections. Weighted averages of recent polling suggest Cepeda could narrowly defeat De la Espriella head-to-head &mdash; but would lose to Valencia. The right&rsquo;s best hope, in other words, is consolidation behind Valencia before the first round even begins. The next two weeks of campaigning will determine whether that consolidation happens or whether the anti-Petro vote remains fatally split.
+    </p>
+    <p class="source"><a href="https://colombiaone.com/2026/05/16/colombia-polls-uncertainty-ahead-presidential-runoff/">ColombiaOne, May 16</a> &middot; <a href="https://www.as-coa.org/articles/poll-tracker-colombias-2026-presidential-election">AS/COA Poll Tracker</a></p>
+  </div>
+</section>
+
+<!-- ==================== 08 SOCIAL GRADIENT — Colorado AI Law ==================== -->
+<section class="spread social-gradient">
+  <div class="spread-inner">
+    <p class="label">08 &middot; AI in Politics</p>
+    <h2>Colorado Guts Its Own Landmark AI Law After Two Years of Struggle</h2>
+    <p class="deck">
+      The fiercest state-level fight over AI regulation in the country ended with a whimper. On May 12, the Colorado legislature passed Senate Bill 189 by overwhelming bipartisan margins &mdash; 34-1 in the Senate, 57-6 in the House &mdash; repealing and replacing the state&rsquo;s first-in-the-nation AI Act that was signed just two years ago. Governor Jared Polis, who had vetoed an earlier iteration and spent months brokering the compromise, signed the bill within hours.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      The new law dramatically scales back requirements. Instead of mandating that companies disclose how their AI systems contribute to high-stakes decisions on hiring, lending, and housing, it simply requires notification to consumers that AI is being used. The implementation deadline has been pushed from June 2026 to January 2027. For advocates who saw Colorado as the vanguard of meaningful AI governance, SB 189 reads as a capitulation. For the tech industry, it reads as a pragmatic compromise that avoids a patchwork of unworkable state mandates.
+    </p>
+    <p class="source" style="color: rgba(255,255,255,0.5);"><a href="https://coloradosun.com/2026/05/12/colorado-ai-law-rewrite-passes/" style="color: rgba(255,255,255,0.5);">Colorado Sun, May 12</a> &middot; <a href="https://www.cpr.org/2026/05/12/ai-artificial-intelligence-disclosure-bill-colorado/" style="color: rgba(255,255,255,0.5);">CPR News</a></p>
+  </div>
+</section>
+
+<!-- ==================== 09 DARK — CISA CI Fortify ==================== -->
+<section class="spread dark-midnight">
+  <div class="spread-inner">
+    <p class="label">09 &middot; GovTech</p>
+    <h2>CISA CI Fortify: Critical Infrastructure Told to Prepare for Weeks of Isolation</h2>
+    <p class="deck">
+      On May 5, the Cybersecurity and Infrastructure Security Agency released CI Fortify, a guidance framework that tells operators of critical infrastructure to plan for operating without internet, third-party vendors, or telecommunications for weeks to months during a conflict scenario. The guidance is blunt: operators should assume that threat actors will have some access to their operational-technology networks and that all external connections will be unreliable.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      CI Fortify urges two core capabilities: proactive isolation (disconnecting from business networks to sustain essential services in a degraded environment) and recovery (documenting systems, backing up critical files, and practicing manual fallback). The initiative signals a shift in how the federal government frames infrastructure security &mdash; moving from breach prevention to operational continuity under sustained attack. With the Iran conflict already raising fears of retaliatory cyber operations, the timing is pointed: this is not a theoretical exercise.
+    </p>
+    <p class="source" style="color: rgba(255,255,255,0.4);"><a href="https://www.cisa.gov/news-events/news/cisa-unveils-new-initiative-fortify-americas-critical-infrastructure" style="color: rgba(255,255,255,0.4);">CISA, May 5</a> &middot; <a href="https://cyberscoop.com/cisa-ci-fortify-critical-infrastructure-isolation-recovery-guidance-during-conflict/" style="color: rgba(255,255,255,0.4);">CyberScoop</a></p>
+  </div>
+</section>
+
+<!-- ==================== 10 HERO GRADIENT — Higher Ground Labs ==================== -->
+<section class="spread hero-gradient" style="background: linear-gradient(135deg, #0c2340 0%, #1a5276 60%, var(--accent-teal) 100%);">
+  <div class="spread-inner">
+    <p class="label">10 &middot; Political Technology</p>
+    <h2>Higher Ground Labs Fund V: Betting on Agentic AI as Core Campaign Infrastructure</h2>
+    <p class="deck">
+      The progressive political-technology accelerator Higher Ground Labs has launched Fund V with a new thesis: AI is no longer a campaign add-on but foundational infrastructure. The rolling fund &mdash; open to year-round submissions &mdash; is targeting three investment areas: strategic new bets that evolve the campaign playbook, citizen-centered relationship systems that sustain voter engagement over time, and community-led messaging platforms that surface authentic grassroots insights.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      The fund is led by Hillary Lehr, returning after overseeing the successful acquisition of HGL-incubated startup Quiller AI by Grassroots Analytics. The emphasis on agentic AI &mdash; systems that can adapt in real time, run feedback loops, and autonomously execute campaign tasks &mdash; marks a departure from earlier bets on static analytics and simple automation. Whether progressive campaigns can field these tools at scale before November remains the central question.
+    </p>
+    <p class="source"><a href="https://highergroundlabs.com/fundv/" style="color: rgba(255,255,255,0.5);">Higher Ground Labs</a></p>
+  </div>
+</section>
+
+<!-- ==================== 11 BIG STAT — TikTok Misinfo ==================== -->
+<section class="spread big-stat" style="background: #fdf5f8;">
+  <div class="spread-inner">
+    <p class="label" style="color: var(--accent-rose); margin-bottom: 1rem;">11 &middot; Social Media Trends</p>
+    <div class="stat-number" style="color: var(--accent-rose);">20%</div>
+    <div class="stat-unit" style="color: var(--accent-slate);">of exposure-weighted posts contain misinformation</div>
+    <h2>TikTok Leads All Platforms in Political Misinformation, EU Study Finds</h2>
+    <p class="deck">
+      A new European Union study measuring misinformation exposure across major social platforms found TikTok at the top of the table: roughly one in five exposure-weighted posts on the platform contains misinformation spanning health, climate, migration, and national politics. Facebook followed at 13 percent, X/Twitter at 11, YouTube and Instagram at around 8 percent each, and LinkedIn at just 2 percent.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      The findings land as TikTok navigates its new ownership structure &mdash; a joint venture giving Oracle, Silver Lake, and other U.S. investors a 45 percent stake in a new American entity. The platform has expanded its use of automated moderation, claiming that over 85 percent of content removed for guideline violations is caught by AI before any human sees it. But the EU data suggests the problem is not one of takedown speed; it is one of ambient exposure, where misinformation spreads virally before moderation systems can intervene.
+    </p>
+    <p class="source"><a href="https://ppc.land/tiktok-leads-platforms-in-misinformation-exposure-new-eu-study-reveals/">PPC Land / EU Study</a></p>
+  </div>
+</section>
+
+<!-- ==================== 12 SOCIAL GRADIENT — DeSantis Data Centers ==================== -->
+<section class="spread social-gradient" style="background: linear-gradient(135deg, #134e5e 0%, #1a6b5a 50%, #71b280 100%);">
+  <div class="spread-inner">
+    <p class="label">12 &middot; GovTech</p>
+    <h2>DeSantis Signs Data-Center Bill: Shielding Consumers from the AI Boom&rsquo;s Power Costs</h2>
+    <p class="deck">
+      Governor Ron DeSantis has signed legislation regulating large-scale data centers in Florida, directly addressing one of the less-discussed costs of the AI revolution: energy. The bill promises that Florida consumers will not bear the burden of the AI boom through higher electric bills or scarcer water resources. Data centers have become voracious consumers of both, and as hyperscale facilities proliferate to meet AI compute demand, states are beginning to draw regulatory lines.
+    </p>
+    <p class="deck" style="margin-top: 1rem;">
+      Florida&rsquo;s move positions the state alongside Virginia and several others now grappling with the infrastructure demands of generative AI. The bill establishes energy-use disclosure requirements and environmental-impact thresholds for new data-center construction. For the broader GovTech landscape, it signals a new category of AI governance &mdash; not regulating what models do, but regulating the physical footprint of the systems that run them.
+    </p>
+    <p class="source" style="color: rgba(255,255,255,0.5);"><a href="https://www.govtech.com/policy" style="color: rgba(255,255,255,0.5);">GovTech / Policy</a></p>
+  </div>
+</section>
+
+<!-- ==================== 13 SPLIT DIPTYCH — Gas Tax Holiday ==================== -->
+<section class="spread split-diptych">
+  <div class="spread-inner spread-wide">
+    <p class="label" style="color: var(--accent-gold); margin-bottom: 0.5rem; text-align: center;">13 &middot; Split Graph</p>
+    <p class="split-super">Two Perspectives on One Issue</p>
+    <p class="split-issue">The Federal Gas Tax Holiday: Gimmick or Emergency Relief?</p>
+    <div class="split-container">
+      <div class="split-half left">
+        <h3>The Case Against: A Bipartisan Gimmick</h3>
+        <p class="split-body">
+          Critics across the political spectrum argue that suspending the 18.4-cent federal gas tax is a band-aid on a bullet wound. The Bipartisan Policy Center estimates the actual consumer savings would be 10 to 16 cents per gallon &mdash; a fraction of the war-driven price increase. A five-month pause would drain roughly $17 billion from the Highway Trust Fund, roughly 46 percent of its annual revenue, accelerating its projected insolvency and threatening road and bridge projects nationwide. The Washington Post editorial board called it a gimmick that addresses symptoms while ignoring the structural cause: an unpopular military conflict with no ceasefire in sight.
+        </p>
+        <p class="split-source">Washington Post Opinion, May 11 &middot; Bipartisan Policy Center &middot; Time, May 12</p>
+      </div>
+      <div class="split-half right">
+        <h3>The Case For: Emergency Relief Now</h3>
+        <p class="split-body">
+          Proponents frame the gas-tax holiday as the fastest available lever in a crisis. Senator Josh Hawley&rsquo;s Gas Tax Suspension Act would pause both the 18.4-cent gas tax and the 24.4-cent diesel tax for 90 to 180 days. Bipartisan support has emerged: Democratic Senators Mark Kelly and Richard Blumenthal have sponsored a parallel bill suspending the tax through October 1. Supporters argue that in a moment when two-thirds of Americans expect gas prices to keep rising and voters are punishing incumbents at the ballot box, even modest relief signals that Washington is not indifferent to the pain at the pump.
+        </p>
+        <p class="split-source">CNBC, May 11 &middot; Fox Business &middot; U.S. News, May 12</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 14 TERMINAL — Quiller AI ==================== -->
+<section class="spread terminal">
+  <div class="spread-inner">
+    <p class="label">14 &middot; Political Tech Application</p>
+    <div class="tool-name">$ quiller-ai &mdash; grassroots-analytics</div>
+    <p class="term-body">
+      <strong>What it does:</strong> Quiller AI is a generative-AI copilot built for political campaigns and nonprofits. It drafts fundraising emails, volunteer scripts, op-eds, and mobilization copy &mdash; producing first drafts that campaign staff describe as seventy percent complete, ready for human polish with candidate-specific details, local references, and tonal adjustments.
+    </p>
+    <p class="term-body">
+      <strong>Who is using it:</strong> Originally incubated by Higher Ground Labs and founded by Democratic strategist Mike Nellis, Quiller won the 2024 Reed Award for Best New AI Tool. In August 2025, Grassroots Analytics acquired Quiller, integrating its generative capabilities into a broader suite of donor analytics, targeting, and outreach tools. The combined platform now serves Democratic campaigns and progressive advocacy organizations at scale during the 2026 midterm cycle.
+    </p>
+    <p class="term-body">
+      <strong>Measured outcome:</strong> Campaigns using Quiller report cutting email-production time by more than half, allowing small teams to maintain high-frequency donor communication that previously required dedicated copywriting staff. The integration with Grassroots Analytics adds predictive donor scoring, meaning the AI drafts are targeted to the audiences most likely to convert.
+    </p>
+    <p class="takeaway">takeaway: The Quiller acquisition exemplifies the consolidation phase in progressive political technology &mdash; point solutions absorbed into platforms, AI copilots becoming table stakes, and the campaign-software market maturing from tool bazaar to integrated suite.</p>
+    <p class="source" style="color: #8b949e;"><a href="https://www.grassrootsanalytics.com/post/grassroots-analytics-is-acquiring-quiller-ai" style="color: #8b949e;">Grassroots Analytics</a> &middot; <a href="https://medium.com/quiller-ai/two-years-of-quiller-what-weve-learned-as-the-first-ai-copilot-for-campaigns-18d163e9fc81" style="color: #8b949e;">Quiller Blog</a></p>
+  </div>
+</section>
+
+<!-- ==================== COLOPHON ==================== -->
+<section class="spread colophon">
+  <p><strong>First Coffee Campaign News</strong></p>
+  <p style="margin-top: 0.5rem;">Curated daily at the intersection of campaigns, technology, and democracy.</p>
+  <p style="margin-top: 0.3rem;">Monday, May 19, 2026 &middot; Editor: Claude for Ben</p>
+  <p style="margin-top: 1rem; font-size: 0.72rem;">Built with Fraunces, Inter &amp; JetBrains Mono &middot; All sources linked inline &middot; No filler, no fluff.</p>
+</section>
+
+</body>
+</html>
