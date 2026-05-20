@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Coffee Campaign News — May 20, 2026</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="First Coffee Campaign News — May 20, 2026" />
+<meta property="og:description" content="Super Tuesday reshapes the midterm map as Massie falls and Bottoms rises. Trump endorses Paxton over Cornyn. AI trust splits along party lines. TikTok's algorithm had a partisan thumb on the scale." />
+<meta property="og:url" content="https://Benltw.github.io/morning-edition/magazines/2026-05-20.html" />
+<meta property="og:site_name" content="First Coffee Campaign News" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a1a;
+  --paper: #faf8f5;
+  --accent-gold: #c9a227;
+  --accent-rose: #c4454d;
+  --accent-navy: #0f1a2e;
+  --accent-midnight: #161b2e;
+  --accent-teal: #1a6b5a;
+  --accent-slate: #3a4a5c;
+  --accent-warm: #f5e6d0;
+  --accent-cool: #e0eaf5;
+  --gradient-social-1: #6366f1;
+  --gradient-social-2: #a855f7;
+  --gradient-social-3: #ec4899;
+  --gradient-hero-1: #0f172a;
+  --gradient-hero-2: #1e3a5f;
+  --gradient-hero-3: #c9a227;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 18px; scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+.spread {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.spread-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+.spread-wide { max-width: 1080px; }
+h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.source {
+  font-size: 0.78rem;
+  color: #777;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+.source a { color: #888; text-decoration: underline; }
+
+/* COVER */
+.cover {
+  background: linear-gradient(160deg, var(--gradient-hero-1) 0%, var(--gradient-hero-2) 60%, #1a3350 100%);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cover .masthead-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+.cover h1 { font-size: 4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+.cover .edition { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
+.cover .tagline { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; color: rgba(255,255,255,0.55); max-width: 500px; }
+.cover .divider { width: 60px; height: 3px; background: var(--accent-gold); margin: 1.5rem auto; }
+
+/* TOC */
+.toc { background: var(--paper); }
+.toc h2 { font-size: 2.2rem; margin-bottom: 2rem; color: var(--accent-navy); }
+.toc-list { list-style: none; counter-reset: toc-counter; }
+.toc-list li {
+  counter-increment: toc-counter;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e0d8;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+.toc-list li::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  min-width: 2rem;
+}
+.toc-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; flex: 1; }
+.toc-arch { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #999; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+
+/* ACADEMIC DROP-CAP */
+.academic { background: #f9f6f0; border-top: 4px solid var(--accent-navy); }
+.academic .paper-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; color: var(--accent-navy); margin-bottom: 0.4rem; }
+.academic .authors { font-family: 'Inter', sans-serif; font-variant: small-caps; font-size: 0.85rem; color: #666; margin-bottom: 1.5rem; }
+.academic .body-text { font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.5rem; }
+.academic .body-text::first-letter {
+  font-family: 'Fraunces', serif; font-size: 3.5rem; float: left; line-height: 0.8;
+  margin-right: 0.5rem; margin-top: 0.15rem; color: var(--accent-navy); font-weight: 800;
+}
+.academic .sidebar {
+  border-left: 3px solid var(--accent-gold); padding: 1rem 1.25rem;
+  background: #fff; font-size: 0.95rem; font-weight: 500; color: var(--accent-navy);
+}
+.academic .sidebar em { font-weight: 700; font-style: normal; }
+
+/* EDITORIAL QUOTE */
+.editorial-quote {
+  background: #2c2418; color: #f5efe6; text-align: center; min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.editorial-quote .quote-text {
+  font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 400;
+  line-height: 1.45; max-width: 760px; margin: 0 auto 2rem; font-style: italic;
+}
+.editorial-quote .attribution {
+  font-family: 'Inter', sans-serif; font-variant: small-caps; font-size: 0.85rem;
+  letter-spacing: 0.12em; color: rgba(245,239,230,0.6);
+}
+.editorial-quote .attribution span { margin: 0 0.5rem; color: var(--accent-gold); }
+
+/* HERO GRADIENT */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--gradient-hero-1) 0%, var(--gradient-hero-2) 70%, var(--accent-teal) 100%);
+  color: #fff;
+}
+.hero-gradient h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+.hero-gradient .deck { font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,0.88); max-width: 720px; }
+.hero-gradient .label { color: var(--accent-gold); }
+
+/* DARK MIDNIGHT */
+.dark-midnight { background: var(--accent-midnight); color: #e0e4ea; }
+.dark-midnight h2 { font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; }
+.dark-midnight .deck { font-size: 1.05rem; line-height: 1.7; color: rgba(224,228,234,0.85); max-width: 720px; }
+.dark-midnight .label { color: var(--accent-gold); }
+
+/* ROSE ALERT */
+.rose-alert { background: #fdf5f3; border-left: 6px solid var(--accent-rose); position: relative; }
+.rose-alert .stamp {
+  position: absolute; top: 3rem; right: 2rem;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700;
+  color: var(--accent-rose); border: 2px solid var(--accent-rose);
+  padding: 0.3rem 0.7rem; transform: rotate(4deg);
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+.rose-alert h2 { font-size: 2.4rem; font-weight: 700; color: var(--accent-rose); margin-bottom: 1.5rem; }
+.rose-alert .deck { font-size: 1.05rem; line-height: 1.7; max-width: 720px; }
+
+/* BIG STAT */
+.big-stat { background: var(--paper); text-align: center; }
+.big-stat .stat-number { font-family: 'Fraunces', serif; font-size: 7rem; font-weight: 900; color: var(--accent-navy); line-height: 1; margin-bottom: 0.5rem; }
+.big-stat .stat-unit { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 2rem; }
+.big-stat h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+.big-stat .deck { font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto; text-align: left; }
+
+/* NEWSPRINT */
+.newsprint { background: #f4f0e8; border-top: 3px double var(--ink); border-bottom: 3px double var(--ink); }
+.newsprint h2 { font-size: 2.6rem; font-weight: 800; text-align: center; margin-bottom: 0.5rem; }
+.newsprint .byline { text-align: center; font-size: 0.8rem; color: #888; margin-bottom: 2rem; font-style: italic; }
+.newsprint .columns { column-count: 2; column-gap: 2.5rem; column-rule: 1px solid #d4cfc4; font-size: 1rem; line-height: 1.75; }
+.newsprint .columns p { margin-bottom: 1rem; text-indent: 1.5rem; }
+.newsprint .columns p:first-child { text-indent: 0; }
+.newsprint .columns p:first-child::first-letter {
+  font-family: 'Fraunces', serif; font-size: 3.2rem; float: left; line-height: 0.8;
+  margin-right: 0.4rem; margin-top: 0.15rem; font-weight: 800;
+}
+
+/* SOCIAL GRADIENT */
+.social-gradient {
+  background: linear-gradient(135deg, var(--gradient-social-1) 0%, var(--gradient-social-2) 50%, var(--gradient-social-3) 100%);
+  color: #fff;
+}
+.social-gradient h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; }
+.social-gradient .deck { font-size: 1.05rem; line-height: 1.7; color: rgba(255,255,255,0.9); max-width: 720px; }
+.social-gradient .label { color: rgba(255,255,255,0.6); }
+
+/* SPLIT DIPTYCH */
+.split-diptych { background: var(--paper); padding: 4rem 2rem; }
+.split-super {
+  text-align: center; font-family: 'Inter', sans-serif; font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent-slate); margin-bottom: 0.75rem;
+}
+.split-issue { text-align: center; font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; color: var(--ink); margin-bottom: 2.5rem; }
+.split-container { display: flex; max-width: 960px; margin: 0 auto; gap: 0; }
+.split-half { flex: 1; padding: 2rem; }
+.split-left { border-right: 1px solid #ccc; }
+.split-left h3 { font-size: 1.3rem; color: #2563eb; margin-bottom: 1rem; }
+.split-right h3 { font-size: 1.3rem; color: var(--accent-rose); margin-bottom: 1rem; }
+.split-half p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
+.split-half .split-source { font-size: 0.78rem; color: #999; font-style: italic; }
+
+/* TERMINAL */
+.terminal {
+  background: #0d1117; color: #c9d1d9;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 4rem 2rem; min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.terminal .spread-inner { max-width: 860px; margin: 0 auto; width: 100%; }
+.terminal .tool-name {
+  font-size: 2rem; font-weight: 700; color: #58a6ff; margin-bottom: 0.5rem;
+}
+.terminal .label-line {
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: #8b949e; margin-bottom: 2rem;
+}
+.terminal .body { font-size: 0.95rem; line-height: 1.8; color: #c9d1d9; margin-bottom: 1.5rem; }
+.terminal .takeaway {
+  border-left: 3px solid #58a6ff; padding: 1rem 1.25rem;
+  color: #58a6ff; font-size: 0.95rem; font-weight: 600;
+  margin-top: 1.5rem;
+}
+.terminal .source { color: #8b949e; }
+.terminal .source a { color: #58a6ff; }
+
+/* COLOPHON */
+.colophon {
+  background: var(--accent-navy); color: rgba(255,255,255,0.6);
+  text-align: center; padding: 4rem 2rem; min-height: 50vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.colophon h2 { font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 1rem; }
+.colophon p { font-size: 0.85rem; max-width: 480px; line-height: 1.7; }
+
+@media (max-width: 700px) {
+  .cover h1 { font-size: 2.5rem; }
+  .hero-gradient h2, .dark-midnight h2, .rose-alert h2, .newsprint h2 { font-size: 1.8rem; }
+  .big-stat .stat-number { font-size: 4.5rem; }
+  .newsprint .columns { column-count: 1; }
+  .split-container { flex-direction: column; }
+  .split-left { border-right: none; border-bottom: 1px solid #ccc; }
+  .editorial-quote .quote-text { font-size: 1.5rem; }
+  .spread { padding: 3rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== COVER ========== -->
+<section class="spread cover">
+  <div class="masthead-label">First Coffee Campaign News</div>
+  <h1>First Coffee</h1>
+  <div class="divider"></div>
+  <div class="edition">Tuesday, May 20, 2026 &mdash; Your daily briefing on campaigns, technology &amp; democracy</div>
+  <div class="tagline">Super Tuesday reshapes the midterm map. Trump's loyalty purge reaches Texas. AI trust fractures along party lines.</div>
+</section>
+
+<!-- ========== TOC ========== -->
+<section class="spread toc">
+  <div class="spread-inner">
+    <h2>In This Issue</h2>
+    <ol class="toc-list">
+      <li><span class="toc-title">Research Insights: TikTok's Algorithm Had a Partisan Thumb on the Scale</span><span class="toc-arch">Academic Drop-Cap</span></li>
+      <li><span class="toc-title">Quote of the Day: David Axelrod on Connectivity and Loneliness</span><span class="toc-arch">Editorial Quote</span></li>
+      <li><span class="toc-title">Super Tuesday: Massie Falls, Bottoms Rises, Six States Reshape the Map</span><span class="toc-arch">Hero Gradient</span></li>
+      <li><span class="toc-title">Trump Endorses Paxton Over Cornyn: The Loyalty Purge Reaches Texas</span><span class="toc-arch">Rose Alert Stamp</span></li>
+      <li><span class="toc-title">Axios Harris Poll 100: AI Trust Splits Along Party Lines</span><span class="toc-arch">Big Stat</span></li>
+      <li><span class="toc-title">Code for America &times; Anthropic: AI Meets the Food-Stamp Caseworker</span><span class="toc-arch">Dark / Midnight</span></li>
+      <li><span class="toc-title">Ongoing: Colombia &mdash; Cepeda Holds the Lead but Runoff Math Favors the Right</span><span class="toc-arch">Newsprint Essay</span></li>
+      <li><span class="toc-title">The Parasocial Ballot: How Social Media Intimacy Shapes Votes</span><span class="toc-arch">Social Gradient</span></li>
+      <li><span class="toc-title">GITEX AI Europe Heads to Berlin &mdash; Digital Sovereignty Takes Center Stage</span><span class="toc-arch">Dark / Midnight</span></li>
+      <li><span class="toc-title">$500M Raised Through AI-Driven Methods in the 2026 Midterms</span><span class="toc-arch">Big Stat</span></li>
+      <li><span class="toc-title">GOP Simulates Voters With AI Agents While Democrats Ban ChatGPT</span><span class="toc-arch">Hero Gradient</span></li>
+      <li><span class="toc-title">Georgia&rsquo;s Governor Race: Third Time Democrats Nominate a Black Woman</span><span class="toc-arch">Social Gradient</span></li>
+      <li><span class="toc-title">Split Graph: The AI Campaign Divide &mdash; Innovation vs. Caution</span><span class="toc-arch">Split Diptych</span></li>
+      <li><span class="toc-title">Political Tech Application: EyesOver &mdash; Real-Time Sentiment for GOP War Rooms</span><span class="toc-arch">Terminal</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== 01 RESEARCH INSIGHTS ========== -->
+<section class="spread academic">
+  <div class="spread-inner">
+    <div class="label" style="margin-bottom:1.5rem; color: var(--accent-gold);">01 &middot; Research Insights of the Day</div>
+    <div class="paper-title">Systematic Partisan Content Skews in TikTok During the 2024 US Elections</div>
+    <div class="authors">Homa Hosseinmardi, Amir Ghasemian, Aaron Clauset et al. &mdash; Nature, May 2026</div>
+    <div class="body-text">
+      Across 323 audit experiments using controlled sock-puppet accounts in New York, Texas, and Georgia, researchers collected more than 280,000 recommendations over 27 weeks during the 2024 presidential campaign. The findings are striking: Republican-seeded accounts received roughly 11.5 percent more co-partisan content than their Democratic counterparts, while Democrat-seeded accounts were exposed to about 7.5 percent more cross-partisan material. In other words, TikTok's For You feed systematically steered all users toward right-leaning political content, regardless of their initial leanings. Democrat-leaning accounts were pushed more cross-partisan content on immigration and crime, while Republican-leaning accounts saw more content on abortion.
+    </div>
+    <div class="sidebar">
+      <em>Practitioner implication:</em> Campaigns relying on TikTok's organic reach should understand that the platform's recommendation engine may amplify conservative messaging asymmetrically. Democratic strategists should factor algorithmic headwinds into paid distribution budgets and consider platform-specific content strategies that account for cross-partisan exposure.
+    </div>
+    <div class="source">Source: <a href="https://www.nature.com/articles/s41586-026-10447-1">Nature (May 2026)</a> &middot; See also: <a href="https://www.nature.com/articles/d41586-026-01314-0">Nature News</a></div>
+  </div>
+</section>
+
+<!-- ========== 02 QUOTE OF THE DAY ========== -->
+<section class="spread editorial-quote">
+  <div class="spread-inner">
+    <div class="label" style="margin-bottom:2rem; color: var(--accent-gold);">02 &middot; Quote of the Day</div>
+    <div class="quote-text">
+      &ldquo;We&rsquo;re more connected than we&rsquo;ve ever been, and yet we&rsquo;ve never been lonelier.&rdquo;
+    </div>
+    <div class="attribution">
+      David Axelrod <span>&middot;</span> Former Senior Advisor to President Obama <span>&middot;</span> Levitt Lecture, University of Iowa <span>&middot;</span> Spring 2026
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 SUPER TUESDAY ========== -->
+<section class="spread hero-gradient">
+  <div class="spread-inner">
+    <div class="label">03 &middot; US Midterms &middot; Primary Night</div>
+    <h2>Super Tuesday: Massie Falls, Bottoms Rises, Six States Reshape the Map</h2>
+    <div class="deck">
+      <p>Six states voted on May 19 and the results are seismic. In Kentucky, Rep. Thomas Massie &mdash; a 12-year incumbent and perennial GOP contrarian &mdash; lost to Trump-endorsed Navy veteran Ed Gallrein in the most expensive House primary in American history, with over $32 million in ad spending. Massie's defeat marks the latest scalp in Trump's systematic purge of Republican dissenters, following the ousting of Sen. Bill Cassidy in Louisiana.</p>
+      <p style="margin-top:1rem;">In Georgia, former Atlanta Mayor Keisha Lance Bottoms won the Democratic gubernatorial nomination outright, avoiding a runoff. She becomes the third consecutive Black woman nominated by Georgia Democrats for governor. On the Republican side, Lt. Gov. Burt Jones and billionaire Rick Jackson head to a June runoff. Meanwhile, in Kentucky's Senate race, Trump-backed Rep. Andy Barr cruised to the GOP nomination for Mitch McConnell's seat with 64 percent of the vote.</p>
+    </div>
+    <div class="source" style="color:rgba(255,255,255,0.5);">Sources: <a href="https://www.nbcnews.com/politics/trump-administration/live-blog/primary-elections-2026-kentucky-georgia-live-updates-rcna345753" style="color:rgba(255,255,255,0.6);">NBC News</a>, <a href="https://www.cnn.com/2026/05/19/politics/live-news/election-pennsylvania-georgia-kentucky-alabama-primaries" style="color:rgba(255,255,255,0.6);">CNN</a>, <a href="https://www.npr.org/2026/05/18/g-s1-122235/primary-day-alabama-georgia-idaho-kentucky-oregon-pennsylvania" style="color:rgba(255,255,255,0.6);">NPR</a></div>
+  </div>
+</section>
+
+<!-- ========== 04 TRUMP PAXTON ========== -->
+<section class="spread rose-alert">
+  <div class="spread-inner">
+    <div class="stamp">Breaking</div>
+    <div class="label" style="margin-bottom:1.5rem; color: var(--accent-rose);">04 &middot; US Midterms &middot; Loyalty Purge</div>
+    <h2>Trump Endorses Paxton Over Cornyn: The Loyalty Purge Reaches Texas</h2>
+    <div class="deck">
+      <p>President Trump delivered an 11th-hour endorsement of Texas Attorney General Ken Paxton in the state's Republican Senate runoff against three-term incumbent John Cornyn, just one week before the May 26 vote. The endorsement could end the career of the Senate's longest-serving Republican, and it signals that no incumbent &mdash; however senior &mdash; is safe from Trump's loyalty test. Neither candidate cleared 50 percent in March's first round, setting up a bruising runoff that has already drawn tens of millions in spending.</p>
+      <p style="margin-top:1rem;">The stakes extend beyond Texas. Democrats see the seat as a potential stretch pickup in November, with nominee James Talarico waiting in the wings. A weakened or polarizing Republican nominee could make this traditionally safe seat competitive for the first time in a generation. Trump framed the choice in personal terms, praising Paxton as a fighter and faulting Cornyn for insufficient loyalty during his political trials.</p>
+    </div>
+    <div class="source">Sources: <a href="https://www.npr.org/2026/05/19/nx-s1-5736175/trump-endorses-ken-paxton-texas-senate">NPR</a>, <a href="https://www.texastribune.org/2026/05/19/donald-trump-ken-paxton-endorsement-texas-senate-gop-primary-runoff-cornyn/">Texas Tribune</a>, <a href="https://www.axios.com/2026/05/19/trump-endorsement-texas-senate-race-ken-paxton">Axios</a></div>
+  </div>
+</section>
+
+<!-- ========== 05 AXIOS HARRIS POLL ========== -->
+<section class="spread big-stat">
+  <div class="spread-inner">
+    <div class="label" style="margin-bottom:2rem; color: var(--accent-gold);">05 &middot; AI &amp; Politics &middot; Public Opinion</div>
+    <div class="stat-number">12pt</div>
+    <div class="stat-unit">Partisan gap in OpenAI&rsquo;s reputation score &mdash; up from 1pt in 2024</div>
+    <h2>Axios Harris Poll 100: AI Trust Splits Along Party Lines</h2>
+    <div class="deck">
+      <p>The 2026 Axios Harris Poll 100, released May 19, reveals a dramatic partisan fracture in how Americans perceive the AI industry. Republicans now rate OpenAI 12 points higher than Democrats do &mdash; a gap that barely existed two years ago. TikTok, Nvidia, Meta, and X show similarly widening divides. Democrats have grown more skeptical of AI technology and the industry behind it, while Republicans are significantly more likely to trust most AI companies.</p>
+      <p style="margin-top:1rem;">One notable exception stands out: Anthropic, maker of Claude, ranks No. 15 overall among America's most visible brands with only a 1-point partisan gap &mdash; making it the rare AI company trusted equally across the aisle. Generationally, 42 percent of Gen Z respondents believe AI will harm their job opportunities and wages, the highest of any age group. The poll underscores a new reality: AI is no longer a neutral technology issue &mdash; it is a partisan identity marker.</p>
+    </div>
+    <div class="source">Sources: <a href="https://www.axios.com/2026/05/19/axios-harris-poll-100-ai-politics">Axios</a>, <a href="https://theharrispoll.com/articles/the-2026-axios-harris-poll-100/">The Harris Poll</a></div>
+  </div>
+</section>
+
+<!-- ========== 06 CODE FOR AMERICA ========== -->
+<section class="spread dark-midnight">
+  <div class="spread-inner">
+    <div class="label">06 &middot; GovTech &middot; AI in Public Services</div>
+    <h2>Code for America &times; Anthropic: AI Meets the Food-Stamp Caseworker</h2>
+    <div class="deck">
+      <p>Code for America and Anthropic announced a partnership at the 2026 Code for America Summit in Chicago to deploy Claude-based tools that help government caseworkers administer public benefits more efficiently. The pilot begins with SNAP &mdash; the Supplemental Nutrition Assistance Program &mdash; through a Policy Navigator that lets caseworkers type plain-language questions about eligibility rules and receive cited, up-to-date answers with suggested next steps.</p>
+      <p style="margin-top:1rem;">The collaboration goes beyond a single chatbot. The organizations plan a full suite of tools for reviewing eligibility documents, drafting communications to benefit recipients, and answering complex policy questions that currently require caseworkers to search through hundreds of pages of federal and state regulation. The long-term vision is a set of reusable, open tools that can be adapted across states and counties &mdash; a rare example of AI deployment in government that prioritizes the front-line worker rather than the policy-maker.</p>
+    </div>
+    <div class="source" style="color:rgba(255,255,255,0.4);"><a href="https://codeforamerica.org/news/anthropic-partnership/" style="color:rgba(255,255,255,0.5);">Code for America</a>, <a href="https://www.nextgov.com/artificial-intelligence/2026/05/anthropic-and-nonprofit-partner-streamline-benefits-administration-ai/413455/" style="color:rgba(255,255,255,0.5);">Nextgov</a>, <a href="https://www.govtech.com/civic/civic-tech-partnership-to-help-govt-caseworkers-use-ai" style="color:rgba(255,255,255,0.5);">GovTech</a></div>
+  </div>
+</section>
+
+<!-- ========== 07 COLOMBIA ========== -->
+<section class="spread newsprint">
+  <div class="spread-inner spread-wide">
+    <div class="label" style="text-align:center; margin-bottom:1rem; color: var(--accent-gold);">07 &middot; Global Elections &middot; Ongoing</div>
+    <h2>Colombia: Cepeda Holds the Lead but Runoff Math Favors the Right</h2>
+    <div class="byline">Ongoing &mdash; New development: right-wing vote consolidation shifts second-round projections</div>
+    <div class="columns">
+      <p>With 11 days until Colombia's first round on May 31, the picture is clarifying: nobody will win outright. Pacto Hist&oacute;rico senator Iv&aacute;n Cepeda leads first-round polling at 35 to 44 percent depending on the survey, well short of the 50-percent threshold for an outright victory. Centro Democr&aacute;tico senator Paloma Valencia has consolidated the right-wing vote and surged to 25 percent in the latest Fundaci&oacute;n G&eacute;nesis Crea survey, while lawyer Abelardo de la Espriella holds around 21 percent.</p>
+      <p>The critical twist is in the second-round math. While Cepeda dominates the first round, multiple polls now project Valencia beating him 49.1 percent to 40.6 percent in a June 21 runoff, as De la Espriella's voters break overwhelmingly to the right. This dynamic mirrors Colombia's 2022 pattern, where left-wing first-round leaders have historically struggled in head-to-head matchups when the right coalesces.</p>
+      <p>The race carries high stakes for U.S.&ndash;Latin American relations. A Cepeda presidency would continue Petro&rsquo;s leftist project, while a Valencia win would mark a sharp rightward correction. International observers are watching whether security concerns and the economy &mdash; not ideology &mdash; ultimately decide the electorate.</p>
+    </div>
+    <div class="source" style="text-align:center;">Sources: <a href="https://www.as-coa.org/articles/poll-tracker-colombias-2026-presidential-election">AS/COA Poll Tracker</a>, <a href="https://colombiaone.com/2026/05/16/colombia-polls-uncertainty-ahead-presidential-runoff/">ColombiaOne</a>, <a href="https://www.riotimesonline.com/colombia-cepeda-presidential-election-26-days-may-2026/">Rio Times</a></div>
+  </div>
+</section>
+
+<!-- ========== 08 PARASOCIAL ========== -->
+<section class="spread social-gradient">
+  <div class="spread-inner">
+    <div class="label">08 &middot; Social Media Trends &middot; Political Psychology</div>
+    <h2>The Parasocial Ballot: How Social Media Intimacy Shapes Votes</h2>
+    <div class="deck">
+      <p>A growing body of research is revealing that the one-sided sense of intimacy users develop with politicians on social media &mdash; known as parasocial relationships &mdash; may be a more powerful predictor of voting intention than traditional party loyalty or policy alignment. A 2025 study of the Indonesian presidential election found that when users felt a sense of homophily (similarity) and personal connection with a political figure online, the emotion of pleasure became the strongest mediator linking those experiences to both electronic word-of-mouth and actual voting intention.</p>
+      <p style="margin-top:1rem;">The implications for the 2026 midterms are direct. Candidates who master the grammar of social media intimacy &mdash; behind-the-scenes content, personal stories, direct replies &mdash; may be building electoral advantages that traditional polling misses entirely. As one researcher put it, the feeling that a politician is talking directly to you creates a bond that functions like personal endorsement. In a cycle where both parties are fighting for disengaged voters, the parasocial advantage may matter more than the ground game.</p>
+    </div>
+    <div class="source" style="color:rgba(255,255,255,0.5);"><a href="https://www.sciencedirect.com/science/article/pii/S2772503025000878" style="color:rgba(255,255,255,0.6);">ScienceDirect (2025)</a>, <a href="https://journals.sagepub.com/doi/full/10.1177/00936502211032822" style="color:rgba(255,255,255,0.6);">Communication Research</a></div>
+  </div>
+</section>
+
+<!-- ========== 09 GITEX ========== -->
+<section class="spread dark-midnight">
+  <div class="spread-inner">
+    <div class="label">09 &middot; Conferences &middot; AI &amp; Politics in Europe</div>
+    <h2>GITEX AI Europe Heads to Berlin &mdash; Digital Sovereignty Takes Center Stage</h2>
+    <div class="deck">
+      <p>Europe's largest AI industry gathering, GITEX AI Europe, arrives in Berlin on June 30 with 1,400 exhibitors and a program explicitly built around the EU AI Act's first full year of enforcement. The conference will spotlight practical AI applications in HealthTech, FinTech, and Smart Cities, but the political subtext is unmistakable: how Europe asserts digital sovereignty while competing with American and Chinese AI ecosystems.</p>
+      <p style="margin-top:1rem;">The timing is significant. With the AI Summit London (June 10&ndash;11) celebrating its tenth edition and the IAPP AI Governance conference running June 1&ndash;2, the month of June 2026 is shaping up as Europe's most concentrated period of AI policy dialogue ever. For political technologists, these events represent the frontier where regulatory frameworks meet campaign innovation &mdash; and where the rules governing AI in elections will be debated by the people building the tools and the regulators writing the constraints.</p>
+    </div>
+    <div class="source" style="color:rgba(255,255,255,0.4);"><a href="https://www.raisesummit.com/post/best-ai-conferences-europe-2026" style="color:rgba(255,255,255,0.5);">Raise Summit</a>, <a href="https://www.data-unplugged.de/en/blog/ai-conferences-europe-2026" style="color:rgba(255,255,255,0.5);">Data Unplugged</a>, <a href="https://iapp.org/conference/iapp-aigg-europe" style="color:rgba(255,255,255,0.5);">IAPP</a></div>
+  </div>
+</section>
+
+<!-- ========== 10 $500M STAT ========== -->
+<section class="spread big-stat">
+  <div class="spread-inner">
+    <div class="label" style="margin-bottom:2rem; color: var(--accent-gold);">10 &middot; Political Technology &middot; Fundraising</div>
+    <div class="stat-number">$500M</div>
+    <div class="stat-unit">Raised through AI-driven methods in the 2026 midterms</div>
+    <h2>The AI Fundraising Machine Is Already Running</h2>
+    <div class="deck">
+      <p>More than half a billion dollars has been raised through AI-powered fundraising methods in the 2026 midterm cycle, according to aggregated reporting from campaign finance trackers and political technology firms. The tools range from AI-optimized email subject lines and donation-page personalization to predictive models that identify likely small donors before they've ever given.</p>
+      <p style="margin-top:1rem;">The National Republican Senatorial Committee has been a particularly aggressive adopter, using AI to create ad variants &mdash; including video-game-themed spots targeting Democratic Senate candidates &mdash; and to identify new small-dollar donors at scale. On the Democratic side, adoption has been slower but not absent: progressive organizations are using AI primarily for data analysis and volunteer coordination rather than direct donor solicitation. The $500 million figure represents a step change from 2024, when AI-driven fundraising was still largely experimental.</p>
+    </div>
+    <div class="source">Sources: <a href="https://opentools.ai/news/ai-revolutionizes-2026-midterm-elections-a-new-era-of-campaign-fundraising-and-strategy">OpenTools</a>, <a href="https://www.axios.com/2026/04/14/republicans-ai-campaigns-democrats-2026">Axios</a></div>
+  </div>
+</section>
+
+<!-- ========== 11 GOP AI vs DEM ========== -->
+<section class="spread hero-gradient">
+  <div class="spread-inner">
+    <div class="label">11 &middot; AI in Campaigns &middot; Ongoing</div>
+    <h2>GOP Simulates Voters With AI Agents While Democrats Ban ChatGPT</h2>
+    <div class="deck">
+      <p>Ongoing: The partisan AI divide in campaigns, a recurring theme this cycle, deepened further this week. An Axios investigation found that 64 percent of Republican consultants now use AI daily in their work, compared to 49 percent of Democrats &mdash; a gap driven as much by institutional culture as by ideology. The Republican National Committee's embrace is systemic: tools like Aaru, which replicates pools of voters as AI agents that can be polled on their views, are being deployed to simulate voter reactions to messaging before ads ever air.</p>
+      <p style="margin-top:1rem;">The Democratic side tells a more complicated story. The DNC has barred staffers from using ChatGPT and Claude, though it permits Gemini for coding and data analysis &mdash; a distinction that reflects regulatory anxiety more than technological assessment. Progressive campaigns, meanwhile, are using AI primarily behind the scenes for data crunching and volunteer logistics, wary of the optics of AI-generated voter contact in a cycle where their base is deeply skeptical of the technology. The result is an emerging asymmetry that could shape which party communicates more effectively in the final stretch.</p>
+    </div>
+    <div class="source" style="color:rgba(255,255,255,0.5);"><a href="https://www.axios.com/2026/04/14/republicans-ai-campaigns-democrats-2026" style="color:rgba(255,255,255,0.6);">Axios</a>, <a href="https://time.com/7321098/ai-2026-midterm-elections/" style="color:rgba(255,255,255,0.6);">TIME</a></div>
+  </div>
+</section>
+
+<!-- ========== 12 GEORGIA GOVERNOR ========== -->
+<section class="spread social-gradient">
+  <div class="spread-inner">
+    <div class="label">12 &middot; US Midterms &middot; Georgia</div>
+    <h2>Georgia&rsquo;s Governor Race: Third Time Democrats Nominate a Black Woman</h2>
+    <div class="deck">
+      <p>Former Atlanta Mayor Keisha Lance Bottoms cleared 50 percent on May 19 to win the Democratic gubernatorial nomination outright, defeating a field that included former DeKalb County CEO Michael Thurmond, former state Sen. Jason Esteves, and former Lt. Gov. Geoff Duncan, a Republican-turned-Democrat. It is the third consecutive cycle that Georgia Democrats have nominated a Black woman for governor, following Stacey Abrams's runs in 2018 and 2022.</p>
+      <p style="margin-top:1rem;">Bottoms enters the general election with significant name recognition from her tenure as Atlanta mayor and her role in the Biden administration. Former President Biden endorsed her in the primary's final stretch. But Democrats have not won the Georgia governor's mansion in 24 years, and the Republican runoff between Lt. Gov. Burt Jones and billionaire Rick Jackson will determine which brand of conservatism she faces in November. The race will test whether Georgia's shifting demographics can finally deliver a statewide win for Democrats in an off-year election.</p>
+    </div>
+    <div class="source" style="color:rgba(255,255,255,0.5);"><a href="https://www.nbcnews.com/politics/2026-election/georgia-democratic-primary-election-winner-keisha-lance-bottoms-rcna345005" style="color:rgba(255,255,255,0.6);">NBC News</a>, <a href="https://georgiarecorder.com/2026/05/19/former-atlanta-mayor-keisha-lance-bottoms-wins-democratic-nomination-for-georgia-governor/" style="color:rgba(255,255,255,0.6);">Georgia Recorder</a></div>
+  </div>
+</section>
+
+<!-- ========== 13 SPLIT GRAPH ========== -->
+<section class="spread split-diptych">
+  <div class="spread-inner spread-wide">
+    <div class="label" style="text-align:center; margin-bottom:0.5rem; color: var(--accent-gold);">13 &middot; Split Graph</div>
+    <div class="split-super">Two Perspectives on One Issue</div>
+    <div class="split-issue">The AI Campaign Divide: Innovation or Recklessness?</div>
+    <div class="split-container">
+      <div class="split-half split-left">
+        <h3>The Caution Case</h3>
+        <p>Progressive strategists and civil-liberties advocates argue that rushing AI into campaign operations risks voter privacy, entrenches manipulation, and widens the digital divide. The DNC's restrictions on ChatGPT and Claude reflect a principle: the potential for AI-generated misinformation and micro-targeted persuasion at scale outweighs the efficiency gains. When campaigns can simulate entire electorates as AI agents, the line between persuasion and manipulation becomes dangerously thin.</p>
+        <p>Democrats worry that normalizing AI in elections erodes public trust at a moment when trust is already at historic lows. Better to win slowly and transparently than to win fast and lose legitimacy.</p>
+        <p class="split-source">Sources: Axios (April 14, 2026), The American Prospect (October 2025)</p>
+      </div>
+      <div class="split-half split-right">
+        <h3>The Innovation Case</h3>
+        <p>Republican operatives and campaign-tech firms counter that AI is simply the latest tool in a long lineage of political technology &mdash; from direct mail to micro-targeting &mdash; and that refusing to use it is unilateral disarmament. With 64 percent of GOP consultants using AI daily, the party argues it is meeting voters where they are, with more personalized, responsive messaging. Tools like Aaru and EyesOver, they say, make campaigns more responsive to actual voter sentiment rather than lagging polls.</p>
+        <p>For the innovation camp, the risk is not in using AI but in falling behind. In a cycle where every dollar and minute counts, the party that communicates faster and more precisely will have the edge.</p>
+        <p class="split-source">Sources: Axios (April 14, 2026), CNBC (May 19, 2026), Campaign Nucleus</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 14 POLITICAL TECH APPLICATION ========== -->
+<section class="spread terminal">
+  <div class="spread-inner">
+    <div class="label-line">14 &middot; Political Tech Application</div>
+    <div class="tool-name">$ eyesover --sentiment-scan</div>
+    <div class="body">
+      <p>EyesOver is a real-time public-sentiment analysis platform that scans millions of social media posts per day to identify how opinions, emotions, and narratives are shifting as events unfold. Integrated with Campaign Nucleus &mdash; the Republican Party's primary campaign management platform &mdash; it connects sentiment intelligence directly to campaign execution, turning insight into ad buys, messaging pivots, and rapid response within a single workflow.</p>
+      <p style="margin-top:1rem;">Multiple Republican campaigns in the 2026 midterm cycle are using EyesOver to pre-test messaging before committing to ad spending. One GOP strategist described it as being able to see the battlefield in real time rather than waiting for weekly polling. The National Republican Senatorial Committee has used the platform to identify emerging micro-narratives &mdash; such as localized economic anxiety or trending policy frustrations &mdash; and deploy targeted digital ads within hours of detection.</p>
+      <p style="margin-top:1rem;">The tool's claimed accuracy in predicting trend direction has made it a fixture in Republican campaign war rooms, and its integration with Campaign Nucleus means that the gap between sensing a shift and acting on it is measured in hours, not days.</p>
+    </div>
+    <div class="takeaway">&gt; takeaway: EyesOver represents the maturation of real-time sentiment analysis from a research curiosity into an operational campaign tool &mdash; and the party that adopted it first is building a structural advantage in responsiveness.</div>
+    <div class="source">Sources: <a href="https://www.campaignnucleus.com/blog/inside-the-2026-election">Campaign Nucleus</a>, <a href="https://www.axios.com/2026/04/14/republicans-ai-campaigns-democrats-2026">Axios</a></div>
+  </div>
+</section>
+
+<!-- ========== COLOPHON ========== -->
+<section class="spread colophon">
+  <h2>Colophon</h2>
+  <p>First Coffee Campaign News is curated daily for Ben by Claude. Set in Fraunces, Inter, and JetBrains Mono. All stories sourced, fact-checked against multiple outlets, and linked. No filler, no fluff &mdash; just the briefing you need before the day begins.</p>
+  <p style="margin-top:1rem; font-size:0.75rem; color: rgba(255,255,255,0.35);">Edition of May 20, 2026 &middot; Published via GitHub Pages</p>
+</section>
+
+</body>
+</html>
